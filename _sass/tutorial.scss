@@ -1,0 +1,299 @@
+.charticulator__tutorial-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    $font-family-main: "Lato", "Lucida Grande", "Segoe UI", sans-serif;
+    $font-family-mono: "Inconsolata", "Menlo", "Courier New", monospace;
+
+    b, strong {
+        font-weight: 700;
+    }
+
+    i, em {
+        font-style: italic;
+    }
+
+    code, pre {
+        font-family: $font-family-mono;
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 2px 4px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 1.2em;
+    }
+
+    h1 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0.2em 0;
+    }
+
+    p {
+        margin: 0.5em 0;
+        line-height: 1.4em;
+    }
+
+    a {
+        text-decoration: underline;
+        margin-right: 0.3em;
+
+        &:hover, &:focus, &:active {
+            color: $color-active;
+        }
+    }
+
+    .charticulator__tutorial-view {
+        display: flex;
+        flex-direction: row;
+
+        .el-svg-icon {
+            display: inline-block;
+            vertical-align: top;
+            width: 32px;
+            height: 32px;
+            background-position: 0 0;
+        }
+
+        &-captions {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: relative;
+            width: 400px;
+            padding: 1em;
+            box-sizing: border-box;
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            .el-caption-section {
+                padding: 0.5em 0em;
+                margin: 3px;
+                margin-right: 48px;
+                border-radius: 4px;
+                -webkit-user-select: text;
+                user-select: text;
+            }
+
+            .el-caption {
+                font-family: inherit;
+                display: block;
+                width: 100%;
+                text-align: left;
+                margin: 0;
+                padding: 0;
+                font-size: inherit;
+                border: none;
+                background: none;
+                color: inherit;
+                padding: 0.2em 1em;
+                background: $gray-220;
+                margin-bottom: 8px;
+                border-radius: 4px;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background: $gray-210;
+                }
+
+                &.is-active {
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+                    code, pre {
+                        border-color: $gray-150;
+                        background: transparentize(black, 0.95);
+                    }
+
+                    background: transparentize($brand-color, 0.9);
+                    border: 1px solid $brand-color;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
+                }
+
+                cursor: pointer;
+            }
+        }
+
+        &-video {
+            flex: 1 1;
+            padding: 20px;
+
+            .el-infobar {
+                margin: 10px 0;
+
+                & > span {
+                    margin-right: 1em;
+                }
+            }
+
+            .el-current-caption {
+                font-size: 20px;
+                padding: 0.2em 1em;
+                background: $gray-090;
+                margin-top: 10px;
+                border-radius: 4px;
+                color: white;
+                background: transparentize($color-active, 0.5);
+                border: 1px solid $color-active;
+            }
+        }
+    }
+
+    .charticulator__tutorial-video-view {
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        background: $gray-050;
+        border-radius: 2px;
+        overflow: hidden;
+        text-align: center;
+
+        .el-video {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .el-controls {
+            text-align: left;
+            height: 34px;
+            background: $gray-060;
+            color: $gray-200;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+
+            .el-button {
+                margin: 1px;
+                padding: 0;
+                font-size: 14px;
+                border: none;
+                background: none;
+                color: $gray-200;
+                cursor: pointer;
+                display: inline-block;
+                vertical-align: top;
+                height: 32px;
+                line-height: 32px;
+
+                .el-svg-icon {
+                    filter: invert(100%);
+                }
+
+                &:hover {
+                    background: $gray-100;
+                }
+
+                &:active {
+                    background: $gray-120;
+                }
+
+                &:focus {
+                    // background: $gray-100;
+                    outline-offset: 0px;
+                }
+
+                // &:focus:hover {
+                //     background: $gray-120;
+                //     outline: none;
+                // }
+
+            }
+
+            .el-button.el-button-onoff {
+                padding: 0 0.5em;
+
+                .el-svg-icon {
+                    filter: invert(80%);
+                }
+
+                &.is-on {
+                    .el-svg-icon {
+                        filter: invert(50%) sepia(1) saturate(10) hue-rotate(190deg) brightness(1.2);
+                    }
+
+                    color: $color-primary-light;
+                }
+            }
+
+            .el-timestamp {
+                padding: 0 10px;
+                display: inline-block;
+                vertical-align: top;
+                height: 32px;
+                line-height: 32px;
+            }
+        }
+
+        .el-progress {
+            padding: 4px;
+            margin: 1px;
+            cursor: pointer;
+
+            &:focus {
+                outline-offset: 0;
+            }
+
+            .el-bar {
+                stroke: $gray-150;
+                stroke-width: 2px;
+            }
+
+            .el-bar-highlight {
+                stroke: $color-primary;
+                stroke-width: 3px;
+            }
+
+            .el-links {
+                stroke: $gray-220;
+                stroke-width: 2px;
+                stroke-linecap: round;
+                fill: none;
+
+                &.is-active {
+                    stroke: $color-active;
+                }
+            }
+
+            .el-ranges {
+                fill: $gray-120;
+                stroke: $gray-060;
+
+                &.is-active {
+                    fill: $gray-200;
+                }
+            }
+
+            .el-current {
+                stroke: $color-primary;
+                stroke-width: 3px;
+                stroke-linecap: round;
+            }
+        }
+    }
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.tutorial-page {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 62px;
+}

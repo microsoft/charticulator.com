@@ -1,0 +1,246 @@
+## Entry Format
+#
+# id: the_unique_id_of_the_dataset
+# name: The Name of the Dataset
+# description: Write a paragraph or two in Markdown to describe the dataset
+# source: Write a paragraph or two in Markdown to cite the source
+# files:
+#   - /datasets/file1.csv
+#   - /datasets/file2.csv
+#
+##
+
+##########################################################################################
+
+- id: mobile_os_market_share
+  name: Mobile OS Market Share
+  description: |
+
+    Market share of well-known mobile operating systems from 2009 to 2016
+
+  source: |
+
+    Data retrieved from [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile/worldwide);
+    aggregated by year by averaging the monthly percentiles
+
+##########################################################################################
+
+- id: les_miserables
+  name: Character Co-occurrence in Les Misérables
+  description: |
+
+    Character co-occurrence graph in Victor Hugo's novel *Les Misérables*
+
+  source: |
+
+    Original dataset compiled by Donald Knuth for the [Stanford GraphBase](https://www-cs-faculty.stanford.edu/~knuth/sgb.html);
+    retrieved from [Mike Bostock](https://bl.ocks.org/mbostock)'s D3 example [Force-Directed Graph](https://bl.ocks.org/mbostock/4062045).
+
+##########################################################################################
+
+- id: gapminder
+  name: Gapminder Dataset
+  description: |
+
+    Statistical data of countries from Gapminder World
+
+  source: |
+
+    Retrieved from [Gapminder](https://www.gapminder.org/data/)
+
+##########################################################################################
+
+- id: caltrain_schedule
+  name: Caltrain Schedule
+  description: |
+
+    Caltrain's schedule
+
+  source: |
+
+    Timetable data from [Caltrain's Website](http://www.caltrain.com/schedules/weekdaytimetable.html);
+    distance information from [Wikipedia - List of Caltrain stations](https://en.wikipedia.org/wiki/List_of_Caltrain_stations#endnote_Note2b);
+    parsed and processed by the authors.
+
+##########################################################################################
+
+- id: boston_weather
+  name: Boston Weather
+  description: |
+
+    Boston daily weather data in 2015 including temperature and precipitation.
+
+  source: |
+
+    Data collected from the [National Centers for Environmental Information](https://www.ncdc.noaa.gov/cdo-web/search?datasetid=GHCND); accessed May. 3th, 2018;
+    aggregated by the authors.
+
+##########################################################################################
+
+- id: mushrooms
+  name: UCI Mushroom Dataset
+  description: |
+
+    The "Mushroom" dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html).
+    We took a sample of 200 mushrooms from the original dataset.
+
+  source: |
+
+    [UCI Machine Learning Repository: Mushroom Dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom).
+    Mushroom records drawn from The Audubon Society Field Guide to North American Mushrooms (1981). G. H. Lincoff (Pres.), New York: Alfred A. Knopf
+
+##########################################################################################
+
+- id: nightingale
+  name: Nightingale
+
+  description: |
+
+    Florence Nightingale's data on the *Diagram of the Causes of Mortality in the Army of the East*
+
+  source: |
+
+    Nightingale, F., Farr, W., & Smith, A. (1859). A contribution to the sanitary history of the British army during the late war with Russia. John W. Parker and Son.
+
+##########################################################################################
+
+- id: polio_united_states
+  name: Polio Cases in the United States
+  description: |
+
+    The number of Polio cases in the United States by Year and State
+
+  source: |
+
+    Retrieved from [Project Tycho](https://www.tycho.pitt.edu/); aggregated into yearly values.
+
+##########################################################################################
+
+- id: cars
+  name: Auto MPG Dataset
+  description: |
+
+    The "Auto MPG Dataset" from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html).
+
+  source: |
+
+    [UCI Machine Learning Repository: Auto MPG Dataset](https://archive.ics.uci.edu/ml/datasets/auto+mpg).
+    This dataset was taken from the StatLib library which is maintained at Carnegie Mellon University. The dataset was used in the 1983 American Statistical Association Exposition.
+
+##########################################################################################
+
+- id: best_bookshelf
+  name: Best books selected by the New York Times from 2013 to 2017
+  description: |
+
+    Best books selected by the New York Times.
+
+  source: |
+
+    Retrieved from the [source code](https://github.com/tanykim/best-bookshelf) of Tanyoung Kim's [Best Book Shelf](http://tany.kim/best-bookshelf/).
+
+##########################################################################################
+
+- id: global_trade_of_natural_resources
+  name: Global Trade of Natural Resources in 2016
+
+  description: |
+
+    Global trade of natural resources in 2016; processed to contain only trades of more than $1,000,000,000 in value.
+
+  source: |
+
+    Chatham House (2018), 'resourcetrade.earth', <https://resourcetrade.earth/>
+
+##########################################################################################
+
+- id: world_greenhouse_gas_emissions
+  name: World Greenhouse Gas Emissions in 2005
+
+  description: |
+
+    Greenhouse gas emissions by industry sectors and end user area.
+
+  source: |
+
+    Data extracted from the [original chart](http://www.wri.org/resources/charts-graphs/world-greenhouse-gas-emissions-2005) from the [World Resources Institute](http://www.wri.org/).
+    See the [working paper](http://www.wri.org/resources/charts-graphs/world-greenhouse-gas-emissions-2005) for more information.
+
+##########################################################################################
+
+- id: higher_education_vs_obesity
+  name: Higher Education v.s. Obesity
+
+  description: |
+
+    Obesity and higher education rates (BA degree) in the United States in 2016
+
+  source: |
+
+    Obesity data is from ["Prevalence of Self-Reported Obesity Among U.S. Adults by State and Territory, BRFSS, 2016"](https://www.cdc.gov/obesity/data/prevalence-maps.html);
+    Education data is from the [U.S. Census Bureau, 2012-2016 American Community Survey 5-Year Estimates](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_16_5YR_S1501&src=pt).
+
+##########################################################################################
+
+- id: msft_stock
+  name: Microsoft Stock Price
+
+  description: |
+
+    Stock price of Microsoft from 1987 to 2018.
+
+  source: |
+
+    Retrieved from [MarcoTrends](http://www.macrotrends.net/stocks/charts/MSFT/prices/microsoft-corp-stock-price-history)
+
+##########################################################################################
+
+- id: world_population_2017
+  name: World Population 2017
+
+  description: |
+
+    World population in 2017, grouped by age and gender.
+
+  source: |
+
+    United Nations, Department of Economic and Social Affairs, Population Division (2017). World Population Prospects: The 2017 Revision, custom data acquired via website.
+
+##########################################################################################
+
+- id: china_pm25_aqi
+  name: China PM2.5 Air Quality Index
+
+  description: |
+
+    China PM2.5 Air Quality Index. We averaged and then converted all values to Air Quality Index (AQI) using the Chinese scale (HJ 633-2012).
+
+  source: |
+
+    Berman, Lex, 2017, "China AQI Archive (Feb 2014 - Feb 2016)", doi:10.7910/DVN/GHOXXO, Harvard Dataverse.
+
+##########################################################################################
+
+- id: food_supply_per_capita
+  name: Per Capita Food Supply in 2013
+
+  description: |
+
+    Food supply in kcal/capita/day. With grand total and percentages.
+
+  source: |
+
+    Data is collected from [FAOSTAT](http://www.fao.org/faostat/en/)'s "Food Balance Sheets".
+
+##########################################################################################
+
+- id: co2_emission_ranking
+  name: Ranking of Carbon Dioxide Emissions
+  description: |
+
+    Carbon dioxide emission values of selected countries and the ranking among these countries
+
+  source: |
+
+    [Millennium Development Goals Indicators](http://mdgs.un.org/unsd/mdg/SeriesDetail.aspx?srid=749)
+    from the United Nations Statistics Division. Accessed May. 4th, 2018.

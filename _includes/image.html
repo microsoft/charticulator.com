@@ -1,0 +1,5 @@
+<p {% if include.center %}style="text-align: center"{% endif %}>
+    <img src="{{ include.src | cdn_url }}" alt="{{ include.alt }}"
+        style="{% if include.width %}width: {{ include.width }};{% endif %}{% if include.maxWidth %}max-width: {{ include.maxWidth }};{% endif %}"
+    />
+</p>

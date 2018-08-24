@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<style>
+    body { overflow: hidden; }
+</style>
+<body>
+{% include header.html %}
+
+<div class="tutorial-page" id="container"></div>
+
+<script type="text/javascript" src="{{ '/tutorials/viewer.bundle.js' | cdn_url }}"></script>
+<script type="text/javascript">
+let app = new CharticulatorTutorial.Application();
+app.initialize("container", {{ page.tutorial | json }});
+</script>
+</body>
+</html>

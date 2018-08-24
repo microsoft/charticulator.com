@@ -1,0 +1,3 @@
+<a href="#" class="video-callout-button" onclick="displayVideoCallout('{{ include.src | cdn_url }}', '{{ include.timeRange }}', '{{ include.openTutorial }}'); return false;">
+    <img class="el-icon" src="{{ '/images/icons/video-tutorial.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top;" />
+    {% if include.text %}{{include.text}}{% endif %}</a>

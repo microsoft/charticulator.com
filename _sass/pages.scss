@@ -1,0 +1,377 @@
+a, a:visited {
+    color: darken($brand-color, 20%);
+}
+
+a:hover {
+    color: darken($brand-color, 20%);
+}
+
+:focus {
+    outline: 1px solid $color-primary;
+    outline-offset: 2px;
+}
+
+.site-title {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.site-title img {
+    height: 32px;
+    padding: 11px 0;
+    vertical-align: top;
+}
+
+.page-link.btn-launch, a.btn-launch-large {
+    background-color: darken($brand-color, 10%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 2px;
+
+    @include shadow-ambient;
+
+    transition: background-color 0.1s linear, box-shadow 0.1s linear;
+
+    &:hover {
+        @include shadow-focused;
+
+        background-color: $brand-color;
+        text-decoration: none;
+    }
+    
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
+        text-decoration: none;
+    }
+}
+
+.img-anchor {
+    &:focus {
+        img {
+            filter: brightness(120%);
+        }
+    }
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .el-description {
+        font-size: 1.6em;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .el-note {
+        font-size: 0.9em;
+        margin-bottom: 0px;
+    }
+}
+
+.home-video {
+    margin-bottom: 40px;
+}
+
+.author-list {
+    margin-bottom: $spacing-unit;
+
+    &-item {
+        text-align: center;
+        vertical-align: top;
+        display: inline-block;
+        width: 150px;
+
+        .el-name {
+            color: black;
+            font-weight: bold;
+        }
+
+        .el-affiliation {
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .el-image {
+            img {
+                width: 100px;
+                border-radius: 50px;
+            }
+        }
+
+        & > a {
+            display: inline-block;
+        }
+    }
+}
+
+.mobile-fork {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .paper-thumbnail {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mobile-fork {
+        display: block;
+    }
+
+    .desktop-fork {
+        display: none;
+    }
+}
+
+.paper-list {
+    margin-bottom: $spacing-unit;
+
+    &-item {
+        line-height: 1.5em;
+        display: block;
+        display: flex;
+        flex-direction: row;
+
+        .paper-thumbnail {
+            img {
+                width: 80px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .paper-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .paper-link {
+            font-size: 14px;
+        }
+
+        .paper-award {
+            font-weight: bold;
+        }
+
+        .paper-journal {
+            font-style: italic;
+        }
+    }
+}
+
+.library-list {
+    margin-bottom: $spacing-unit / 2;
+
+    &-item {
+        text-align: center;
+        display: inline-block;
+        padding-right: 20px;
+
+        .el-name {
+            color: black;
+        }
+
+        .el-image {
+            img {
+                height: 50px;
+                border-radius: 2px;
+            }
+        }
+
+        & > a {
+            display: inline-block;
+        }
+    }
+}
+
+.dataset-item {
+    h3 {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .el-description {
+        line-height: 1.5em;
+        display: flex;
+        flex-direction: row;
+
+        .el-label {
+            flex-shrink: 0;
+            flex-grow: 0;
+            width: 100px;
+            text-align: right;
+            padding-right: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .el-detail {}
+    }
+
+    &:target {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+    border: 1px solid transparent;
+    padding: 15px 20px;
+    margin: -15px -20px;
+    margin-bottom: 22px;
+    border-radius: 2px;
+}
+
+@media (min-width: 900px) {
+    .doc-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .doc-table-of-contents {
+        position: fixed;
+        margin-top: 10px;
+    }
+
+    .doc-contents {
+        flex: 1 1;
+        margin-left: 230px;
+    }
+}
+
+.doc-table-of-contents {
+    width: 190px;
+    border: 1px solid transparentize($color-border, 0.5);
+    background: transparentize($gray-220, 0.9);
+    border-radius: 2px;
+    padding: 5px;
+
+    ul {
+        li {
+            margin: 1px 0;
+            display: block;
+
+            a {
+                padding: 2px 5px;
+                display: block;
+            }
+        }
+
+        list-style-type: none;
+        margin: 0;
+
+        & > ul {
+            li {
+                padding-left: 2em;
+                font-size: 0.9em;
+            }
+        }
+
+        li.active {
+            background: transparentize($gray-200, 0.4);
+        }
+
+        & > ul.active {
+            li {
+                background: transparentize($gray-200, 0.7);
+            }
+        }
+    }
+}
+
+table {
+    td, th {
+        padding: 3px 10px;
+    }
+}
+
+.video-callout-button {
+    text-decoration: none;
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+
+    img {
+        filter: opacity(60%);
+    }
+    &:hover, &:active, &:focus {
+        img {
+            filter: none;
+        }
+    }
+}
+
+.video-callout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+
+    & > div {
+        position: absolute;
+        left: 50px;
+        right: 50px;
+        top: 50px;
+        bottom: 50px;
+    }
+
+    .controls-container {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, 0.5);
+        flex-shrink: 0;
+        border-radius: 2px;
+
+        a {
+            color: $gray-200;
+            margin-right: 1em;
+        }
+
+        .pull-right {
+            float: right;
+        }
+    }
+
+    .video-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 50px;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}

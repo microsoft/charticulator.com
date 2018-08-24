@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | markdownify }}</h1>
+
+<div class="gallery-page">
+    <div class="gallery-page-chart">
+        <img src="{{ page.image | cdn_url }}" alt="{{ page.title }}" />
+    </div>
+    <div class="gallery-page-description">
+        {{ content }}
+        {% if page.dataset %}
+        {% for item in site.data.datasets %}
+            {% if item.id == page.dataset %}
+                <div class="el-data-source">
+                    <div class="el-data-source-item">
+                        <div class="el-label">Data Source</div>
+                        <div class="el-details">{{ item.source | markdownify }}</div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% if page.video %}
+<h2>Creation Process</h2>
+<p class="gallery-video">
+    <video controls="controls" preload="auto">
+        <source src="{{ page.video | cdn_url }}" type="video/mp4" />
+    </video>
+</p>
+<p class="p-small"><a href="{{ page.video | cdn_url }}" download>Download Video</a></p>
+{% endif %}

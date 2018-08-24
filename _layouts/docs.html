@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="doc-container">
+    <div class="doc-table-of-contents">
+        <ul>
+            {% for item in site.docs %}
+            <li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url | relativize_url }}">{{item.title}}</a></li>
+                {% if item.sections %}
+                <ul {% if item.url == page.url %}class="active"{% endif %}>
+                {% for section in item.sections %}
+                    <li><a href="{{ item.url | relativize_url }}#{{section[1]}}">{{section[0]}}</a></li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="doc-contents">
+        <h1>{{ page.title | escape }}</h1>
+        {{ content }}
+    </div>
+</div>
