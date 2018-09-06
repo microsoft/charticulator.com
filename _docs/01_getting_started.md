@@ -43,6 +43,18 @@ Charticulator's user interface consists of the following components:
 
 {% include image.html src="/images/docs/ui-components.png" alt="User interface" %}
 
+You can customize the position, size, and docking status of the three components: *Glyph Editor*, *Layers Panel*, and *Attributes Panel*. Click the dock status icon on the top right corner of each view will toggle its docking status. When the view is undocked, you can change its position and size.
+
+{% include image.html src="/images/docs/floating-panels.png" alt="Floating Panels" center="true" width="450px" %}
+
+
+<h3>Help Menu</h3>
+
+Click the help icon on the top right corner will provide you with the links to several resources. You can come back to this Getting Started page, go to the <a href="{{ '/gallery/index.html' | relativize_url }}">Example gallery</a>, <a href="https://github.com/Microsoft/charticulator/issues/new">create an issue</a> in our github repository, visit the <a href="https://charticulator.com">Charticulator main website</a>, and <a href="mailto:charticulator@microsoft.com">contact us</a> via email.
+
+{% include image.html src="/images/docs/help.png" alt="Help Menu" center="true" %}
+
+
 
 <h2 id="preparing-data">Preparing Data</h2>
 
@@ -99,12 +111,13 @@ Charticulator expects the nodes table to contain an `id` column and the links ta
 
 <h2 id="loading-data">Loading Data</h2>
 
-When you launch Charticulator, it automatically invokes the "New" chart command. Because you need to load data in order to create a chart, the New chart panel let's you choose the data files. You can click the button or drag a CSV file into the button area to open the data file. Once you choose the data file, Charticulator previews the top 5 rows.
+When you launch Charticulator, it automatically invokes the "New" chart command. Because you need to load data in order to create a chart, the New chart panel let's you choose the data files. You can click the button or drag a CSV file into the button area to open the data file. 
 
 {% include image.html src="/images/docs/import-data.png" alt="Import Data" %}
 
+Once you choose the data file, Charticulator previews the top five rows.
 
-
+{% include image.html src="/images/docs/import-data-preview.png" alt="Import Data Preview" %}
 
 Now you are ready to <a href="{{ '/docs/user-interaction.html' | relativize_url }}">create a chart with Charticulator</a> and follow along with our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>.
 Also note that each chart in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> has an associated video of its creation process.

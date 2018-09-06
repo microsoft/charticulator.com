@@ -5,6 +5,7 @@ sections:
     - [Interaction, interaction]
     - [Layout Composition, layout-composition]
     - [Data-Driven Guides, data-driven-guides]
+    - [Chart Output, chart-output]
 ---
 
 In contrast to existing chart creation tools, Charticulator allows you to interactively specify a chart's layout. It automatically places glyphs based on your layout specification. Like other chart creation tools, Charticulator allows you to interactively style individual chart elements such as size, color, font, etc.
@@ -12,14 +13,24 @@ In this tutorial, we describe the set of interactions used to create a chart in 
 
 On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutorial.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top; filter: opacity(60%);" /> button below will reveal the corresponding tutorial.
 
+
 <h2 id="interaction">Interaction</h2>
 
 <h3>Adding a Mark (to a Glyph)</h3>
-To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
+Charticulator supports five types of marks: Shape, Symbol, Line, Text, and Image. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
+
+Charticulator now supports three types of shapes: rectangle, oval, and triangle. You need to select the desried shape **before** adding it to the *Glyph Editor*. 
+
+{% include image.html src="/images/docs/marks.png" alt="Makrs and Symbols" width="200px" center="1" %}
 
 To place the mark at a specific location, you can click the mark to activate it and click or drag within the *Glyph Editor*, depending on the mark type. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="18.00,21.09" openTutorial="tutorial3" %})
 
 Guides can be added to a glyph from the *Toolbar* via the same interaction. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="13.00,14.99" openTutorial="tutorial5" %})
+
+
+<h3>Changing a Symbol</h3>
+Charticulator supports seven types of symbols: circle, cross, diamond, square, star, triangle, and wye. You can change the symbol type **after** you added the symbol mark to the *Glyph Editor*.
+{% include image.html src="/images/docs/symbols.png" alt="Makrs and Symbols" width="200px" center="1" %}
 
 
 <h3>Binding Data</h3>
@@ -28,6 +39,13 @@ You can drag a data column from the *Dataset Panel* and drop it into dropzones i
 {% include image.html src="/images/docs/dropzones.png" alt="Dropzones" width="400px" center="true" %}
 
 You can also select the data column from data binding popup panels in the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="47.60,50.65" openTutorial="tutorial5" %})
+
+
+<h3>Text Formatting</h3>
+
+Charticulator now allows for a simple formatting for the text attribute. For example, when you bind a numerical variable (called `Share`) to the text attribute of a text mark, the default text string is "${Share}{.1f}", where {.1f} indicates one number is shown past the decimal point. If you want to add a percentage sign (%) after the `Share` value, you can change the text string to "${Share}{.1f}%".
+
+The dollar symbol ($) is reserved to specify the data column name. Therefore, if you want to include a dollar sign to the string, you need to preprend the balckslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal poinot, the text string should be "\\\$${Price}{.2f}".
 
 
 <h3>Specifying Constraints</h3>
@@ -59,9 +77,12 @@ For attributes that are bound to data, Charticulator uses a scale to determine h
 Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type. You can add a lenged to the chart by clicking on the "Add Legend" button from a scales panel. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.50" openTutorial="tutorial4" %})
 
 <h3>Data-Driven Visibility</h3>
-Charticulator also supports *data-driven visibility*; as the name implies, the visibility of marks is determined by data values. Clicking on the “Conditioned by” button in the  Visibility attribute invokes a popup panel, where you can set a filter via a set of checkboxes. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="49.50,57.00" openTutorial="tutorial2" %})
+Charticulator also supports *data-driven visibility*; as the name implies, the visibility of marks is determined by data values. Clicking on the “Conditioned by” button in the Visibility attribute invokes a popup panel, where you can set a filter. For the categorical variables, you can set a filter via a set of checkboxes. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="49.50,57.00" openTutorial="tutorial2" %}) 
 
-{% include image.html src="/images/docs/conditional-visibility.png" alt="Conditional Visibility" width="400px" center="true" %}
+{% include image.html src="/images/docs/cond-visibility-cat.png" alt="Conditional Visibility for Categorical Variables" width="400px" center="true" %}
+
+For the numberical variables, you can specify a simple boolean query (e.g., Count > 0).
+{% include image.html src="/images/docs/cond-visibility-num.png" alt="Conditional Visibility for Numerical Variables" width="400px" center="true" %}
 
 
 <h2 id="layout-composition">Layout Composition</h2>
@@ -91,3 +112,18 @@ Charticulator suppors three coordinate systems: Cartesian, Polar, and Custom cur
 A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). A Data-driven guide can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. To learn more about data-driven guides, please refer to <a href="http://ddg.namwkim.org/" target="_blank">the work of Kim et al (2016)</a>. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %})
 
 Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
+
+
+<h2 id="chart-output">Chart Output</h2>
+
+You can export chart designs as images in PNG and SVG format.
+
+{% include image.html src="/images/docs/export-image.png" alt="Export as Image" %}
+
+You can save chart designs to the 'My Charts' list. Please note that your data and your charts **stays local** in your browser. 
+
+{% include image.html src="/images/docs/save-chart.png" alt="Save to My Charts" width="500px" center="1" %}
+
+You can open the saved chart from the 'My Charts' list. Click the Open icon from the main toolbar to see the 'My Charts' list.
+
+{% include image.html src="/images/docs/open-chart.png" alt="Save to My Charts" width="500px" center="1" %}
