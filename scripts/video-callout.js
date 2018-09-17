@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 function displayVideoCallout(src, timeRange, openTutorial) {
     var timeStart = +timeRange.split(",")[0];
     var timeEnd = +timeRange.split(",")[1];
