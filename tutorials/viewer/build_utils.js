@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
 // Nodejs version 6.0+
 var fs = require("fs-extra");
 var jsyaml = require("js-yaml");
