@@ -28,7 +28,7 @@ layout: default
 {% if page.video %}
 <h2>Creation Process</h2>
 <p class="gallery-video">
-    <video controls="controls" preload="auto">
+    <video controls="controls" preload="auto" onplay="trackVideoPlay({ name: '{{ page.title }}', type: 'gallery', url: '{{ page.video }}' })">
         <source src="{{ page.video | cdn_url }}" type="video/mp4" />
     </video>
 </p>

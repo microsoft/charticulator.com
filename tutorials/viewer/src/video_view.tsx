@@ -6,6 +6,7 @@ import * as d3 from "d3";
 import * as Hammer from "hammerjs";
 import * as R from "./resources";
 import { classNames } from "./utils";
+import { trackEvent } from "./telemetry";
 
 function zeroPadding(s: string, length: number) {
     while (s.length < length) {
@@ -13,6 +14,7 @@ function zeroPadding(s: string, length: number) {
     }
     return s;
 }
+
 
 function formatTimestamp(ts: number) {
     let total_seconds = Math.floor(ts);

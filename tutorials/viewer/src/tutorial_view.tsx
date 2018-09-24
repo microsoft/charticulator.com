@@ -10,6 +10,7 @@ import { VideoView } from "./video_view";
 import { TutorialCaption, TutorialMetadata } from "./data";
 import { classNames } from "./utils";
 import * as marked from "marked";
+import { trackEvent } from "./telemetry";
 
 marked.setOptions({
     smartypants: true
@@ -131,6 +132,7 @@ export class TutorialView extends React.Component<TutorialViewProps, TutorialVie
     }
 
     public render() {
+        const { tutorial } = this.props;
         return (
             <div
                 className="charticulator__tutorial-view"
@@ -142,7 +144,7 @@ export class TutorialView extends React.Component<TutorialViewProps, TutorialVie
                 >
                     <VideoView
                         ref={(e) => this.videoView = e}
-                        source={this.props.tutorial.videoSource}
+                        source={tutorial.videoSource}
                         width={this.props.width - 440}
                         height={(this.props.height - 40)}
                         renderTimeAxis={this.renderTimeAxis.bind(this)}
@@ -151,6 +153,12 @@ export class TutorialView extends React.Component<TutorialViewProps, TutorialVie
                         }}
                         onPlay={() => {
                             let index = this.getCaptionAtTimestamp(this.videoView.time);
+                            trackEvent("play-video", {
+                                type: "tutorial",
+                                name: tutorial.name || "Unknown",
+                                url: tutorial.videoSource.mp4 || tutorial.videoSource.webm,
+                                index,
+                            });
                             this.setState({
                                 currentCaptionIndex: index,
                                 keepCurrentInView: true
@@ -166,7 +174,7 @@ export class TutorialView extends React.Component<TutorialViewProps, TutorialVie
                         this.setState({ keepCurrentInView: false });
                     }}
                 >
-                    {this.props.tutorial.captions.map((caption, index) => (
+                    {tutorial.captions.map((caption, index) => (
                         <CaptionView
                             key={index}
                             caption={caption}

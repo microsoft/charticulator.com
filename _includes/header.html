@@ -26,7 +26,7 @@
           <a class="page-link" href="{{ '/gallery/index.html' | relativize_url }}">Gallery</a>
           <a class="page-link" href="{{ '/docs/getting-started.html' | relativize_url }}">Getting Started</a>
           <a class="page-link" href="{{ '/about.html' | relativize_url }}">About</a>
-          <a class="page-link btn-launch" href="{{ '/app/index.html' | relativize_url }}" role="button">Launch</a>
+          <a class="page-link btn-launch" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">Launch</a>
         </div>
       </nav>
     {% endif %}
