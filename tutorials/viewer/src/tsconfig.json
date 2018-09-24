@@ -8,6 +8,7 @@
         "moduleResolution": "node",
         "target": "es5",
         "jsx": "react",
+        "lib": ["es5", "es6", "dom"],
         "noImplicitAny": true,
         "sourceMap": true
     }
