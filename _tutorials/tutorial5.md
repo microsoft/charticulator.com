@@ -13,7 +13,7 @@ tutorial:
 
         Boston weather data collected from the National Centers for Environmental Information.
 
-        In this tutorial, we create a radial chart showing the temperature and precipitation in Boston for a year.
+        In this tutorial, we create a radial chart showing the temperature and precipitation in Boston over the course of a year.
 
     - section: |
         # Create a Data-Driven Guide
@@ -34,7 +34,7 @@ tutorial:
     - timeBegin: 8.09
       timeEnd: 12.31
       text: |
-        Add a line mark, anchoring from the minimum tempearture to the maximum temperature
+        Add a line mark, anchored between the maximum tempearture and the minimum temperature
 
     - section: |
         # Arrange the Glyphs in a Radial Layout
@@ -55,7 +55,7 @@ tutorial:
     - timeBegin: 17.90
       timeEnd: 28.83
       text: |
-        Map `Avg. Temperature` to the line color and configure the color scale for temperature
+        Map `Avg. Temperature` to the line stroke color and select a Spectral gradient
 
     - timeBegin: 28.83
       timeEnd: 35.07
@@ -70,17 +70,17 @@ tutorial:
     - timeBegin: 35.07
       timeEnd: 45.90
       text: |
-        Add a circle mark to the glyph, anchoring to the average temperature
+        Add a circle mark to the glyph anchored to the average temperature
 
     - timeBegin: 45.90
       timeEnd: 55.20
       text: |
-        Map `Precipitation` to the circle size and set the range of the size to 3000
+        Map `Precipitation` to the circle size and set the end of the size range to 3000
 
     - timeBegin: 55.20
       timeEnd: 67.70
       text: |
-        Set the color of circles to light Blue
+        Set the color of circles to light blue and set the opacity to 0.2
 
     - section: |
         # Style the Chart
@@ -93,12 +93,12 @@ tutorial:
     - timeBegin: 76.70
       timeEnd: 84.27
       text: |
-        Anchor the top of the text to the center of the chart and adjust the top margin of the chart
+        Anchor the top of the Title text to the center of the chart
 
     - timeBegin: 84.27
       timeEnd: 94.10
       text: |
-        Change the font family and font color
+        Change the font family and font color of the Title text
 
     - section: |
         # Finalize the Chart

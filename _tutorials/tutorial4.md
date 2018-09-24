@@ -11,7 +11,7 @@ tutorial:
     - section: |
         # Dataset & Chart
 
-        A set of edible mushrooms sampled from the UCI mushroom dataset.
+        A set of edible mushrooms sampled from the UC Irvine Mushroom dataset.
 
         In this tutorial, we create a chart displaying 200 mushrooms, grouped by their odor and cap surface characteristics.
 
@@ -38,7 +38,7 @@ tutorial:
     - timeBegin: 14.69
       timeEnd: 18.29
       text: |
-        Set the stroke color of the cricle to White
+        Set the stroke color of the circle mark to White
 
     - section: |
         # Group the Glyphs
@@ -56,7 +56,7 @@ tutorial:
     - timeBegin: 30.90
       timeEnd: 33.83
       text: |
-        Adjust the left margin of the chart to accommodate the text
+        Adjust the left margin of the chart to accommodate the Y axis tick labels
 
     - section: |
         # Finalize the Chart

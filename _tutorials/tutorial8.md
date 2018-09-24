@@ -13,7 +13,7 @@ tutorial:
 
         Boston weather data collected from the National Centers for Environmental Information.
 
-        In this tutorial, we export the monthly radial chart as a Power BI Custom visual and import it to Power BI.
+        In this tutorial, we use the result of [Tutorial 7](tutorial7.html) and export the monthly radial chart as a Power BI custom visual, which we import in Power BI.
 
     - section: |
         # Export a Chart Design as Power BI Custom Visual
@@ -21,12 +21,12 @@ tutorial:
     - timeBegin: 0.00
       timeEnd: 2.27
       text: |
-        Selecte the Charticulator Template option
+        Select the Power BI Custom Visual option
 
     - timeBegin: 2.27
       timeEnd: 4.69
       text: |
-        Adjust the options for the Axes and Scales
+        Adjust the options for Axes and Scales
 
     - timeBegin: 4.69
       timeEnd: 16.00
@@ -44,12 +44,12 @@ tutorial:
     - timeBegin: 26.99
       timeEnd: 31.97
       text: |
-        Add the custom visual to the canvas and resize the chart
+        Add the custom visual to the canvas and resize it
 
     - timeBegin: 31.97
       timeEnd: 48.00
       text: |
-        Configure the data mapping
+        Populate the custom visual's data fields
 
     - section: |
         # Add a Slicer for Month
@@ -62,6 +62,6 @@ tutorial:
     - timeBegin: 52.70
       timeEnd: 61.00
       text: |
-        Click several months in the slicer to see how it updates the chart
+        Click several months in the slicer to see how it updates the custom visual
 
 ---

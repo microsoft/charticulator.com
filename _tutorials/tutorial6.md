@@ -44,12 +44,12 @@ tutorial:
     - timeBegin: 26.38
       timeEnd: 33.77
       text: |
-        Adjust the circle stroke to Black with the opacity of 0.7
+        Set the circle stroke to Black with an opacity of 0.7
 
     - timeBegin: 33.77
       timeEnd: 40.00
       text: |
-        Adjust the right margin of the chart
+        Adjust the right margin of the chart to accommodate the legend
 
     - section: |
         # Finalize the Chart

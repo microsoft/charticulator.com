@@ -13,7 +13,7 @@ tutorial:
 
         Boston weather data collected from the National Centers for Environmental Information.
 
-        In this tutorial, we create a radial chart showing the temperature in Boston for January 2015 and save it as a Charticulator Template.
+        In this tutorial wee create a radial chart showing the temperature in Boston for January 2015 and save it as a Charticulator Template.
 
     - section: |
         # Create a Data-Driven Guide
@@ -29,12 +29,12 @@ tutorial:
     - timeBegin: 7.00
       timeEnd: 11.00
       text: |
-        Add a shape mark, anchoring from the minimum tempearture to the maximum temperature
+        Add a shape mark, anchoring from the maximum tempearture to the minimum temperature
 
     - timeBegin: 11.00
       timeEnd: 22.09
       text: |
-        Map `Avg. Temperature` to the rectangle color and configure the color scale for temperature; Change the shape to Ellipse
+        Map `Avg. Temperature` to the rectangle color, select the Spectral color palette, and adjust its domain; Change the shape of the mark to an Ellipse
 
     - section: |
         # Arrange the Glyphs in a Radial Layout
@@ -52,7 +52,7 @@ tutorial:
     - timeBegin: 29.97
       timeEnd: 41.27
       text: |
-        Configure the range for the data axis, and set the colors of Axis to Gray
+        Configure the range for the data axis, and set the color of the axis to gray
 
     - section: |
         # Style the Chart Title
@@ -86,12 +86,12 @@ tutorial:
     - timeBegin: 63.97
       timeEnd: 66.97
       text: |
-        Selecte the Charticulator Template option
+        Select the Charticulator Template option
 
     - timeBegin: 66.97
       timeEnd: 69.69
       text: |
-        Adjust the options for the Axes and Scales
+        Adjust the options for Axes and Scales
 
     - timeBegin: 69.69
       timeEnd: 80.00

@@ -11,9 +11,9 @@ tutorial:
     - section: |
         # Dataset & Chart
 
-        Study results from the Charticulator reproduction study.
+        Results from a usability study comprised of four tasks.
 
-        In this tutorial, we create a bar chart with error bars, displaying taks completion time from the Charticulator reproduction study.
+        In this tutorial, we display task completion time by creating a bar chart with error bars.
 
     - section: |
         # Set up the Chart
@@ -39,7 +39,7 @@ tutorial:
     - timeBegin: 15.60
       timeEnd: 20.99
       text: |
-        Adjust the range and position of the data axis
+        Adjust the range and position of the X axis
     
     - section: |
         # Create a Bar Glyph with an Error Bar
@@ -52,7 +52,7 @@ tutorial:
     - timeBegin: 24.80
       timeEnd: 27.40
       text: |
-        Set the color of rectangles to light Blue
+        Set the color of the mark to light blue
 
     - timeBegin: 27.40
       timeEnd: 30.49
@@ -80,7 +80,7 @@ tutorial:
     - timeBegin: 55.00
       timeEnd: 61.20
       text: |
-        Set the label's color to White and increase the font size
+        Set the label's color to white and increase the font size
 
     - section: |
         # Adjust the Gap
