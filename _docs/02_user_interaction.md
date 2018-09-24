@@ -5,7 +5,7 @@ sections:
     - [Interaction, interaction]
     - [Layout Composition, layout-composition]
     - [Data-Driven Guides, data-driven-guides]
-    - [Chart Output, chart-output]
+    - [Text Formatting, text-formatting]
 ---
 
 In contrast to existing chart creation tools, Charticulator allows you to interactively specify a chart's layout. It automatically places glyphs based on your layout specification. Like other chart creation tools, Charticulator allows you to interactively style individual chart elements such as size, color, font, etc.
@@ -19,9 +19,11 @@ On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutor
 <h3>Adding a Mark (to a Glyph)</h3>
 Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, and an Image. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
 
-Charticulator now supports three types of shapes: rectangle, oval, and triangle. You need to select the desired shape **before** adding it to the *Glyph Editor*. 
+{% include image.html src="/images/docs/marks-toolbar.png" alt="Marks Toolbar" width="400px" center="1" %}
 
-{% include image.html src="/images/docs/marks.png" alt="Marks and Symbols" width="200px" center="1" %}
+Charticulator now supports three types of shapes: rectangle, oval, and triangle. You can change the shape type from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial7.mp4" timeRange="20.45,22.09" openTutorial="tutorial7" %})
+
+{% include image.html src="/images/docs/shapes.png" alt="Shapes" width="400px" center="1" %}
 
 To place the mark at a specific location, you can click the mark to activate it and click or drag within the *Glyph Editor*, depending on the mark type. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="18.00,21.09" openTutorial="tutorial3" %})
 
@@ -39,13 +41,6 @@ You can drag a data column from the *Dataset Panel* and drop it into dropzones i
 {% include image.html src="/images/docs/dropzones.png" alt="Dropzones" width="400px" center="true" %}
 
 You can also select the data column from data binding popup panels in the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="47.60,50.65" openTutorial="tutorial5" %})
-
-
-<h3>Text Formatting</h3>
-
-Charticulator provides simple formatting for the text attribute. For example, when you bind a numerical variable (called `Share`) to the text attribute of a text mark, the default text string is "${Share}{.1f}", where {.1f} indicates one number is shown past the decimal point. If you want to add a percentage sign (%) after the `Share` value, you can change the text string to "${Share}{.1f}%".
-
-The dollar symbol ($) is reserved to specify the data column name. Therefore, if you want to include a dollar sign to the string, you need to preprend the backslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be "\\\$${Price}{.2f}".
 
 
 <h3>Specifying Constraints</h3>
@@ -73,8 +68,14 @@ For attributes that are bound to data, Charticulator uses a scale to determine h
 
 {% include image.html src="/images/docs/scale-editor.png" alt="Scale Editor" width="400px" center="true" %}
 
+For the image field of the image mark, you can assign an image for each unique data value.
+
+{% include image.html src="/images/docs/image-scale.png" alt="Binding Images with Image Scale" width="500px" center="1" %}
+
+
 <h3>Adding a Legend</h3>
 Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type. You can add a lenged to the chart by clicking on the "Add Legend" button from a scales panel. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.50" openTutorial="tutorial4" %})
+
 
 <h3>Data-Driven Visibility</h3>
 Charticulator also supports *data-driven visibility*, where the visibility of marks is determined by data values. Clicking on the "Conditioned by" button in the Visibility attribute invokes a popup panel, where you can set a filter. For categorical variables, you can set a filter via a set of checkboxes. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="49.50,57.00" openTutorial="tutorial2" %}) 
@@ -84,6 +85,12 @@ Charticulator also supports *data-driven visibility*, where the visibility of ma
 For numberical variables, you can specify a simple boolean query (e.g., Count > 0).
 {% include image.html src="/images/docs/cond-visibility-num.png" alt="Conditional Visibility for Numerical Variables" width="400px" center="true" %}
 
+
+<h3>Axis Sort</h3>
+
+Charticualtor allows you to chanage the order of the X and Y axes labels. You can manually reorder them with a drag-and-drop interaction. You can also reverse the current order of the labels.
+
+{% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
 
 <h2 id="layout-composition">Layout Composition</h2>
 
@@ -114,16 +121,17 @@ A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provid
 Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
 
 
-<h2 id="chart-output">Chart Output</h2>
+<h2 id="text-formatting">Text Formatting</h2>
 
-You can export chart designs as images in PNG and SVG format.
+Charticulator provides simple formatting for the text attribute. When the column name does not contain spaces or special characters, you can refer to a data column using the column name (e.g., Share, Temperature); otherwise, you need to enclose the column name with the grave symbol (\`) (e.g., \`Import Value\`, \`Avg. Temperature\`). Note that the expression is case sensitive.
 
-{% include image.html src="/images/docs/export-image.png" alt="Export as Image" %}
+Charticulator allows you to format the value of an expression with a format specifier, which follows <a href="https://github.com/d3/d3-format#format">d3's syntax</a>. For example, when you bind a numerical variable (called `Mean`) to the text attribute of a text mark, the default text string is "${avg(Mean)}{.1f}", where {.1f} indicates one number is shown past the decimal point. ({% include videocallout.html src="/videos/tutorials/tutorial9.mp4" timeRange="49.00,55.00" openTutorial="tutorial9" %}) When Group by is applied, the data rows come as a list and thus it is necessary to use an aggregation function even if there is only one data row in each group. Charticulator, by default, uses an avg aggregation function in all cases.
+ 
+Charticulator allows you to use simple arithmetic the expression. For example, if you want to convert the `Temperature` value from Celsius to Fahrenheit, you can change the text string to "${avg(Temperature) * 1.8 + 32}".
 
-You can save chart designs to the 'My Charts' list. Please note that your data and your charts **remains local** in your browser. 
+You can combine multiple columns to produce a single text string. Keep in mind that data rows come as a list, so it is necessary to use an aggregation function even if there is only one row. To compute the sum of the two columns, you can use the "${avg(\`Import Value\` + \`Export Value\`)" text string.
 
-{% include image.html src="/images/docs/save-chart.png" alt="Save to My Charts" width="500px" center="1" %}
+You can also combine data values with a regular string. For example, if you want to add a percentage sign (%) after the `Share` value, you can change the text string to "${avg(Share)}{.1f}%". 
+The dollar symbol ($) is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to preprend the backslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be "\\\$${avg(Price)}{.2f}".
 
-You can open the saved chart from the 'My Charts' list. Click the Open icon from the main toolbar to see the 'My Charts' list.
-
-{% include image.html src="/images/docs/open-chart.png" alt="Save to My Charts" width="500px" center="1" %}
+Charticulator currently support two constants---E (=2.718281828…) and PI (=3.1415926…)---as well as common math functions including floor, ceil, exp, log, sin, cos, tan, sqrt, and pow. In addition, it supports common aggregation functions such as min, max, sum, avg, stdev, variance, median, and count. It also allows you to retrive the first and last value with the first and last fuction, respectively.
