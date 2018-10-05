@@ -1,0 +1,10 @@
+---
+title: [the title to be shown at the top of the gallery page]
+image: [the image to display]
+video: [the video documenting the creation process (optional)]
+description: [the description to be shown in the gallery thumbnail]
+dataset: [the id of the dataset being used]
+order: [a number to control where the gallery item should appear (optional)]
+---
+
+[The markdown text to be shown in the gallery page.]
