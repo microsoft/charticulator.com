@@ -2,9 +2,9 @@
 title: Polio Incidence Rates in the United States
 image: /images/gallery/polio.png
 video: /videos/gallery/polio.mp4
-description: Polio incidence rates in the United States
+description: Polio incidence rates in the United States (matrix view)
 dataset: polio_united_states
-order: 16
+order: 14
 ---
 
 This chart displays Polio incidence rates (number of cases per 100,000 people) for each American state.

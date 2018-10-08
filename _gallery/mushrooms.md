@@ -1,6 +1,6 @@
 ---
 title: Edible Mushrooms
-description: Edible mushrooms, sampled from the UCI mushroom dataset
+description: 200 samples of mushrooms
 image: /images/gallery/mushrooms.png
 video: /videos/gallery/mushrooms.mp4
 dataset: mushrooms

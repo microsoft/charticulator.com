@@ -244,3 +244,28 @@
 
     [Millennium Development Goals Indicators](http://mdgs.un.org/unsd/mdg/SeriesDetail.aspx?srid=749)
     from the United Nations Statistics Division. Accessed May. 4th, 2018.
+
+##########################################################################################
+
+- id: ghcn
+  name: Global Historical Climatology Network (GHCN)
+  description: |
+
+    Global Historical Climatology Network-Daily Database. DOI: [10.1175/JTECH-D-11-00103.1](https://doi.org/10.1175/JTECH-D-11-00103.1)
+
+  source: |
+
+    Global Historical Climatology Network-Daily Database. [doi:10.1175/JTECH-D-11-00103.1](https://doi.org/10.1175/JTECH-D-11-00103.1)
+
+##########################################################################################
+
+- id: iucn_red_list
+  name:
+  description: |
+
+    https://en.wikipedia.org/wiki/IUCN_Red_List
+
+  source: |
+
+    Data retrieved from [Wikipedia](https://commons.wikimedia.org/wiki/File:IUCN_Red_List_2007.svg),
+    originally from [IUCN Red List](http://www.iucnredlist.org/info/stats), on 17:32, 14 February 2009 (UTC). Total number of species from Table 1. Number of species in VU, EN and CR from Table 2
