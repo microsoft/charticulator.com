@@ -8,7 +8,7 @@ sections:
     - [Loading Data, loading-data]
 ---
 
-This page describes four things that you will need to learn in order to use Charticulator.
+This page describes four things that you need to learn in order to use Charticulator.
 
 <h2 id="terminology">Terminology</h2>
 
@@ -115,9 +115,9 @@ When you launch Charticulator, it automatically invokes the "New" chart command.
 
 {% include image.html src="/images/docs/import-data.png" alt="Import Data" %}
 
-Once you choose the data file, Charticulator allows you to preview its top five rows.
+Once you choose the data file, Charticulator previews its top five rows.
 
 {% include image.html src="/images/docs/import-data-preview.png" alt="Import Data Preview" %}
 
 Now you are ready to <a href="{{ '/docs/user-interaction.html' | relativize_url }}">create a chart with Charticulator</a> and follow along with our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>.
-Also note that each chart in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> has an associated video of its creation process.
+Also note that many of the charts in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> have an associated video of their creation process.

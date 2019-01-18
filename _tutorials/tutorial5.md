@@ -1,6 +1,7 @@
 ---
 description: "Boston Weather in a Year"
 image: "/images/tutorials/tutorial5.png"
+order: 5
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial5.mp4"

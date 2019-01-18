@@ -1,6 +1,7 @@
 ---
 description: "200 Samples of Mushrooms"
 image: "/images/tutorials/tutorial4.png"
+order: 4
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial4.mp4"

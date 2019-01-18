@@ -1,6 +1,7 @@
 ---
 description: "Mobile OS Market Share"
 image: "/images/tutorials/tutorial2.png"
+order: 2
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial2.mp4"

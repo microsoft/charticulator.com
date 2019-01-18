@@ -1,6 +1,7 @@
 ---
 description: "Power BI Custom visual"
 image: "/images/tutorials/tutorial8.png"
+order: 8
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial8.mp4"

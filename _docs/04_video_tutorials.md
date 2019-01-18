@@ -6,7 +6,8 @@ permalink: /docs/video-tutorials.html
 Follow along with these step-by-step tutorials as you learn how to use Charticulator.
 
 <div class="gallery">
-    {% for item in site.tutorials %}
+    {% assign tutorials_ordered = site.tutorials | stable_sort: "order" %}
+    {% for item in tutorials_ordered %} 
     <a class="gallery-item" href="{{ item.url | relativize_url }}">
         <div class="el-image" style="background-image: url({{ item.image | thumbnail_image: '540x360^' | relativize_url }})"></div>
         <span class="el-description">{{ item.description | markdownify }}</span>
@@ -14,4 +15,4 @@ Follow along with these step-by-step tutorials as you learn how to use Charticul
     {% endfor %}
 </div>
 
-Also note that each chart in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> has an associated video of its creation process.
+Also note that many of the charts in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> has an associated video of their creation process.

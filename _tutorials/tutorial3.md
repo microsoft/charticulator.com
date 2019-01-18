@@ -1,6 +1,7 @@
 ---
 description: "Character Co-occurrence in Les Misearbles"
 image: "/images/tutorials/tutorial3.png"
+order: 3
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial3.mp4"

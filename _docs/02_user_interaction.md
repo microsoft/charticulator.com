@@ -17,7 +17,7 @@ On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutor
 <h2 id="interaction">Interaction</h2>
 
 <h3>Adding a Mark (to a Glyph)</h3>
-Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, and an Image. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
+Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, and an Icon. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
 
 {% include image.html src="/images/docs/marks-toolbar.png" alt="Marks Toolbar" width="400px" center="1" %}
 
@@ -68,7 +68,7 @@ For attributes that are bound to data, Charticulator uses a scale to determine h
 
 {% include image.html src="/images/docs/scale-editor.png" alt="Scale Editor" width="400px" center="true" %}
 
-For the image field of the image mark, you can assign an image for each unique data value.
+For the image field of the icon mark, you can assign an image for each unique data value. ({% include videocallout.html src="/videos/tutorials/tutorial10.mp4" timeRange="40.61,70.40" openTutorial="tutorial10" %})
 
 {% include image.html src="/images/docs/image-scale.png" alt="Binding Images with Image Scale" width="500px" center="1" %}
 
@@ -86,11 +86,12 @@ For numberical variables, you can specify a simple boolean query (e.g., Count > 
 {% include image.html src="/images/docs/cond-visibility-num.png" alt="Conditional Visibility for Numerical Variables" width="400px" center="true" %}
 
 
-<h3>Axis Sort</h3>
+<h3>Sorting an Axis</h3>
 
 Charticualtor allows you to chanage the order of the X and Y axes labels. You can manually reorder them with a drag-and-drop interaction. You can also reverse the current order of the labels.
 
 {% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
+
 
 <h2 id="layout-composition">Layout Composition</h2>
 
@@ -129,9 +130,12 @@ Charticulator allows you to format the value of an expression with a format spec
  
 Charticulator allows you to use simple arithmetic the expression. For example, if you want to convert the `Temperature` value from Celsius to Fahrenheit, you can change the text string to "${avg(Temperature) * 1.8 + 32}".
 
-You can combine multiple columns to produce a single text string. Keep in mind that data rows come as a list, so it is necessary to use an aggregation function even if there is only one row. To compute the sum of the two columns, you can use the "${avg(\`Import Value\` + \`Export Value\`)" text string.
+You can combine multiple columns to produce a single text string. Keep in mind that data rows come as a list, so it is necessary to use an aggregation function even if there is only one row. To compute the sum of the two columns, you can use the "${avg(\`Import Value\` + \`Export Value\`)}" text string.
 
 You can also combine data values with a regular string. For example, if you want to add a percentage sign (%) after the `Share` value, you can change the text string to "${avg(Share)}{.1f}%". 
-The dollar symbol ($) is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to preprend the backslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be "\\\$${avg(Price)}{.2f}".
+The dollar symbol ($) is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to prepend the backslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be "\\\$${avg(Price)}{.2f}".
 
 Charticulator currently support two constants---E (=2.718281828…) and PI (=3.1415926…)---as well as common math functions including floor, ceil, exp, log, sin, cos, tan, sqrt, and pow. In addition, it supports common aggregation functions such as min, max, sum, avg, stdev, variance, median, and count. It also allows you to retrive the first and last value with the first and last fuction, respectively.
+
+<h3>Formatiing Axis Tick Labels</h3>
+For the Numerical Axis, you can format the axis tick labels by setting the tick format field using a similar format specifier. Because you are using the data bounded to the axis, you should not specify a data column name (with a dollar symbol). For example, to show a percentage for a numerical data, the tick format string should be "{.0%}". If you want to prepend a dollar sign to the tick values with a single number after the decimal point, the tick format string should be "${.1f}".

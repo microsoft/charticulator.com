@@ -1,6 +1,7 @@
 ---
 description: "Bar Chart with Error Bars"
 image: "/images/tutorials/tutorial9.png"
+order: 9
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial9.mp4"

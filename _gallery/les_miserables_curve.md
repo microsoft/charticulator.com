@@ -1,6 +1,6 @@
 ---
 title: "Character co-occurrence in *Les Misérables*"
-description: "Character co-occurrence in *Les Misérables*. Layout along a custom curve."
+description: "Character co-occurrence in *Les Misérables* (A custom curve layout)"
 image: /images/gallery/les_miserables_curve.png
 video: /videos/gallery/les_miserables_curve.mp4
 dataset: les_miserables

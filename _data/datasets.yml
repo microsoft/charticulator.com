@@ -269,3 +269,16 @@
 
     Data retrieved from [Wikipedia](https://commons.wikimedia.org/wiki/File:IUCN_Red_List_2007.svg),
     originally from [IUCN Red List](http://www.iucnredlist.org/info/stats), on 17:32, 14 February 2009 (UTC). Total number of species from Table 1. Number of species in VU, EN and CR from Table 2
+
+##########################################################################################
+
+- id: per_capita_gdp_g7
+  name: Per Capita GDP of G7 Countries in 2018
+
+  description: |
+
+    Per Capita GDP of G7 Countries in 2013
+
+  source: |
+
+    Data is retrieved from [statista](https://www.statista.com/chart/14181/per-capita-gdp-of-g7-countries/).

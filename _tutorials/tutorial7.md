@@ -1,6 +1,7 @@
 ---
 description: "Monthly Weather Radial as a Charticulator Template"
 image: "/images/tutorials/tutorial7.png"
+order: 7
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial7.mp4"

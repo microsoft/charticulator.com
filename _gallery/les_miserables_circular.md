@@ -1,6 +1,6 @@
 ---
 title: "Character co-occurrence in *Les Misérables*"
-description: "Character co-occurrence in *Les Misérables*. Circular layout."
+description: "Character co-occurrence in *Les Misérables* (Circular layout)"
 image: /images/gallery/les_miserables_circular.png
 video: /videos/gallery/les_miserables_circular.mp4
 dataset: les_miserables

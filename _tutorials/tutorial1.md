@@ -1,6 +1,7 @@
 ---
 description: "Radial Bar Chart"
 image: "/images/tutorials/tutorial1.png"
+order: 1
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial1.mp4"

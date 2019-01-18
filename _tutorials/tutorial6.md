@@ -1,6 +1,7 @@
 ---
 description: "Fertility Rate v.s. Life Expectancy"
 image: "/images/tutorials/tutorial6.png"
+order: 6
 tutorial:
   videoSource:
     mp4: "../videos/tutorials/tutorial6.mp4"
