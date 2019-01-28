@@ -7,6 +7,9 @@ dataset: boston_weather
 order: 5
 ---
 
+Here we use Charticulator to create a [Weather Radial](http://www.weather-radials.com/) visualization, designed by Raureif GmbH.
+
 A radial chart displaying the temperature and rainfall in Boston over the course of a year.
 Each line represents a single day's minimum and maximum temperature. Lines are colored by the average temperature.
 The blue circles represents the amount of rainfall.
+
