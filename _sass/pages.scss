@@ -9,6 +9,16 @@ a:hover {
     color: darken($brand-color, 20%);
 }
 
+blockquote {
+  font-size: 1.3em;
+  letter-spacing: 0;
+  footer {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 0.9em;
+  }
+}
+
 :focus {
     outline: 1px solid $color-primary;
     outline-offset: 2px;
@@ -24,6 +34,75 @@ a:hover {
     height: 32px;
     padding: 11px 0;
     vertical-align: top;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.site-header {
+    $header-background: $gray-020;
+
+    background: $header-background;
+    color: white;
+    border-top: 5px solid $header-background;
+    border-bottom: 1px solid $header-background;
+
+    .site-title {
+        color: $gray-200;
+    }
+
+    .site-nav {
+        .page-link {
+            color: $gray-200;
+        }
+    }
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.columns-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 -8px;
+
+    .columns-1 {
+        flex: 1;
+    }
+
+    .columns-2 {
+        flex: 2;
+    }
+
+    .columns-3 {
+        flex: 3;
+    }
+
+    .columns-4 {
+        flex: 4;
+    }
+
+    .columns-5 {
+        flex: 5;
+    }
+
+    .columns-6 {
+        flex: 6;
+    }
+
+    .columns-7 {
+        flex: 7;
+    }
+
+    .columns-8 {
+        flex: 8;
+    }
+
+    & > div {
+        margin: 0 8px;
+        flex-shrink: 0;
+    }
 }
 
 .page-link.btn-launch, a.btn-launch-large {
@@ -42,7 +121,7 @@ a:hover {
         background-color: $brand-color;
         text-decoration: none;
     }
-    
+
     &:focus {
         outline: none;
         box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
@@ -58,27 +137,111 @@ a:hover {
     }
 }
 
+.page-section {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+.content-shade {
+    background: #F0F0F0;
+}
+
+.content-inverted {
+    background: #111111;
+    color: white;
+    padding: 3em 0;
+}
+
 .home-header {
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff;
     text-align: center;
+    padding-top: 180px;
+    padding-bottom: 180px;
     margin-bottom: 40px;
+    margin-top: -30px;
+
+    .el-image {
+        margin-top: 0;
+        margin-bottom: 60px;
+        filter: invert(80%);
+    }
 
     h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .el-description {
-        font-size: 1.6em;
+        font-size: 2.5em;
         font-weight: 300;
         margin-bottom: 40px;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    a, a:visited {
+        color: lighten($brand-color, 20%);
+    }
+
+    a:hover {
+        color: lighten($brand-color, 20%);
+    }
+
+    a.btn-launch-large {
+        color: white;
     }
 
     p {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .el-note {
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: 0px;
+    }
+
+    .el-github {
+        margin-top: 1em;
+    }
+
+    .columns-container {
+        align-items: center;
+    }
+}
+
+.home-section {
+    padding-top: 144px;
+    padding-bottom: 144px;
+
+    img {
+        border-radius: 2px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+    p {
+        color: $gray-120;
+        font-size: 0.9em;
     }
 }
 
@@ -153,6 +316,7 @@ a:hover {
                 width: 80px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             }
+
             margin-left: 1em;
             margin-right: 1em;
         }
@@ -307,6 +471,7 @@ table {
 
 .video-callout-button {
     text-decoration: none;
+
     &:hover, &:active, &:focus {
         text-decoration: none;
     }
@@ -314,6 +479,7 @@ table {
     img {
         filter: opacity(60%);
     }
+
     &:hover, &:active, &:focus {
         img {
             filter: none;

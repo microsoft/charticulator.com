@@ -3,18 +3,100 @@ layout: default
 title: Home
 ---
 
-<a class="img-anchor desktop-fork" href="https://github.com/Microsoft/charticulator" tabindex="0"><img style="position: absolute; top: 5px; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
+<section class="home-header" style="background-image: url({{ '/images/hex-gallery-faded.png' | cdn_url }})">
+  <p class="el-description">
+    Build Custom Visualizations without Programming
+  </p>
+  <p>
+    <a class="btn-launch-large" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">
+      Launch Charticulator
+    </a>
+  </p>
+  <p class="el-note">
+    Charticulator requires the use of a mouse or touch screen.
+  </p>
+  <p class="el-note">
+    Compatatible with
+    <a href="https://www.google.com/chrome/">Google Chrome</a>,
+    <a href="//www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>,
+    and <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.
+  </p>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <p class="el-github">
+    <a class="github-button" href="https://github.com/Microsoft/charticulator" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Microsoft/charticulator on GitHub">Star</a> <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/Microsoft/charticulator/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Microsoft/charticulator on GitHub">Fork</a>
+  </p>
+</section>
 
-<div class="home-header">
-    <h1>Charticulator</h1>
-    <p class="el-description">Interactive Construction of Bespoke Chart Layouts</p>
-    <p><a class="btn-launch-large" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">Launch Charticulator</a></p>
-    <p class="el-note">Charticulator requires the use of a mouse or touch screen.</p>
-    <p class="el-note">Compatatible with <a href="https://www.google.com/chrome/">Google Chrome</a>, <a href="//www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>, and <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.</p>
-    <p class="el-note mobile-fork"><a href="https://github.com/Microsoft/charticulator">Fork the Github repository of this project</a>.</p>
+<section class="page-section home-section">
+  <div class="columns-container">
+    <div class="columns-4">
+      <img src="{{ '/images/fast-forward.gif' | cdn_url }}" />
+    </div>
+    <div class="columns-3" style="text-align: center">
+      <h2>Rapidly Build Visualizations</h2>
+      <p>Charticulator enables you to create custom visualizations with a few clicks</p>
+    </div>
+  </div>
+</section>
+
+<div class="content-shade">
+  <section class="page-section home-section">
+    <div class="columns-container">
+      <div class="columns-3" style="text-align: center">
+        <h2>Infinite Design Possibilities</h2>
+        <p>See more examples in our <a href="gallery/">gallery page</a></p>
+      </div>
+      <div class="columns-4">
+          <img src="{{ '/images/small-multiples.png' | thumbnail_image: '640x480^' | cdn_url }}" />
+        </div>
+    </div>
+  </section>
 </div>
-<p class="home-video">
-    <video style="max-width: 100%" controls preload="auto" poster="{{ '/videos/charticulator-supplemental-poster.png' | cdn_url }}" onplay="trackVideoPlay()">
-        <source src="{{ '/videos/charticulator-supplemental.mp4' | cdn_url }}"></source>
+
+<section class="page-section home-section">
+  <div class="columns-container">
+    <div class="columns-4">
+      <img src="{{ '/images/powerbi-visual.png' | thumbnail_image: '1200x900^' | cdn_url }}" />
+    </div>
+    <div class="columns-3" style="text-align: center">
+      <h2>Export Your Designs as Reusable Templates</h2>
+      <p>Create a design once, and use it in similar scenarios</p>
+    </div>
+  </div>
+</section>
+
+<div class="content-shade">
+  <section class="page-section home-section">
+    <h1 style="text-align: center">What people say about Charticulator</h1>
+    <blockquote>
+      The Charticulator - an amazing way to generate totally new/original/amazing custom visuals for Power BI without
+      writing a single line of code.
+      Fantastic work by the folks at Microsoft Research here.
+      <footer>&mdash;
+        Amir Netz (Technical Fellow at Microsoft, CTO of Power BI & Intelligence Platform) </footer>
+    </blockquote>
+    <div class="columns-container" style="align-items: flex-start;">
+      <div class="columns-3" style="overflow: hidden;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Another <a href="https://twitter.com/hashtag/Charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#Charticulator</a> viz exploring linked bands to create Alluvial/Sankey/Streamgraph/Ribbon type charts. Data set is global suicides by generation from Kaggle.<br><br>.CHART file is in the share for you to explore:<a href="https://t.co/ayBWNxRAQU">https://t.co/ayBWNxRAQU</a> <a href="https://t.co/lvQUL6ILYC">pic.twitter.com/lvQUL6ILYC</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1093245925403705344?ref_src=twsrc%5Etfw">February 6, 2019</a></blockquote>
+      </div>
+      <div class="columns-3" style="overflow: hidden;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/GooglePlay?src=hash&amp;ref_src=twsrc%5Etfw">#GooglePlay</a> app categories using parallel coordinates with <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> and <a href="https://twitter.com/hashtag/PowerBI?src=hash&amp;ref_src=twsrc%5Etfw">#PowerBI</a> . Unfortunatley, charticulator doesn&#39;t support interactive brushing (yet?) which is what makes P-coords so powerful. Used some range slicers instead.<br><br>Interactive PBI:<a href="https://t.co/WffYcurmW7">https://t.co/WffYcurmW7</a> <a href="https://t.co/fCFc0Z9hNE">pic.twitter.com/fCFc0Z9hNE</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1085661423567482880?ref_src=twsrc%5Etfw">January 16, 2019</a></blockquote>
+      </div>
+      <div class="columns-3" style="overflow: hidden;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I just submitted my visual, using Charticulator, for this months <a href="https://twitter.com/hashtag/SWDchallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SWDchallenge</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> <a href="https://t.co/k3Yeg5gKrq">pic.twitter.com/k3Yeg5gKrq</a></p>&mdash; Dennis de Kock (@Kocky) <a href="https://twitter.com/Kocky/status/1081650965193854976?ref_src=twsrc%5Etfw">January 5, 2019</a></blockquote>
+      </div>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </section>
+</div>
+
+<div class="content-inverted">
+  <section class="page-section home-section">
+    <video style="max-width: 100%" controls preload="auto" poster="{{ '/videos/charticulator-supplemental-poster.png' | cdn_url }}"
+      onplay="trackVideoPlay()">
+      <source src="{{ '/videos/charticulator-supplemental.mp4' | cdn_url }}">
+      </source>
     </video>
-</p>
+  </section>
+</div>

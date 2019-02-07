@@ -87,15 +87,17 @@
     font-size: 14px;
 }
 
+
+
 .gallery {
     // text-align: center;
     margin: -10px;
     margin-bottom: $spacing-unit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
 
     &-item {
-        vertical-align: top;
-        display: inline-block;
-        width: 270px;
         margin: 10px;
         border: 1px solid #ddd;
         border-radius: 2px;
@@ -106,8 +108,8 @@
 
         .el-image {
             display: block;
-            width: 270px;
-            height: 180px;
+            width: 100%;
+            padding-bottom: 70%;
             background-size: cover;
             background-position: 0% 0%;
             background-repeat: no-repeat;
@@ -136,5 +138,20 @@
             outline: none;
             box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
         }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
