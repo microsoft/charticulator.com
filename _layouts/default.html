@@ -4,7 +4,7 @@
 
 <body>
   {% include header.html %}
-  <main class="page-content" aria-label="Content">
+  <main class="page-content {% if page.blackfooter %}page-content-blackfooter{% endif %}" aria-label="Content">
     {{ content }}
   </main>
   {% include footer.html %}

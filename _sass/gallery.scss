@@ -61,7 +61,7 @@
 
     margin-bottom: $spacing-unit;
 
-    @include media-query($on-laptop) {
+    @include media-query(900px) {
         display: flex;
         flex-direction: column;
 
@@ -86,8 +86,6 @@
 .p-small {
     font-size: 14px;
 }
-
-
 
 .gallery {
     // text-align: center;
@@ -140,7 +138,6 @@
         }
     }
 }
-
 
 @media (max-width: 900px) {
     .gallery {

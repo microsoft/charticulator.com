@@ -21,12 +21,13 @@
           </span>
         </label>
 
+        {% assign current = page.url | downcase | split: '/' %}
         <div class="trigger">
-          <a class="page-link" href="{{ '/index.html' | relativize_url }}">Home</a>
-          <a class="page-link" href="{{ '/gallery/index.html' | relativize_url }}">Gallery</a>
-          <a class="page-link" href="{{ '/docs/getting-started.html' | relativize_url }}">Getting Started</a>
-          <a class="page-link" href="{{ '/about.html' | relativize_url }}">About</a>
-          <a class="page-link btn-launch" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">Launch</a>
+          <a class="page-link {% unless current[1] %}active{% endunless %}" href="{{ '/index.html' | relativize_url }}">Home</a>
+          <a class="page-link {% if current[1] == 'gallery' %}active{% endif %}" href="{{ '/gallery/index.html' | relativize_url }}">Gallery</a>
+          <a class="page-link {% if current[1] == 'docs' %}active{% endif %}" href="{{ '/docs/getting-started.html' | relativize_url }}">Getting Started</a>
+          <a class="page-link {% if current[1] == 'about.html' %}active{% endif %}" href="{{ '/about.html' | relativize_url }}">About</a>
+          <a class="btn-launch" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">Launch</a>
         </div>
       </nav>
     {% endif %}

@@ -10,13 +10,14 @@ a:hover {
 }
 
 blockquote {
-  font-size: 1.3em;
-  letter-spacing: 0;
-  footer {
-    margin-top: 5px;
-    text-align: right;
-    font-size: 0.9em;
-  }
+    font-size: 1.3em;
+    letter-spacing: 0;
+
+    footer {
+        margin-top: 5px;
+        text-align: right;
+        font-size: 0.9em;
+    }
 }
 
 :focus {
@@ -24,45 +25,120 @@ blockquote {
     outline-offset: 2px;
 }
 
-.site-title {
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.site-title img {
-    height: 32px;
-    padding: 11px 0;
-    vertical-align: top;
-}
-
 h1 {
     font-size: 2em;
 }
 
-.site-header {
-    $header-background: $gray-020;
+$header-background: $gray-020;
+$header-height: 54px;
 
+.site-header {
+    min-height: $header-height;
+    line-height: $header-height;
     background: $header-background;
     color: white;
-    border-top: 5px solid $header-background;
-    border-bottom: 1px solid $header-background;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
 
-    .site-title {
+.site-title {
+    display: inline-block;
+    height: $header-height;
+    line-height: $header-height;
+    vertical-align: top;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &,
+    &:visited {
         color: $gray-200;
     }
 
-    .site-nav {
-        .page-link {
-            color: $gray-200;
+    img {
+        height: 32px;
+        padding: 11px 0;
+        vertical-align: top;
+    }
+}
+
+.site-nav {
+    min-height: $header-height;
+    line-height: $header-height;
+
+    .page-link {
+        display: inline-block;
+        height: $header-height - 2px;
+        line-height: $header-height - 2px;
+        padding-top: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0;
+        color: $gray-200;
+        text-decoration: none;
+        border-bottom: 2px solid $header-background;
+        vertical-align: top;
+        transition: border-color 0.1s linear;
+
+        &:not(:last-child) {
+            margin-right: 1px;
+        }
+
+        &:hover, &.active {
+            border-bottom: 2px solid white;
         }
     }
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    @include media-query($on-palm) {
+        background: $header-background;
+        text-align: left;
+        border-color: $gray-100;
+        min-height: auto;
+
+        .page-link {
+            display: block;
+            border-bottom: none;
+
+            &:hover, &.active {
+                background: $gray-040;
+                border-bottom: none;
+            }
+
+            margin-left: 0;
+            padding-left: 20px;
+            padding-right: 40px;
+        }
+
+        .btn-launch {
+            margin-left: 20px;
+        }
+
+        .menu-icon {
+            > svg path {
+                fill: $gray-200;
+            }
+        }
+    }
+}
+
+.page-content {
+    margin-top: $header-height;
+
+    &-blackfooter {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 .columns-container {
     display: flex;
+    overflow: hidden;
     flex-direction: row;
     align-items: center;
     margin: 0 -8px;
@@ -103,12 +179,26 @@ h1 {
         margin: 0 8px;
         flex-shrink: 0;
     }
+
+    @include media-query($on-palm) {
+        flex-direction: column;
+        margin: 0;
+
+        & > div {
+            margin: 0;
+            width: 100%;
+        }
+    }
 }
 
-.page-link.btn-launch, a.btn-launch-large {
+.btn-launch, a.btn-launch-large {
     background-color: darken($brand-color, 10%);
-    color: white;
-    padding: 10px 20px;
+
+    &, &:visited {
+        color: white;
+    }
+
+    padding: 12px 24px;
     border-radius: 2px;
 
     @include shadow-ambient;
@@ -118,15 +208,27 @@ h1 {
     &:hover {
         @include shadow-focused;
 
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+        color: white;
         background-color: $brand-color;
         text-decoration: none;
     }
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
+        box-shadow: 0 0 0 0.2em darken($brand-color, 10%);
         text-decoration: none;
     }
+}
+
+.btn-launch {
+    display: inline-block;
+    vertical-align: top;
+    height: $header-height - 16px;
+    line-height: $header-height - 16px;
+    margin: 8px 0;
+    padding: 0 20px;
+    margin-left: 10px;
 }
 
 .img-anchor {
@@ -159,19 +261,30 @@ h1 {
     background: #F0F0F0;
 }
 
-.content-inverted {
-    background: #111111;
+@mixin content-inverted {
+    background: $gray-020;
     color: white;
-    padding: 3em 0;
+
+    a, a:visited {
+        color: lighten($brand-color, 20%);
+    }
+
+    a:hover {
+        color: lighten($brand-color, 20%);
+    }
+}
+
+.content-inverted {
+    @include content-inverted;
 }
 
 .home-header {
     background-attachment: fixed;
     background-position-x: center;
     background-position-y: center;
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     color: #ffffff;
     text-align: center;
     padding-top: 180px;
@@ -214,11 +327,34 @@ h1 {
 
     .el-note {
         font-size: 0.8em;
+        font-weight: 300;
         margin-bottom: 0px;
     }
 
+    .el-opensource {
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        font-weight: 300;
+    }
+
     .el-github {
-        margin-top: 1em;
+        margin-top: 0.5em;
+    }
+
+    a.github-button {
+        color: $gray-200;
+        font-size: 0.9em;
+        font-weight: 300;
+        border: 1px solid $gray-200;
+
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            color: $white;
+            border-color: $white;
+        }
+
+        border-radius: 2px;
+        padding: 5px 10px;
     }
 
     .columns-container {
@@ -235,18 +371,46 @@ h1 {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.6em;
         font-weight: 300;
+        border-bottom: 1px solid $brand-color;
     }
 
     p {
         color: $gray-120;
-        font-size: 0.9em;
+    }
+
+    &-description {
+        text-align: left;
+        padding: 2em;
+
+        &.is-right {
+            text-align: right;
+        }
+
+        @include media-query($on-palm) {
+            order: 2;
+
+            &.is-right {
+                text-align: left;
+            }
+
+            h2 {
+                border-bottom: none;
+            }
+        }
     }
 }
 
-.home-video {
-    margin-bottom: 40px;
+.home-quotes {
+    h1 {
+        font-weight: 300;
+    }
+
+    & > blockquote {
+        margin: 3em 0;
+        border-color: lighten($brand-color, 20%);
+    }
 }
 
 .author-list {
@@ -543,4 +707,10 @@ table {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
     }
+}
+
+.site-footer-black {
+    border-top: 1px solid $gray-040;
+
+    @include content-inverted;
 }

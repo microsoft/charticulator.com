@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+blackfooter: true
 ---
 
 <section class="home-header" style="background-image: url({{ '/images/hex-gallery-faded.png' | cdn_url }})">
@@ -21,21 +22,22 @@ title: Home
     <a href="//www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>,
     and <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a>.
   </p>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <p class="el-opensource">
+    Free and Open Source from Microsoft Research
+  </p>
   <p class="el-github">
-    <a class="github-button" href="https://github.com/Microsoft/charticulator" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Microsoft/charticulator on GitHub">Star</a> <!-- Place this tag where you want the button to render. -->
-    <a class="github-button" href="https://github.com/Microsoft/charticulator/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Microsoft/charticulator on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/Microsoft/charticulator" aria-label="Microsoft/charticulator on GitHub">Browser the Source Code</a>
   </p>
 </section>
 
 <section class="page-section home-section">
   <div class="columns-container">
-    <div class="columns-4">
+    <div class="columns-5 home-section-image">
       <img src="{{ '/images/fast-forward.gif' | cdn_url }}" />
     </div>
-    <div class="columns-3" style="text-align: center">
+    <div class="columns-3 home-section-description">
       <h2>Rapidly Build Visualizations</h2>
-      <p>Charticulator enables you to create custom visualizations with a few clicks</p>
+      <p>Charticulator enables you to create custom and expressive visualizations within short amount of time.</p>
     </div>
   </div>
 </section>
@@ -43,11 +45,11 @@ title: Home
 <div class="content-shade">
   <section class="page-section home-section">
     <div class="columns-container">
-      <div class="columns-3" style="text-align: center">
+      <div class="columns-3 home-section-description is-right">
         <h2>Infinite Design Possibilities</h2>
-        <p>See more examples in our <a href="gallery/">gallery page</a></p>
+        <p>Charticulator allows you to form complex visual representations by composing basic shapes.<br />See more examples in our <a href="gallery/">gallery</a>.</p>
       </div>
-      <div class="columns-4">
+      <div class="columns-5 home-section-image">
           <img src="{{ '/images/small-multiples.png' | thumbnail_image: '640x480^' | cdn_url }}" />
         </div>
     </div>
@@ -56,18 +58,18 @@ title: Home
 
 <section class="page-section home-section">
   <div class="columns-container">
-    <div class="columns-4">
+    <div class="columns-5 home-section-image">
       <img src="{{ '/images/powerbi-visual.png' | thumbnail_image: '1200x900^' | cdn_url }}" />
     </div>
-    <div class="columns-3" style="text-align: center">
-      <h2>Export Your Designs as Reusable Templates</h2>
-      <p>Create a design once, and use it in similar scenarios</p>
+    <div class="columns-3 home-section-description">
+      <h2>Export as Reusable Templates</h2>
+      <p>Once you create a visualization, you can export it as a template that can be reused in other tools.</p>
     </div>
   </div>
 </section>
 
 <div class="content-shade">
-  <section class="page-section home-section">
+  <section class="page-section home-section home-quotes">
     <h1 style="text-align: center">What people say about Charticulator</h1>
     <blockquote>
       The Charticulator - an amazing way to generate totally new/original/amazing custom visuals for Power BI without
@@ -76,23 +78,35 @@ title: Home
       <footer>&mdash;
         Amir Netz (Technical Fellow at Microsoft, CTO of Power BI & Intelligence Platform) </footer>
     </blockquote>
+    <h1 style="text-align: center">Made with Charticulator</h1>
     <div class="columns-container" style="align-items: flex-start;">
       <div class="columns-3" style="overflow: hidden;">
         <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Another <a href="https://twitter.com/hashtag/Charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#Charticulator</a> viz exploring linked bands to create Alluvial/Sankey/Streamgraph/Ribbon type charts. Data set is global suicides by generation from Kaggle.<br><br>.CHART file is in the share for you to explore:<a href="https://t.co/ayBWNxRAQU">https://t.co/ayBWNxRAQU</a> <a href="https://t.co/lvQUL6ILYC">pic.twitter.com/lvQUL6ILYC</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1093245925403705344?ref_src=twsrc%5Etfw">February 6, 2019</a></blockquote>
       </div>
       <div class="columns-3" style="overflow: hidden;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I just submitted my visual, using Charticulator, for this months <a href="https://twitter.com/hashtag/SWDchallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SWDchallenge</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> <a href="https://t.co/k3Yeg5gKrq">pic.twitter.com/k3Yeg5gKrq</a></p>&mdash; Dennis de Kock (@Kocky) <a href="https://twitter.com/Kocky/status/1081650965193854976?ref_src=twsrc%5Etfw">January 5, 2019</a></blockquote>
+      </div>
+      <div class="columns-3" style="overflow: hidden;">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Avg Estimated Christmas Spend in US for <a href="https://twitter.com/hashtag/MakeoverMonday?src=hash&amp;ref_src=twsrc%5Etfw">#MakeoverMonday</a> - via <a href="https://twitter.com/hashtag/Charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#Charticulator</a> - <a href="https://t.co/SjJEya1lbz">https://t.co/SjJEya1lbz</a> <br>Unfamiliar new tool to me, so stuck close to original viz <a href="https://twitter.com/VizWizBI?ref_src=twsrc%5Etfw">@VizWizBI</a> <a href="https://twitter.com/TriMyData?ref_src=twsrc%5Etfw">@TriMyData</a> <a href="https://t.co/nQYZ8eYYwy">pic.twitter.com/nQYZ8eYYwy</a></p>&mdash; David Eldersveld (@dataveld) <a href="https://twitter.com/dataveld/status/1076849513158066176?ref_src=twsrc%5Etfw">December 23, 2018</a></blockquote>
+        </div>
+    </div>
+    <!--
+      <div class="columns-3" style="overflow: hidden;">
         <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/GooglePlay?src=hash&amp;ref_src=twsrc%5Etfw">#GooglePlay</a> app categories using parallel coordinates with <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> and <a href="https://twitter.com/hashtag/PowerBI?src=hash&amp;ref_src=twsrc%5Etfw">#PowerBI</a> . Unfortunatley, charticulator doesn&#39;t support interactive brushing (yet?) which is what makes P-coords so powerful. Used some range slicers instead.<br><br>Interactive PBI:<a href="https://t.co/WffYcurmW7">https://t.co/WffYcurmW7</a> <a href="https://t.co/fCFc0Z9hNE">pic.twitter.com/fCFc0Z9hNE</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1085661423567482880?ref_src=twsrc%5Etfw">January 16, 2019</a></blockquote>
       </div>
       <div class="columns-3" style="overflow: hidden;">
-        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I just submitted my visual, using Charticulator, for this months <a href="https://twitter.com/hashtag/SWDchallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SWDchallenge</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> <a href="https://t.co/k3Yeg5gKrq">pic.twitter.com/k3Yeg5gKrq</a></p>&mdash; Dennis de Kock (@Kocky) <a href="https://twitter.com/Kocky/status/1081650965193854976?ref_src=twsrc%5Etfw">January 5, 2019</a></blockquote>
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Latest <a href="https://twitter.com/hashtag/charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#charticulator</a> started as a Willard Brinton tribute...then charticulator took over.<br>Used the global terrorism database:<a href="https://t.co/qqV3Hwu1qQ">https://t.co/qqV3Hwu1qQ</a> <a href="https://t.co/RtjONKnzbz">pic.twitter.com/RtjONKnzbz</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1082526229327052806?ref_src=twsrc%5Etfw">January 8, 2019</a></blockquote>
       </div>
-    </div>
+      <div class="columns-3" style="overflow: hidden;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Was inspired by <a href="https://twitter.com/CarniDC?ref_src=twsrc%5Etfw">@CarniDC</a> book of work so I tried something close. Not perfect but given the time (15- 20 mins) and no need to deal with .JS... I am amazed how easy it was. Again, <a href="https://twitter.com/hashtag/Charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#Charticulator</a> is amazing! Spread the word :)<a href="https://t.co/yEHE6pDyw2">https://t.co/yEHE6pDyw2</a> <a href="https://t.co/zC7W76LFCm">pic.twitter.com/zC7W76LFCm</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1073985244556972032?ref_src=twsrc%5Etfw">December 15, 2018</a></blockquote>
+      </div>
+     -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </section>
 </div>
 
 <div class="content-inverted">
-  <section class="page-section home-section">
+  <section class="page-section home-section home-section-last">
     <video style="max-width: 100%" controls preload="auto" poster="{{ '/videos/charticulator-supplemental-poster.png' | cdn_url }}"
       onplay="trackVideoPlay()">
       <source src="{{ '/videos/charticulator-supplemental.mp4' | cdn_url }}">
