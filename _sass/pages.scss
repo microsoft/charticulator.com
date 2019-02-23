@@ -224,9 +224,9 @@ $header-height: 54px;
 .btn-launch {
     display: inline-block;
     vertical-align: top;
-    height: $header-height - 16px;
-    line-height: $header-height - 16px;
-    margin: 8px 0;
+    height: $header-height - 20px;
+    line-height: $header-height - 20px;
+    margin: 10px 0;
     padding: 0 20px;
     margin-left: 10px;
 }
@@ -279,6 +279,7 @@ $header-height: 54px;
 }
 
 .home-header {
+    background-color: #242424;
     background-attachment: fixed;
     background-position-x: center;
     background-position-y: center;
@@ -373,7 +374,7 @@ $header-height: 54px;
     h2 {
         font-size: 1.6em;
         font-weight: 300;
-        border-bottom: 1px solid $brand-color;
+        border-bottom: 3px solid lighten($brand-color, 20%);
     }
 
     p {
