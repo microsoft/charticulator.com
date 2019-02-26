@@ -403,6 +403,18 @@ $header-height: 54px;
     }
 }
 
+.home-section-image {
+    .el-image {
+        width: 100%;
+        padding-bottom: 56%;
+        background-position: center;
+        background-color: black;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+    }
+}
+
 .home-quotes {
     h1 {
         font-weight: 300;

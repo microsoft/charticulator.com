@@ -6,7 +6,7 @@ blackfooter: true
 
 <section class="home-header" style="background-image: url({{ '/images/hex-gallery-faded.png' | thumbnail_image: '1920x1080^' | cdn_url }})">
   <p class="el-description">
-    Build Custom Visualizations without Programming
+    Create Bespoke Chart Designs without Programming
   </p>
   <p>
     <a class="btn-launch-large" href="{{ '/app/index.html' | relativize_url }}" role="button" onclick="trackAppLaunch()">
@@ -33,11 +33,11 @@ blackfooter: true
 <section class="page-section home-section">
   <div class="columns-container">
     <div class="columns-5 home-section-image">
-      <img src="{{ '/images/fast-forward.gif' | cdn_url }}" />
+      <img src="{{ '/images/fast-forward.gif' | cdn_url }}" alt="Interactive Chart Creation" />
     </div>
     <div class="columns-3 home-section-description">
-      <h2>Rapidly Build Visualizations</h2>
-      <p>Charticulator enables you to create custom and expressive visualizations within short amount of time.</p>
+      <h2>Interactive Chart Creation</h2>
+      <p>Charticulator enables you to create bespoke and reusable chart layouts without writing any code.</p>
     </div>
   </div>
 </section>
@@ -47,11 +47,41 @@ blackfooter: true
     <div class="columns-container">
       <div class="columns-3 home-section-description is-right">
         <h2>Infinite Design Possibilities</h2>
-        <p>Charticulator allows you to form complex visual representations by composing basic shapes.<br />See more examples in our <a href="gallery/">gallery</a>.</p>
+        <p>Charticulator enables you to compose a wide range of visual representations.<br />See more examples in our <a href="gallery/">gallery</a>.</p>
       </div>
       <div class="columns-5 home-section-image">
-          <img src="{{ '/images/small-multiples.png' | thumbnail_image: '640x480^' | cdn_url }}" />
-        </div>
+        <div class="el-image" id="img-slideshow" alt="Infinite Design Possibilities" />
+      </div>
+      <script type="text/javascript">
+        (function() {
+          // Define the slideshow images. Jekyll is going to convert the "{{...}}" syntax to correct urls
+          var imageList = [
+            "{{ '/images/gallery/boston_seattle_weather.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/co2_emission_ranking.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/global_trade_of_natural_resources.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/polio_map_alternative.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/polio_map_small_multiples.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/polio.png' | thumbnail_image: '640x480^' | cdn_url }}",
+            "{{ '/images/gallery/world_greenhouse_gas_emissions.png' | thumbnail_image: '640x480^' | cdn_url }}"
+          ];
+          function randomSwitchImage() {
+            let imageElement = document.getElementById("img-slideshow");
+            let bgImage = imageElement.style.backgroundImage;
+            while(true) {
+              let index = Math.floor(Math.random() * imageList.length);
+              if(index < imageList.length) {
+                let newURL = "url(" + imageList[index] + ")";
+                if(newURL != bgImage) {
+                  imageElement.style.backgroundImage = newURL;
+                  break;
+                }
+              }
+            }
+          }
+          setInterval(randomSwitchImage, 3000);
+          randomSwitchImage();
+        })();
+      </script>
     </div>
   </section>
 </div>
@@ -59,11 +89,11 @@ blackfooter: true
 <section class="page-section home-section">
   <div class="columns-container">
     <div class="columns-5 home-section-image">
-      <img src="{{ '/images/powerbi-visual.png' | thumbnail_image: '1200x900^' | cdn_url }}" />
+      <img src="{{ '/images/powerbi-visual.png' | thumbnail_image: '1200x900^' | cdn_url }}" alt="Reusable Chart Designs" />
     </div>
     <div class="columns-3 home-section-description">
-      <h2>Export as Reusable Templates</h2>
-      <p>Once you create a visualization, you can export it as a template that can be reused in other tools.</p>
+      <h2>Reusable Chart Designs</h2>
+      <p>Charticulator lets you export chart designs into reusable templates including Microsoft Power BI custom visuals.</p>
     </div>
   </div>
 </section>
@@ -78,7 +108,7 @@ blackfooter: true
       <footer>&mdash;
         Amir Netz (Technical Fellow at Microsoft, CTO of Power BI & Intelligence Platform) </footer>
     </blockquote>
-    <h1 style="text-align: center">Made with Charticulator</h1>
+    <h1 style="text-align: center">What people made with Charticulator</h1>
     <div class="columns-container" style="align-items: flex-start;">
       <div class="columns-3" style="overflow: hidden;">
         <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Another <a href="https://twitter.com/hashtag/Charticulator?src=hash&amp;ref_src=twsrc%5Etfw">#Charticulator</a> viz exploring linked bands to create Alluvial/Sankey/Streamgraph/Ribbon type charts. Data set is global suicides by generation from Kaggle.<br><br>.CHART file is in the share for you to explore:<a href="https://t.co/ayBWNxRAQU">https://t.co/ayBWNxRAQU</a> <a href="https://t.co/lvQUL6ILYC">pic.twitter.com/lvQUL6ILYC</a></p>&mdash; Nick Snapp (@Nsnapp) <a href="https://twitter.com/Nsnapp/status/1093245925403705344?ref_src=twsrc%5Etfw">February 6, 2019</a></blockquote>
