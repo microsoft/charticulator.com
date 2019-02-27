@@ -22,7 +22,7 @@ instrumentation_key: ""
 url: "https://charticulator.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Enable CDN when deploying the site.
-cdn_enabled: false
+cdn_enabled: true
 # Configure the CDN endpoint
 cdn_prefix: "https://charticulator.azureedge.net"
 
