@@ -26,7 +26,7 @@ blackfooter: true
     Free and Open Source from Microsoft Research
   </p>
   <p class="el-github">
-    <a class="github-button" href="https://github.com/Microsoft/charticulator" aria-label="Microsoft/charticulator on GitHub">Browser the Source Code</a>
+    <a class="github-button" href="https://github.com/Microsoft/charticulator" aria-label="Microsoft/charticulator on GitHub">Browse the Source Code</a>
   </p>
 </section>
 
@@ -64,21 +64,49 @@ blackfooter: true
             "{{ '/images/gallery/polio.png' | thumbnail_image: '640x480^' | cdn_url }}",
             "{{ '/images/gallery/world_greenhouse_gas_emissions.png' | thumbnail_image: '640x480^' | cdn_url }}"
           ];
+          function switchToImage(img) {
+            let oldElements = Array.from(document.getElementById("img-slideshow").children);
+            let div = document.createElement("div");
+            document.getElementById("img-slideshow").append(div);
+            div.style.backgroundImage = "url(" + img.src + ")";
+            window.getComputedStyle(div).opacity;
+            div.style.opacity = 1;
+            setTimeout(function() {
+              oldElements.forEach(function(e) { e.remove(); });
+            }, 500);
+          }
+          function loadImage(imageURL, callback) {
+            let img = new Image();
+            let isCanceled = false;
+            let timeout = setTimeout(function() {
+              isCanceled = true;
+              callback();
+            }, 5000);
+            img.onload = () => {
+              if(!isCanceled) {
+                clearTimeout(timeout);
+                callback();
+                switchToImage(img);
+              }
+            };
+            img.src = imageURL;
+          }
+          // Switch images randomly
+          let currentImage = null;
           function randomSwitchImage() {
-            let imageElement = document.getElementById("img-slideshow");
-            let bgImage = imageElement.style.backgroundImage;
             while(true) {
               let index = Math.floor(Math.random() * imageList.length);
               if(index < imageList.length) {
-                let newURL = "url(" + imageList[index] + ")";
-                if(newURL != bgImage) {
-                  imageElement.style.backgroundImage = newURL;
+                if(imageList[index] != currentImage) {
+                  currentImage = imageList[index];
+                  loadImage(currentImage, function() {
+                    setTimeout(randomSwitchImage, 3000)
+                  });
                   break;
                 }
               }
             }
           }
-          setInterval(randomSwitchImage, 3000);
           randomSwitchImage();
         })();
       </script>

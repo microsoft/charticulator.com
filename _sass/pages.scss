@@ -336,10 +336,11 @@ $header-height: 54px;
         margin-top: 1.5em;
         margin-bottom: 0;
         font-weight: 300;
+        font-size: 1.1em;
     }
 
     .el-github {
-        margin-top: 0.5em;
+        margin-top: 1em;
     }
 
     a.github-button {
@@ -355,7 +356,7 @@ $header-height: 54px;
         }
 
         border-radius: 2px;
-        padding: 5px 10px;
+        padding: 7px 10px;
     }
 
     .columns-container {
@@ -407,11 +408,20 @@ $header-height: 54px;
     .el-image {
         width: 100%;
         padding-bottom: 56%;
-        background-position: center;
-        background-color: black;
-        background-size: contain;
-        background-repeat: no-repeat;
         border-radius: 2px;
+        position: relative;
+        background-color: black;
+        & > div {
+            background-color: black;
+            border-radius: 2px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+        }
     }
 }
 
