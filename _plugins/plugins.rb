@@ -3,6 +3,8 @@ require 'base64'
 require 'json'
 require 'mini_magick'
 
+$build_timestamp = Time.now.to_i.to_s
+
 module Enumerable
   def stable_sort
     each_with_index.sort { |(x, i), (y, j)|
@@ -26,6 +28,10 @@ module Jekyll
       else
         relativize_url(path)
       end
+    end
+
+    def timestamped_url(url)
+        url + "?v=" + $build_timestamp
     end
 
     # Generate a thumbnail image from a given image, spec is specified in ImageMagick's syntax
