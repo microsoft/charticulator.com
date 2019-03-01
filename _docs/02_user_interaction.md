@@ -9,7 +9,7 @@ sections:
 ---
 
 In contrast to existing chart creation tools, Charticulator allows you to interactively specify a chart's layout. It automatically places glyphs based on your layout specification. Like other chart creation tools, Charticulator allows you to interactively style individual chart elements such as size, color, font, etc.
-In this tutorial, we describe the set of interactions used to create a chart in Charticulator. To see more examples of chart creation with Charticulator, refer to the creation process videos in the gallery as well as our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>. 
+In this tutorial, we describe the set of interactions used to create a chart in Charticulator. To see more examples of chart creation with Charticulator, refer to the creation process videos in the gallery as well as our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>.
 
 On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutorial.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top; filter: opacity(60%);" /> button below will reveal the corresponding tutorial.
 
@@ -78,7 +78,7 @@ Legends visualize the scales used in a chart. Charticulator currently uses a pre
 
 
 <h3>Data-Driven Visibility</h3>
-Charticulator also supports *data-driven visibility*, where the visibility of marks is determined by data values. Clicking on the "Conditioned by" button in the Visibility attribute invokes a popup panel, where you can set a filter. For categorical variables, you can set a filter via a set of checkboxes. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="49.50,57.00" openTutorial="tutorial2" %}) 
+Charticulator also supports *data-driven visibility*, where the visibility of marks is determined by data values. Clicking on the "Conditioned by" button in the Visibility attribute invokes a popup panel, where you can set a filter. For categorical variables, you can set a filter via a set of checkboxes. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="49.50,57.00" openTutorial="tutorial2" %})
 
 {% include image.html src="/images/docs/cond-visibility-cat.png" alt="Conditional Visibility for Categorical Variables" width="400px" center="true" %}
 
@@ -124,18 +124,18 @@ Glyph elements can be snapped to these anchor points by adding layout constraint
 
 <h2 id="text-formatting">Text Formatting</h2>
 
-Charticulator provides simple formatting for the text attribute. When the column name does not contain spaces or special characters, you can refer to a data column using the column name (e.g., Share, Temperature); otherwise, you need to enclose the column name with the grave symbol (\`) (e.g., \`Import Value\`, \`Avg. Temperature\`). Note that the expression is case sensitive.
+Charticulator provides simple formatting for the text attribute. When the column name does not contain spaces or special characters, you can refer to a data column using the column name (e.g., `Share`, `Temperature`); otherwise, you need to enclose the column name with the grave symbol <code>`</code> (e.g., <code>`Import Value`</code>, <code>`Avg. Temperature`</code>). Note that the expression is case sensitive.
 
-Charticulator allows you to format the value of an expression with a format specifier, which follows <a href="https://github.com/d3/d3-format#format">d3's syntax</a>. For example, when you bind a numerical variable (called `Mean`) to the text attribute of a text mark, the default text string is "${avg(Mean)}{.1f}", where {.1f} indicates one number is shown past the decimal point. ({% include videocallout.html src="/videos/tutorials/tutorial9.mp4" timeRange="49.00,55.00" openTutorial="tutorial9" %}) When Group by is applied, the data rows come as a list and thus it is necessary to use an aggregation function even if there is only one data row in each group. Charticulator, by default, uses an avg aggregation function in all cases.
- 
-Charticulator allows you to use simple arithmetic the expression. For example, if you want to convert the `Temperature` value from Celsius to Fahrenheit, you can change the text string to "${avg(Temperature) * 1.8 + 32}".
+Charticulator allows you to format the value of an expression with a format specifier, which follows <a href="https://github.com/d3/d3-format#format">d3's syntax</a>. For example, when you bind a numerical variable (called `Mean`) to the text attribute of a text mark, the default text string is `${avg(Mean)}{.1f}`, where `{.1f}` indicates one number is shown past the decimal point. ({% include videocallout.html src="/videos/tutorials/tutorial9.mp4" timeRange="49.00,55.00" openTutorial="tutorial9" %}) When Group by is applied, the data rows come as a list and thus it is necessary to use an aggregation function even if there is only one data row in each group. Charticulator, by default, uses an avg aggregation function in all cases.
 
-You can combine multiple columns to produce a single text string. Keep in mind that data rows come as a list, so it is necessary to use an aggregation function even if there is only one row. To compute the sum of the two columns, you can use the "${avg(\`Import Value\` + \`Export Value\`)}" text string.
+Charticulator allows you to use simple arithmetic the expression. For example, if you want to convert the `Temperature` value from Celsius to Fahrenheit, you can change the text string to `${avg(Temperature) * 1.8 + 32}`.
 
-You can also combine data values with a regular string. For example, if you want to add a percentage sign (%) after the `Share` value, you can change the text string to "${avg(Share)}{.1f}%". 
-The dollar symbol ($) is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to prepend the backslash symbol (\\). For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be "\\\$${avg(Price)}{.2f}".
+You can combine multiple columns to produce a single text string. Keep in mind that data rows come as a list, so it is necessary to use an aggregation function even if there is only one row. To compute the sum of the two columns, you can use the <code>${avg(`Import Value` + `Export Value`)}</code> text string.
 
-Charticulator currently support two constants---E (=2.718281828…) and PI (=3.1415926…)---as well as common math functions including floor, ceil, exp, log, sin, cos, tan, sqrt, and pow. In addition, it supports common aggregation functions such as min, max, sum, avg, stdev, variance, median, and count. It also allows you to retrive the first and last value with the first and last fuction, respectively.
+You can also combine data values with a regular string. For example, if you want to add a percentage sign `%` after the `Share` value, you can change the text string to `${avg(Share)}{.1f}%`.
+The dollar symbol `$` is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to prepend the backslash symbol `\`. For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be `\$${avg(Price)}{.2f}`.
+
+Charticulator currently support two constants --- `E` (=2.718281828…) and `PI` (=3.1415926…) --- as well as common math functions including `floor`, `ceil`, `exp`, `log`, `sin`, `cos`, `tan`, `sqrt`, and `pow`. In addition, it supports common aggregation functions such as `min`, `max`, `sum`, `avg`, `stdev`, `variance`, `median`, and `count`. It also allows you to retrive the first and last value with the `first` and `last` fuction, respectively.
 
 <h3>Formatiing Axis Tick Labels</h3>
-For the Numerical Axis, you can format the axis tick labels by setting the tick format field using a similar format specifier. Because you are using the data bounded to the axis, you should not specify a data column name (with a dollar symbol). For example, to show a percentage for a numerical data, the tick format string should be "{.0%}". If you want to prepend a dollar sign to the tick values with a single number after the decimal point, the tick format string should be "${.1f}".
+For the Numerical Axis, you can format the axis tick labels by setting the tick format field using a similar format specifier. Because you are using the data bounded to the axis, you should not specify a data column name (with a dollar symbol). For example, to show a percentage for a numerical data, the tick format string should be `{.0%}`. If you want to prepend a dollar sign to the tick values with a single number after the decimal point, the tick format string should be `${.1f}`.
