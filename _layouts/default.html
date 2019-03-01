@@ -4,10 +4,8 @@
 
 <body>
   {% include header.html %}
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
+  <main class="page-content {% if page.blackfooter %}page-content-blackfooter{% endif %}" aria-label="Content">
+    {{ content }}
   </main>
   {% include footer.html %}
   <script type="text/javascript" src="{{ '/scripts/video-callout.js' | relativize_url }}"></script>
