@@ -30,6 +30,8 @@ People
             <div class="el-affiliation">Microsoft Research</div>
         </a>
     </div>
+</div>
+<div class="author-list">
     <div class="author-list-item">
         <a href="https://github.com/natoverse">
             <div class="el-image"><img src="{{ '/images/authors/author_nathan.jpg' | relativize_url }}" alt="Nathan Evans" /></div>
@@ -66,9 +68,12 @@ Publication
     <div class="paper-list-item">
         <div class="paper-thumbnail"><a href="https://www.microsoft.com/en-us/research/uploads/prod/2018/08/Charticulator-InfoVis2018.pdf"><img src="{{ '/images/paper-thumbnail.jpg' | relativize_url }}" alt="Paper Thumbnail" /></a></div>
         <div class="paper-content">
-            <div class="paper-title">Charticulator: Interactive Construction of Bespoke Chart Layouts <span class="paper-link">[<a href="https://www.microsoft.com/en-us/research/uploads/prod/2018/08/Charticulator-InfoVis2018.pdf">PDF</a>]</span></div>
+            <div class="paper-title">
+                Charticulator: Interactive Construction of Bespoke Chart Layouts
+                <span class="paper-link">[<a href="https://www.microsoft.com/en-us/research/uploads/prod/2018/08/Charticulator-InfoVis2018.pdf">PDF</a>]</span>
+            </div>
             <div class="paper-author">Donghao Ren, Bongshin Lee, and Matthew Brehmer</div>
-            <div class="paper-journal">IEEE Transactions on Visualization and Computer Graphics (InfoVis 2018), To appear</div>
+            <div class="paper-journal">IEEE Transactions on Visualization and Computer Graphics (InfoVis 2018), 25 (1), 2019</div>
             <div class="paper-award"><img src="{{ '/images/icons/honorable-mention.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top;" /> Best Paper Honorable Mention Award</div>
         </div>
     </div>
