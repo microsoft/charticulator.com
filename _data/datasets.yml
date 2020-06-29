@@ -274,11 +274,34 @@
 
 - id: per_capita_gdp_g7
   name: Per Capita GDP of G7 Countries in 2018
-
   description: |
 
-    Per Capita GDP of G7 Countries in 2013
+    Per Capita GDP of G7 Countries in 2018
 
   source: |
 
     Data is retrieved from [statista](https://www.statista.com/chart/14181/per-capita-gdp-of-g7-countries/).
+
+##########################################################################################
+
+- id: oecd_population
+  name: Population of OECD Countries in 2018
+  description: |
+
+    Population of OECD Countries in 2018
+
+  source: |
+
+    Data is retrieved from [OECD Data](https://data.oecd.org/pop/population.htm).
+
+##########################################################################################
+
+- id: driving_shifts
+  name: Miles Driven vs. Gas Prices
+
+  description: |
+    Miles driven (per capita) vs. gas prices over the years
+
+  source: |
+
+    Data is retrieved from [Observable's Connected Scatterplot](https://observablehq.com/@d3/connected-scatterplot), which is a recreation of Hannah Fairfield’s [Driving Shifts Into Reverse](https://archive.nytimes.com/www.nytimes.com/imagepages/2010/05/02/business/02metrics.html).
