@@ -30,7 +30,7 @@
     "multirun": "1.0.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "typescript": "^2.8.1",
+    "typescript": "^3.9.7",
     "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
     "yaml-loader": "^0.5.0"
