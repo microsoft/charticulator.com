@@ -93,7 +93,6 @@
 
 - id: nightingale
   name: Nightingale
-
   description: |
 
     Florence Nightingale's data on the *Diagram of the Causes of Mortality in the Army of the East*
@@ -143,7 +142,6 @@
 
 - id: global_trade_of_natural_resources
   name: Global Trade of Natural Resources in 2016
-
   description: |
 
     Global trade of natural resources in 2016; processed to contain only trades of more than $1,000,000,000 in value.
@@ -156,7 +154,6 @@
 
 - id: world_greenhouse_gas_emissions
   name: World Greenhouse Gas Emissions in 2005
-
   description: |
 
     Greenhouse gas emissions by industry sectors and end user area.
@@ -170,7 +167,6 @@
 
 - id: higher_education_vs_obesity
   name: Higher Education v.s. Obesity
-
   description: |
 
     Obesity and higher education rates (BA degree) in the United States in 2016
@@ -210,7 +206,6 @@
 
 - id: china_pm25_aqi
   name: China PM2.5 Air Quality Index
-
   description: |
 
     China PM2.5 Air Quality Index. We averaged and then converted all values to Air Quality Index (AQI) using the Chinese scale (HJ 633-2012).
@@ -223,7 +218,6 @@
 
 - id: food_supply_per_capita
   name: Per Capita Food Supply in 2013
-
   description: |
 
     Food supply in kcal/capita/day. With grand total and percentages.
@@ -298,10 +292,21 @@
 
 - id: driving_shifts
   name: Miles Driven vs. Gas Prices
-
   description: |
     Miles driven (per capita) vs. gas prices over the years
 
   source: |
 
     Data is retrieved from [Observable's Connected Scatterplot](https://observablehq.com/@d3/connected-scatterplot), which is a recreation of Hannah Fairfield’s [Driving Shifts Into Reverse](https://archive.nytimes.com/www.nytimes.com/imagepages/2010/05/02/business/02metrics.html).
+
+##########################################################################################
+
+- id: school_earnings
+  name: Gender Earnings Disparity
+  description: |
+
+    Gender Earnings Disparity -- 10 Years Post-Enrollment
+
+  source: |
+
+    Data is retrieved from [James Curley's GitHub repository](https://gist.github.com/jalapic/03b22e4d5e1cfcacc1ae), which was estimated from a figure.
