@@ -15,4 +15,4 @@ Follow along with these step-by-step tutorials as you learn how to use Charticul
     {% endfor %}
 </div>
 
-Also note that many of the charts in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> has an associated video of their creation process.
+Also note that many of the charts in our <a href="{{ '/gallery/index.html' | relativize_url }}">gallery</a> have an associated video of their creation process.

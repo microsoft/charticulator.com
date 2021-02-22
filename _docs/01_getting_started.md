@@ -33,17 +33,19 @@ Charticulator's user interface consists of the following components:
 
 2. **Toolbar**: widgets for specifying Marks, Links, Guides, Plot Segments, and Scaffolds.
 
-3. **Glyph Editor**: a canvas for specifying the glyph design.
+3. **Chart Canvas**: a canvas for specifying the chart design.
 
-4. **Layers Panel**: listing the contents of the chart and glyph designs.
+4. **Glyph Editor**: a canvas for specifying the glyph design.
 
-5. **Attributes Panel**: widgets for specifying the attributes and data bindings for each layer.
+5. **Layers Panel**: listing the contents of the chart and glyph designs.
 
-6. **Chart Canvas**: a canvas for specifying the chart design.
+6. **Attributes Panel**: widgets for specifying the attributes and data bindings for each layer.
 
+7. **Scales Panel**: listing the scales used in the chart.
+   
 {% include image.html src="/images/docs/ui-components.png" alt="User interface" %}
 
-You can customize the position, size, and docking status of the *Glyph Editor*, *Layers Panel*, and *Attributes Panel*. Click the dock status icon in the top right corner of each view to toggle its docking status. When the view is undocked, you can change its position and size.
+You can customize the position, size, and docking status of the *Glyph Editor*, *Layers Panel*, *Attributes Panel*, and *Scales Panel*. Click the dock status icon in the top right corner of each view to toggle its docking status. When the view is undocked, you can change its position and size.
 
 {% include image.html src="/images/docs/floating-panels.png" alt="Floating Panels" center="true" width="450px" %}
 
@@ -58,7 +60,7 @@ Click the help icon in the top right corner to reveal links to several resources
 
 <h2 id="preparing-data">Preparing Data</h2>
 
-Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Currently, Charticulator supports only the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">"long format" or "narrow format"</a> of a data table. For example, the table below shows (in long form) the maket share of mobile operating systems from one year to the next.
+Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Charticulator is disigned to supports mainly the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">"long format" or "narrow format"</a> of a data table. For example, the table below shows (in long form) the maket share of mobile operating systems from one year to the next.
 
 <table>
 <thead>
