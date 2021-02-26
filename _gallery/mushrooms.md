@@ -3,6 +3,7 @@ title: Edible Mushrooms
 description: 200 samples of mushrooms
 image: /images/gallery/mushrooms.png
 video: /videos/gallery/mushrooms.mp4
+data: /data/mushrooms.csv
 dataset: mushrooms
 order: 19
 ---

@@ -3,6 +3,7 @@ title: "Boston Weather in a Year"
 description: "Boston weather in a year"
 image: /images/gallery/boston_weather.png
 video: /videos/gallery/boston_weather.mp4
+data: /data/boston_weather_2015.csv
 dataset: boston_weather
 order: 5
 ---

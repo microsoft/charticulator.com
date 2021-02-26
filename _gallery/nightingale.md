@@ -3,6 +3,7 @@ title: Causes of Mortality over Time
 description: "Causes of Mortality over time (Reproduction of the Nightingale chart)"
 image: /images/gallery/nightingale.png
 video: /videos/gallery/nightingale.mp4
+data: /data/nightingale.csv
 dataset: nightingale
 order: 4
 ---

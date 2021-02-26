@@ -3,6 +3,7 @@ title: World Population Pyramid of 2017
 image: /images/gallery/world_population_2017.png
 video: /videos/gallery/world_population_2017.mp4
 description: World population pyramid of 2017
+data: world_population_2017.csv
 dataset: world_population_2017
 order: 13
 ---

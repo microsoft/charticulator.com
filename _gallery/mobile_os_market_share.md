@@ -4,6 +4,7 @@ title: Market share of mobile operating systems
 description: Market share of mobile operating systems
 image: /images/gallery/mobile_os_market_share.png
 video: /videos/gallery/mobile_os_market_share.mp4
+data: /data/mobile_os_market_share.csv
 dataset: mobile_os_market_share
 order: 12
 ---

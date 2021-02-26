@@ -290,9 +290,10 @@
 
 ##########################################################################################
 
-- id: driving_shifts
+- id: driving_trends
   name: Miles Driven vs. Gas Prices
   description: |
+
     Miles driven (per capita) vs. gas prices over the years
 
   source: |
@@ -310,3 +311,15 @@
   source: |
 
     Data is retrieved from [James Curley's GitHub repository](https://gist.github.com/jalapic/03b22e4d5e1cfcacc1ae), which was estimated from a figure.
+
+##########################################################################################
+
+- id: fitbit
+  name: Fitbit Activities
+  description: |
+
+    Fitbit-tracked activity data for 2016.
+
+  source: |
+
+    Data collected by the authors.

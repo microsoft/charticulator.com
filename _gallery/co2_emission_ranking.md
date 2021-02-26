@@ -3,6 +3,7 @@ title: "Ranking of Carbon Dioxide Emissions"
 description: "Ranking of carbon dioxide emissions of selected countries"
 image: /images/gallery/co2_emission_ranking.png
 video: /videos/gallery/co2_emission_ranking.mp4
+data: /data/co2_emission_ranking.csv
 dataset: co2_emission_ranking
 order: 3
 ---

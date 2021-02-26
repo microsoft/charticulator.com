@@ -17,7 +17,11 @@ layout: default
                 <div class="el-data-source">
                     <div class="el-data-source-item">
                         <div class="el-label">Data Source</div>
-                        <div class="el-details">{{ item.source | markdownify }}</div>
+                        <div class="el-details">{{ item.source | markdownify }}
+                            {% if page.data %}
+                            <a href="{{page.data}}">Download Dataset (.csv)</a>
+                            {% endif %}        
+                        </div>
                     </div>
                 </div>
             {% endif %}

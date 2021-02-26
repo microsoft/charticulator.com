@@ -3,7 +3,8 @@ title: Miles Driven vs. Gas Prices
 description: "Miles Driven vs. Gas Prices"
 image: /images/gallery/miles_vs_gasprices.png
 video: /videos/gallery/miles_vs_gasprices.mp4
-dataset: driving_shifts
+data: driving_trends.csv
+dataset: driving_trends
 order: 24
 ---
 

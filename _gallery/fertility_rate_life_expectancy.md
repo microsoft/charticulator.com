@@ -3,6 +3,7 @@ title: "Fertility Rate vs. Life Expectancy"
 description: "Fertility rate vs. life expectancy from the Gapminder dataset"
 image: /images/gallery/fertility_rate_vs_life_expectancy.png
 video: /videos/gallery/fertility_rate_life_expectancy.mp4
+data: /data/gapminder.csv
 dataset: gapminder
 order: 22
 ---
