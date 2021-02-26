@@ -44,4 +44,4 @@ To draw a chart with the links between glyphs in Charticulator, you need two dat
    
 {% include image.html src="/images/docs/create-relationship.png" alt="Create relationship" width="600px" center="1" %}
 
-After creting the relationship, do not forget to select both **Don’t summarize** and **Show items with no data** for all columns in the Data and Links sections.
+After creating the relationship, do not forget to select both **Don’t summarize** and **Show items with no data** for all columns in the Data and Links sections.
