@@ -5,7 +5,6 @@ sections:
   - [Replacing Dataset, replacing-dataset]
   - [Chart Output, chart-output]
   - [Nested Chart, nested-chart]
-  - [Power BI Custom Visual, power-bi]
 ---
 
 <h2 id="replacing-dataset">Swap in New Dataset</h2>
@@ -43,9 +42,8 @@ You can export chart designs as a Charticulator Template, which can be loaded as
 {% include image.html src="/images/docs/export-CT.png" alt="Export as Image" %}
 
 <h3>Power BI Custom Visual</h3>
-You can export chart designs as a Power BI Custom Visual (.pbiviz), which can be imported into Power BI. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="0.00,16.00" openTutorial="tutorial8" %}) Note that **not all** chart designs can be exported as a valid custom visual that can be imported into Power BI.
-
-{% include image.html src="/images/docs/export-PBI-CV.png" alt="Export as Power BI Custom Visual" %}
+You can export chart designs as a Power BI Custom Visual (.pbiviz) ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="0.00,16.00" openTutorial="tutorial8" %}), which can be imported into Power BI. Check out how you can <a href="{{ '/docs/using-in-power-bi.html' | relativize_url }}">use the chart design in Power BI</a>. 
+Note that **not all** chart designs can be exported as a valid custom visual that can be imported into Power BI.
 
 <h2 id="nested-chart">Nested Chart</h2>
 Charticulaor allows you to create a <a href="https://en.wikipedia.org/wiki/Small_multiple">small multiple</a>, a series of similar graphs or charts using the same scale and axes, by using a nested chart (or a chart component).
@@ -65,9 +63,3 @@ Unlike the main Charticulator page, the header will have the "Save Nested Chart"
 {% include image.html src="/images/docs/nested-chart-header.png" alt="Nested Chart Header" center=true width="400px" %}
 
 You can swtich back and forth between the main Charticualtor and the one for the nested chart.
-
-<h2 id="power-bi">Power BI Custom Visual</h2>
-
-You can import the chart design, exported as a Power BI Custom Visual, into Power BI. Once its requird data fields are filled, you can see the chart within Power BI. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="32.87,48.00" openTutorial="tutorial8" %}) In addition, the chart reacts to the event from other charts or slicers. For example, you can create a slicer using the Month value of the `DATE` value so that you can interactively choose the desired month to be shown. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="52.70,61.00" openTutorial="tutorial8" %})
-
-{% include image.html src="/images/docs/power-bi.png" alt="Power BI" %}

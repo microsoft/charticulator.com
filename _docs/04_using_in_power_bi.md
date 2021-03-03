@@ -1,12 +1,16 @@
 ---
-title: Power BI Tips
-permalink: /docs/power-bi-tips.html
+title: Using in Power BI
+permalink: /docs/using-in-power-bi.html
 sections:
   - [Don't Summarize, donot-summarize]
   - [Data Order, data-order]
   - [Date vs. Date Hierarchy, date]
   - [Chart with Links, chart-with-links]
 ---
+
+You can import the chart design, exported as a Power BI Custom Visual, into Power BI. Once its requird data fields are filled, you can see the chart within Power BI. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="32.87,48.00" openTutorial="tutorial8" %}) In addition, the chart reacts to the event from other charts or slicers. For example, you can create a slicer using the Month value of the `DATE` value so that you can interactively choose the desired month to be shown. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="52.70,61.00" openTutorial="tutorial8" %})
+
+{% include image.html src="/images/docs/power-bi.png" alt="Power BI" %}
 
 Charticulator’s underlying framework handles data tables in a certain way, expecting data tables are formatted in a specific way. Some of the Power BI’s default behaviors do not satisfy the expectations and cause unwanted results. Here, we explain how to configure the settings in Power BI to meet Charticulator’s expectations.
 
