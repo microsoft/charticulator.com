@@ -3,6 +3,7 @@ title: Global Trade of Natural Resources in 2016
 description: "Global trade of natural resources in 2016"
 image: /images/gallery/global_trade_of_natural_resources.png
 video: /videos/gallery/global_trade_of_natural_resources.mp4
+data: /data/global_resource_trade.zip
 dataset: global_trade_of_natural_resources
 order: 1
 ---

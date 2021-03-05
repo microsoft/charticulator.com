@@ -3,6 +3,7 @@ title: Population of OECD Countries in 2018
 image: /images/gallery/oecd_population_2018.png
 video: /videos/gallery/oecd_population_2018.mp4
 description: Population of OECD countries in 2018
+data: /data/oecd_population_2018.csv
 dataset: oecd_population_2018
 order: 27
 ---

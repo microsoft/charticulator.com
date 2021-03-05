@@ -19,7 +19,7 @@ layout: default
                         <div class="el-label">Data Source</div>
                         <div class="el-details">{{ item.source | markdownify }}
                             {% if page.data %}
-                            <a href="{{page.data}}">Download Dataset (.csv)</a>
+                            <a href="{{ page.data }}">Download Dataset ({{ page.data | slice: -4, 4 }})</a>
                             {% endif %}        
                         </div>
                     </div>

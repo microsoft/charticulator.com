@@ -28,7 +28,7 @@ By default, Charticulator does **not** sort data and handles the data in the ord
 
 <h2 id="date">Date vs. Date Hierarchy</h2>
 
-For the date type data value (e.g., "02/24/2021"), Charticulator automatically extracts its subcomponents (e.g., day, dayOfYear, weekday). On the other hand, Power BI creates a date hierarchy, consisting of Year, Quarter, Month, and Day, and uses the data hierarchy by default. Therefore, to reuse a chart design created with Charticulator in Power BI, you need to select the **Date** menu item.
+For the date type data value (e.g., "02/24/2021"), Charticulator automatically extracts its subcomponents (e.g., day, dayOfYear, weekday). On the other hand, Power BI creates a date hierarchy, consisting of Year, Quarter, Month, and Day, and uses the date hierarchy by default. Therefore, to reuse a chart design created with Charticulator in Power BI, you need to select the **Date** menu item.
 
 {% include image.html src="/images/docs/date.png" alt="Date" width="350px" center="1" %}
 

@@ -48,6 +48,8 @@ You can specify the layout relationship between two objects using anchors and/or
 
 {% include image.html src="/images/docs/anchors-handles.png" alt="Anchors and Handles" width="400px" center="true" %}
 
+To reuse a chart design in Power BI, it is crucial to anchor visual elements to appropriate guides (for both directions). Each of the four corners for the default plot segment is anchored to the intersection of two default guides. When you add additional plot segment or adjust the existing one, do not forget to anchor their four corners to the intersection of two guides.
+
 
 <h3>Creaing a Guide</h3>
 You can create your own guides to facilitate the alignment of elements. To create a guide, click the desired guide (horizontal or vertical) in the *Toolbar* to activate it; subsequently clicking on the *Glyph Editor* or *Chart Canvas* will add the new guide.
@@ -63,8 +65,8 @@ To create a link between glyphs, you must specify the shape (i.e., line or band)
 You can adjust the anchor positions of links directly from the *Chart Canvas*. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="47.49,50.81" openTutorial="tutorial3" %})
 
 
-<h3>Configuring Scales</h3>
-For attributes that are bound to data, Charticulator uses a scale to determine how the data is mapped to visual properties. Scales have their own attributes, and you can edit their attributes by toggling a scales panel from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="7.21,13.50" openTutorial="tutorial4" %})
+<h3>Scales and Legends</h3>
+For attributes that are bound to data, Charticulator uses a scale to determine how the data is mapped to visual properties. Scales are listed in the *Scales Panel* and have their own attributes. You can edit their attributes by toggling a scale view from the *Attributes Panel*. For example, you can change the color mapping for categorical data ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="7.21,13.50" openTutorial="tutorial4" %}) or for numerical data ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="21.40,27.40" openTutorial="tutorial5" %}), and change the range mapping for numeraical data ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="47.91,54.50" openTutorial="tutorial5" %}).
 
 {% include image.html src="/images/docs/scale-editor.png" alt="Scale Editor" width="400px" center="true" %}
 
@@ -72,9 +74,20 @@ For the image field of the icon mark, you can assign an image for each unique da
 
 {% include image.html src="/images/docs/image-scale.png" alt="Binding Images with Image Scale" width="500px" center="1" %}
 
+<p>&nbsp;</p>{: style="line-height: 6pt;" }
+<h4>Adding a legend</h4>{: style="color: darkblue; line-height: 0pt;" }
+Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type: color legend for categorical data; color legend for numerical data; and range legend for numerical data. You can add a lenged to the chart by clicking on the "Add Legend" button from a scale view. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.90" openTutorial="tutorial4" %})
 
-<h3>Adding a Legend</h3>
-Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type. You can add a lenged to the chart by clicking on the "Add Legend" button from a scales panel. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.50" openTutorial="tutorial4" %})
+As for categorical data, you can create a scale and a corresponding legend in two ways. As described above, when you bind a data column to a visual properly, Charticulator automatically creates a scale using data values from the column and allows you to add its legend to the chart. In addition, you can a scale and a corresponding legend using data column names: in this case, the legend is automatically added to the canvas. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="0.55,5.30" openTutorial="tutorial12" %}) You can edit the color mapping by toggling a scale view from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="6.55,16.05" openTutorial="tutorial12" %})
+
+{% include image.html src="/images/docs/legend-column-names.png" alt="Creating a Legend using Column Names" width="700px" center="1" %}
+
+<p>&nbsp;</p>{: style="line-height: 6pt;" }
+<h4>Reusing a scale</h4>{: style="color: darkblue; line-height: 0pt;" }
+Charticulator enables you to reuse an exising scale. You can drag a scale from the *Scales Panel* and drop it into the target zones in the *Attributes Panel*. In addition, Charticulator tries to resue an exising scale automatically, when appropriate. For example, when you bind a `Country` column to the color of text (after biniding it to the color of the corresponding bar), Charticulator reuses the scale created for the bar's fill color.
+
+{% include image.html src="/images/docs/scale-reuse.png" alt="Scale Reuse" width="700px" center="1" %}
+
 
 
 <h3>Data-Driven Visibility</h3>
@@ -87,7 +100,6 @@ For numberical variables, you can specify a simple boolean query (e.g., Count > 
 
 
 <h3>Sorting an Axis</h3>
-
 Charticualtor allows you to chanage the order of the X and Y axes labels. You can manually reorder them with a drag-and-drop interaction. You can also reverse the current order of the labels.
 
 {% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
@@ -101,7 +113,8 @@ By default, a chart begins with a rectangular plot segment and a Cartesian coord
 - A numerical axis positions glyphs according to their numerical values ({% include videocallout.html src="/videos/tutorials/tutorial6.mp4" timeRange="3.40,11.02" openTutorial="tutorial6" %})
 
 The diagram below shows the possible layouts produced from combining scaffolds and axes.
-{% include image.html src="/images/docs/layout-composition.png" alt="Layout Composition" %}
+
+{% include image.html src="/images/docs/layout-composition.png" alt="Layout Composition" width="600px" center="true" %}
 
 <h3>Sub-layouts</h3>
 For categorical axes, Charticulator employs sub-layouts to determine a within-group layout. Charticulator currently supports four types of sub-layouts: horizontal stacking, vertical stacking, grid, and circle-packing. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="26.89,30.90" openTutorial="tutorial4" %})
@@ -109,7 +122,6 @@ For categorical axes, Charticulator employs sub-layouts to determine a within-gr
 {% include image.html src="/images/docs/sublayouts.png" alt="Plot Sublayouts" width="400px" center="true" %}
 
 <h3>Coordinate Systems</h3>
-
 Charticulator suppors three coordinate systems: Cartesian, Polar, and Custom curve. Charticulator morphs mark shapes in the two non-Cartesian systems, and its morphing maintains a precise data binding because the morphing is performed in vector graphics. For example, a rectangle becomes a wedge shape in a polor coordinate system and a custom curve coordinate system. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="4.00,7.03" openTutorial="tutorial1" %})
 
 {% include image.html src="/images/docs/coordinate-systems.png" alt="Three Coordinate Systems" width="450px" center="true" %}
@@ -136,6 +148,7 @@ You can also combine data values with a regular string. For example, if you want
 The dollar symbol `$` is reserved to specify the expression. Therefore, if you want to include a dollar sign to the string, you need to prepend the backslash symbol `\`. For example, to prepend a dollar sign before the `Price` value with two numbers after the decimal point, the text string should be `\$${avg(Price)}{.2f}`.
 
 Charticulator currently support two constants --- `E` (=2.718281828…) and `PI` (=3.1415926…) --- as well as common math functions including `floor`, `ceil`, `exp`, `log`, `sin`, `cos`, `tan`, `sqrt`, and `pow`. In addition, it supports common aggregation functions such as `min`, `max`, `sum`, `avg`, `stdev`, `variance`, `median`, and `count`. It also allows you to retrive the first and last value with the `first` and `last` fuction, respectively.
+
 
 <h3>Formatiing Axis Tick Labels</h3>
 For the Numerical Axis, you can format the axis tick labels by setting the tick format field using a similar format specifier. Because you are using the data bounded to the axis, you should not specify a data column name (with a dollar symbol). For example, to show a percentage for a numerical data, the tick format string should be `{.0%}`. If you want to prepend a dollar sign to the tick values with a single number after the decimal point, the tick format string should be `${.1f}`.

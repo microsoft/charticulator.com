@@ -3,6 +3,7 @@ title: World Greenhouse Gas Emissions
 image: /images/gallery/world_greenhouse_gas_emissions.png
 video: /videos/gallery/world_greenhouse_gas_emissions.mp4
 description: World greenhouse gas emissions
+data: /data/world_greenhouse_gas_emissions.zip
 dataset: world_greenhouse_gas_emissions
 order: 2
 ---
