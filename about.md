@@ -65,19 +65,15 @@ Charticulator is a project from [Microsoft Research](https://www.microsoft.com/e
 
 <div class="author-list">
     <div class="author-list-item">
-        <a href="https://donghaoren.org/">
+        <a href="https://www.linkedin.com/in/donghaoren/">
             <div class="el-image"><img src="{{ '/images/authors/author_donghao.jpg' | relativize_url }}" alt="Donghao Ren" /></div>
             <div class="el-name">Donghao Ren</div>
-            <div class="el-affiliation"><strike>UCSB</strike></div>
-            <div class="el-affiliation">Apple</div>
         </a>
     </div>
     <div class="author-list-item">
-        <a href="https://mattbrehmer.github.io/">
+        <a href="https://www.linkedin.com/in/matthewbrehmer/">
             <div class="el-image"><img src="{{ '/images/authors/author_matt.jpg' | relativize_url }}" alt="Matthew Brehmer" /></div>
             <div class="el-name">Matthew Brehmer</div>
-            <div class="el-affiliation"><strike>Microsoft Research</strike></div>
-            <div class="el-affiliation">Tableau Research</div>
         </a>
     </div>
     <div class="author-list-item">

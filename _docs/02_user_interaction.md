@@ -21,18 +21,15 @@ Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, a
 
 {% include image.html src="/images/docs/marks-toolbar.png" alt="Marks Toolbar" width="400px" center="1" %}
 
-Charticulator now supports three types of shapes: rectangle, oval, and triangle. You can change the shape type from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial7.mp4" timeRange="20.45,22.09" openTutorial="tutorial7" %})
+Charticulator supports three types of shapes: rectangle, oval, and triangle, as well as seven types of symbols: a circle, a cross, a diamond, a square, a star, a triangle, and a wye. You can change the shape type and symbol type from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial7.mp4" timeRange="20.45,22.09" openTutorial="tutorial7" %})
 
-{% include image.html src="/images/docs/shapes.png" alt="Shapes" width="400px" center="1" %}
+{% include image.html src="/images/docs/shapes-symbols.png" alt="Shapes" width="700px" center="1" %}
 
 To place the mark at a specific location, you can click the mark to activate it and click or drag within the *Glyph Editor*, depending on the mark type. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="18.00,21.09" openTutorial="tutorial3" %})
 
 Guides can be added to a glyph from the *Toolbar* via the same interaction. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="13.00,14.99" openTutorial="tutorial5" %})
 
 
-<h3>Changing a Symbol</h3>
-Charticulator supports seven types of symbols: a circle, a cross, a diamond, a square, a star, a triangle, and a wye. You can change the symbol type **after** you added the symbol mark to the *Glyph Editor*.
-{% include image.html src="/images/docs/symbols.png" alt="Makrs and Symbols" width="200px" center="1" %}
 
 
 <h3>Binding Data</h3>
@@ -51,7 +48,7 @@ You can specify the layout relationship between two objects using anchors and/or
 To reuse a chart design in Power BI, it is crucial to anchor visual elements to appropriate guides (for both directions). Each of the four corners for the default plot segment is anchored to the intersection of two default guides. When you add additional plot segment or adjust the existing one, do not forget to anchor their four corners to the intersection of two guides.
 
 
-<h3>Creaing a Guide</h3>
+<h3>Creating a Guide</h3>
 You can create your own guides to facilitate the alignment of elements. To create a guide, click the desired guide (horizontal or vertical) in the *Toolbar* to activate it; subsequently clicking on the *Glyph Editor* or *Chart Canvas* will add the new guide.
 
 {% include image.html src="/images/docs/new-guide.png" width="400px" alt="New Guide" center="true" %}
@@ -78,7 +75,7 @@ For the image field of the icon mark, you can assign an image for each unique da
 <h4>Adding a legend</h4>{: style="color: darkblue; line-height: 0pt;" }
 Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type: color legend for categorical data; color legend for numerical data; and range legend for numerical data. You can add a lenged to the chart by clicking on the "Add Legend" button from a scale view. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.90" openTutorial="tutorial4" %})
 
-As for categorical data, you can create a scale and a corresponding legend in two ways. As described above, when you bind a data column to a visual properly, Charticulator automatically creates a scale using data values from the column and allows you to add its legend to the chart. In addition, you can a scale and a corresponding legend using data column names: in this case, the legend is automatically added to the canvas. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="0.55,5.30" openTutorial="tutorial12" %}) You can edit the color mapping by toggling a scale view from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="6.55,16.05" openTutorial="tutorial12" %})
+As for categorical data, you can create a scale and a corresponding legend in two ways. As described above, when you bind a data column to a visual property, Charticulator automatically creates a scale using data values from the column and allows you to add its legend to the chart. In addition, you can a scale and a corresponding legend using data column names: in this case, the legend is automatically added to the canvas. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="0.55,5.30" openTutorial="tutorial12" %}) You can edit the color mapping by toggling a scale view from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="6.55,16.05" openTutorial="tutorial12" %})
 
 {% include image.html src="/images/docs/legend-column-names.png" alt="Creating a Legend using Column Names" width="700px" center="1" %}
 
@@ -100,7 +97,7 @@ For numberical variables, you can specify a simple boolean query (e.g., Count > 
 
 
 <h3>Sorting an Axis</h3>
-Charticualtor allows you to chanage the order of the X and Y axes labels. You can manually reorder them with a drag-and-drop interaction. You can also reverse the current order of the labels.
+As Charticulator by default handles the data in the order they appear in the table, the default order of the axes labels is determined by how the data is ordered in the table. Therefore, Charticualtor allows you to chanage the order of the X and Y axes labels. You can either automatically order them by data values or manually reorder them with a drag-and-drop interaction. In addition, you can reverse the current order of the labels, or reset to the default order.
 
 {% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
 
@@ -129,9 +126,13 @@ Charticulator suppors three coordinate systems: Cartesian, Polar, and Custom cur
 
 <h2 id="data-driven-guides">Data-Driven Guides</h2>
 
-A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). A Data-driven guide can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. To learn more about data-driven guides, please refer to <a href="http://ddg.namwkim.org/" target="_blank">the work of Kim et al (2016)</a>. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %})
+A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %}) It can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
 
-Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
+A glyph can have multiple data-driven guides. For example, a diverging bar chart has the mark for one data column pointing right or up, and the mark for another data column pointing in the opposite direction (i.e., left or down, respectively). You can create a diverging bar chart by adding two data-driven guides, facing each other
+
+{% include image.html src="/images/docs/data-driven-guides.png" alt="Data-Driven Guides" width="450px" center="true" %}
+
+To learn more about data-driven guides, please refer to <a href="http://ddg.namwkim.org/" target="_blank">the work of Kim et al. (2016)</a>.
 
 
 <h2 id="text-formatting">Text Formatting</h2>

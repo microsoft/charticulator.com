@@ -60,7 +60,10 @@ Click the help icon in the top right corner to reveal links to several resources
 
 <h2 id="preparing-data">Preparing Data</h2>
 
-Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Charticulator is disigned to supports mainly the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">"long format" or "narrow format"</a> of a data table. For example, the table below shows (in long form) the maket share of mobile operating systems from one year to the next.
+Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Charticulator is disigned to support both the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">wide and narrow</a> format of a data table. 
+
+<h3>Narrow</h3>
+The table below shows (in narrow form) the maket share of mobile operating systems from one year to the next.
 
 <table>
 <thead>
@@ -72,19 +75,35 @@ Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-
 <tr><td>2009</td><td>Symbian</td><td>2.5</td></tr>
 <tr><td>2010</td><td>iOS</td><td>40.77</td></tr>
 <tr><td>2010</td><td>Android</td><td>16.97</td></tr>
-<tr><td>2010</td><td>Symbian</td><td>1.19</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+</tbody>
+</table>
+
+
+<h3>Wide</h3>
+The table below shows (in wide form) the world population by gender and age. Becuase a glyph represents one data row, you need to use a <a href="{{ '/docs/user-interaction.html#data-driven-guides' | relativize_url }}">data-driven guide</a> to position multiple marks based on numerical data values in a glyph.
+
+<table>
+<thead>
+<tr><th>Age</th><th>Female</th><th>Male</th></tr>
+</thead>
+<tbody>
+<tr><td>0-4</td><td>327.601</td><td>350.321</td></tr>
+<tr><td>5-9</td><td>316.714</td><td>338.892</td></tr>
+<tr><td>10-14</td><td>301.011</td><td>322.363</td></tr>
+<tr><td>15-19</td><td>288.482</td><td>308.333</td></tr>
+<tr><td>20-24</td><td>287.820</td><td>306.100</td></tr>
 <tr><td>...</td><td>...</td><td>...</td></tr>
 </tbody>
 </table>
 
 
 <h3>Data for Links</h3>
-
 To draw charts with the links between glyphs, you will need two data tables: one for nodes/entities and another for links/relationships between nodes. For example, to draw the arc chart below (character co-ocurrence in Les Miserables), you will need one table for the characters and another for their co-occurrences.
 
 {% include image.html src="/images/gallery/les_miserables_linear.png" alt="Les Miserables Chart" %}
 
-Charticulator expects the nodes table to contain an `id` column and the links table to contain `source_id` and `target_id` columns, which refer to the `id`s in the nodes table, as illustrated below.
+Charticulator expects the nodes table to contain an `id` column and the links table to contain `source_id` and `target_id` columns, which refer to the `id`s in the nodes table, as illustrated below. Note that these column names are **case sensitive**.
 
 <table>
 <thead>
@@ -110,6 +129,7 @@ Charticulator expects the nodes table to contain an `id` column and the links ta
 <tr><td>...</td><td>...</td><td>...</td></tr>
 </tbody>
 </table>
+
 
 <h2 id="loading-data">Loading Data</h2>
 
