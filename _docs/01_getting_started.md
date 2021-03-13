@@ -47,14 +47,14 @@ Charticulator's user interface consists of the following components:
 
 You can customize the position, size, and docking status of the *Glyph Editor*, *Layers Panel*, *Attributes Panel*, and *Scales Panel*. Click the dock status icon in the top right corner of each view to toggle its docking status. When the view is undocked, you can change its position and size.
 
-{% include image.html src="/images/docs/floating-panels.png" alt="Floating Panels" center="true" width="450px" %}
+{% include image.html src="/images/docs/floating-panels.png" alt="Floating Panels" center="true" width="500px" %}
 
 
 <h3>Help Menu</h3>
 
-Click the help icon in the top right corner to reveal links to several resources, including a link to this Getting Started page, the <a href="{{ '/gallery/index.html' | relativize_url }}">Example gallery</a>, a link to <a href="https://github.com/Microsoft/charticulator/issues/new">create an issue</a> in our Github repository, the <a href="https://charticulator.com">Charticulator main website</a>, and a link to <a href="mailto:charticulator@microsoft.com">contact us</a> via email.
+Click the help icon in the top right corner to reveal links to several resources, including a link to this Getting Started page, the <a href="{{ '/gallery/index.html' | relativize_url }}">Example Gallery</a>, a link to <a href="https://github.com/Microsoft/charticulator/issues/new">create an issue</a> in our Github repository, the <a href="https://charticulator.com">Charticulator main website</a>, and a link to <a href="mailto:charticulator@microsoft.com">contact us</a> via email.
 
-{% include image.html src="/images/docs/help.png" alt="Help Menu" center="true" %}
+{% include image.html src="/images/docs/help.png" alt="Help Menu" center="true" width="150px" %}
 
 
 

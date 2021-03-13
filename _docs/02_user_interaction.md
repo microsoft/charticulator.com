@@ -3,8 +3,8 @@ title: Creating Charts
 permalink: /docs/user-interaction.html
 sections:
     - [Interaction, interaction]
-    - [Layout Composition, layout-composition]
     - [Data-Driven Guides, data-driven-guides]
+    - [Layout Composition, layout-composition]
     - [Text Formatting, text-formatting]
 ---
 
@@ -30,14 +30,14 @@ To place the mark at a specific location, you can click the mark to activate it 
 Guides can be added to a glyph from the *Toolbar* via the same interaction. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="13.00,14.99" openTutorial="tutorial5" %})
 
 
-
-
 <h3>Binding Data</h3>
-You can drag a data column from the *Dataset Panel* and drop it into dropzones in the *Glyph Editor*, the *Chart Canvas*, or the *Attributes Panel*. The compatible dropzones will appear (highlighed in blue) once you start dragging a data column. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="2.90,5.20" openTutorial="tutorial2" %})
+You can drag a data column from the *Dataset Panel* and drop it into dropzones in the *Glyph Editor*, the *Chart Canvas*, or the *Attributes Panel*. The compatible dropzones will appear (highlighed in blue) once you start dragging a data column, and then when you move your cursor over a drop target it will be highlighted in orange. ({% include videocallout.html src="/videos/tutorials/tutorial2.mp4" timeRange="2.90,5.20" openTutorial="tutorial2" %})
 
 {% include image.html src="/images/docs/dropzones.png" alt="Dropzones" width="400px" center="true" %}
 
-You can also select the data column from data binding popup panels in the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="47.60,50.65" openTutorial="tutorial5" %})
+You can also select the data column from data binding popup panels in the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial9.mp4" timeRange="48.80,50.90" openTutorial="tutorial9" %})
+
+{% include image.html src="/images/docs/bind-data.png" alt="Bind Data" width="250px" center="true" %}
 
 
 <h3>Specifying Constraints</h3>
@@ -45,7 +45,7 @@ You can specify the layout relationship between two objects using anchors and/or
 
 {% include image.html src="/images/docs/anchors-handles.png" alt="Anchors and Handles" width="400px" center="true" %}
 
-To reuse a chart design in Power BI, it is crucial to anchor visual elements to appropriate guides (for both directions). Each of the four corners for the default plot segment is anchored to the intersection of two default guides. When you add additional plot segment or adjust the existing one, do not forget to anchor their four corners to the intersection of two guides.
+To reuse a chart design in Power BI, it is crucial to anchor visual elements to appropriate guides (for both directions). For example, each of the four corners for the default plot segment is anchored to the intersection of two default guides. When you add additional plot segment or adjust the existing one, do not forget to anchor their four corners to the intersection of two guides.
 
 
 <h3>Creating a Guide</h3>
@@ -80,11 +80,16 @@ As for categorical data, you can create a scale and a corresponding legend in tw
 {% include image.html src="/images/docs/legend-column-names.png" alt="Creating a Legend using Column Names" width="700px" center="1" %}
 
 <p>&nbsp;</p>{: style="line-height: 6pt;" }
+<h4>(Range) Legend vs. Axis for numerical data</h4>{: style="color: darkblue; line-height: 0pt;" }
+When you add a range legend for numerical data, it is positioned along the axis by default, thus looking same as a numerical axis. However, as illustrated below, the legend is for the height (or width) of a glyph while the numerical axis is for the posion of of a glyph.
+
+{% include image.html src="/images/docs/legend-vs-axis.png" alt="Legend vs. Axis" width="600px" center="1" %}
+
+<p>&nbsp;</p>{: style="line-height: 6pt;" }
 <h4>Reusing a scale</h4>{: style="color: darkblue; line-height: 0pt;" }
 Charticulator enables you to reuse an exising scale. You can drag a scale from the *Scales Panel* and drop it into the target zones in the *Attributes Panel*. In addition, Charticulator tries to resue an exising scale automatically, when appropriate. For example, when you bind a `Country` column to the color of text (after biniding it to the color of the corresponding bar), Charticulator reuses the scale created for the bar's fill color.
 
 {% include image.html src="/images/docs/scale-reuse.png" alt="Scale Reuse" width="700px" center="1" %}
-
 
 
 <h3>Data-Driven Visibility</h3>
@@ -100,6 +105,17 @@ For numberical variables, you can specify a simple boolean query (e.g., Count > 
 As Charticulator by default handles the data in the order they appear in the table, the default order of the axes labels is determined by how the data is ordered in the table. Therefore, Charticualtor allows you to chanage the order of the X and Y axes labels. You can either automatically order them by data values or manually reorder them with a drag-and-drop interaction. In addition, you can reverse the current order of the labels, or reset to the default order.
 
 {% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
+
+
+<h2 id="data-driven-guides">Data-Driven Guides</h2>
+
+A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %}) It can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
+
+A glyph can have multiple data-driven guides. For example, a diverging bar chart has the mark for one data column pointing right or up, and the mark for another data column pointing in the opposite direction (i.e., left or down, respectively). You can create a diverging bar chart by adding two data-driven guides, facing each other
+
+{% include image.html src="/images/docs/data-driven-guides.png" alt="Data-Driven Guides" width="450px" center="true" %}
+
+To learn more about data-driven guides, please refer to <a href="http://ddg.namwkim.org/" target="_blank">the work of Kim et al. (2016)</a>.
 
 
 <h2 id="layout-composition">Layout Composition</h2>
@@ -122,17 +138,6 @@ For categorical axes, Charticulator employs sub-layouts to determine a within-gr
 Charticulator suppors three coordinate systems: Cartesian, Polar, and Custom curve. Charticulator morphs mark shapes in the two non-Cartesian systems, and its morphing maintains a precise data binding because the morphing is performed in vector graphics. For example, a rectangle becomes a wedge shape in a polor coordinate system and a custom curve coordinate system. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="4.00,7.03" openTutorial="tutorial1" %})
 
 {% include image.html src="/images/docs/coordinate-systems.png" alt="Three Coordinate Systems" width="450px" center="true" %}
-
-
-<h2 id="data-driven-guides">Data-Driven Guides</h2>
-
-A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %}) It can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
-
-A glyph can have multiple data-driven guides. For example, a diverging bar chart has the mark for one data column pointing right or up, and the mark for another data column pointing in the opposite direction (i.e., left or down, respectively). You can create a diverging bar chart by adding two data-driven guides, facing each other
-
-{% include image.html src="/images/docs/data-driven-guides.png" alt="Data-Driven Guides" width="450px" center="true" %}
-
-To learn more about data-driven guides, please refer to <a href="http://ddg.namwkim.org/" target="_blank">the work of Kim et al. (2016)</a>.
 
 
 <h2 id="text-formatting">Text Formatting</h2>
