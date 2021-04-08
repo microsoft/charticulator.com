@@ -2,13 +2,23 @@
 title: Reusing Charts
 permalink: /docs/reusing-charts.html
 sections:
+  - [Importing Template, importing-template]
   - [Replacing Dataset, replacing-dataset]
   - [Chart Output, chart-output]
   - [Nested Chart, nested-chart]
 ---
 
+You can reuse a chart design for differnt datasets either (1) by importing a Charticulator template to the current dataset or (2) by swapping in a new dataset into an existing Charticualtor design session. 
+
+<h2 id="importing-template">Import a Charticulator Template</h2>
+
+Clicking the <img class="el-icon" src="{{ '/images/icons/icons-import-template.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the toolbar will display a file open dialog so that you can select a template file. If the current dataset has all the data columns used (and thus are required) in the template, having the same column name and data type for every column, Charticulator immediately redraws the chart applying the selected template. Otherwise, Charticulator opens the *Map your data* window, asking you to create mappings between the data columns in the current dataset and those used in the template.
+
+
 <h2 id="replacing-dataset">Swap in New Dataset</h2>
-You can swap in a new dataset into an existing Charticulator session. Clicking a <img class="el-icon" src="{{ '/images/icons/icons-replace.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top; filter: opacity(60%);" /> icon in the Dataset Panel will display a file open dialog so that you can select a new dataset file. Note that the new file should have the same structure --- the same number of columns as well as same column name and data type for every column.
+
+Clicking the <img class="el-icon" src="{{ '/images/icons/icons-replace.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the Dataset Panel will display a file open dialog so that you can select a new dataset file. If the new dataset has exactly the same structure --- the same number of columns as well as same column name and data type for every column --- Charticulator immediately redraws the chart once the dataset file is selected. Otherwise, Charticulator opens the *Map your data* window to allow you to create mappings between the data columns used in the current design and those in the new dataset.
+
 
 <h2 id="chart-output">Chart Output</h2>
 
@@ -37,13 +47,14 @@ You can export chart designs as an HTML file.
 {% include image.html src="/images/docs/export-html.png" alt="Export as HTML" %}
 
 <h3>Charticulator Template</h3>
-You can export chart designs as a Charticulator Template, which can be loaded as a chart component to create a nested chart. Once you click the "Charticulator Template" button at the bottom, a template file is created in JSON format. ({% include videocallout.html src="/videos/tutorials/tutorial7.mp4" timeRange="64.67,80.00" openTutorial="tutorial7" %})
+You can export chart designs as a Charticulator Template, which can be (1) emported to apply the chart design or (2) loaded as a chart component to create a nested chart. Once you click the "Charticulator Template" button at the bottom, a template file is created in JSON format. ({% include videocallout.html src="/videos/tutorials/tutorial7.mp4" timeRange="64.67,80.00" openTutorial="tutorial7" %})
 
 {% include image.html src="/images/docs/export-CT.png" alt="Export as Image" %}
 
 <h3>Power BI Custom Visual</h3>
 You can export chart designs as a Power BI Custom Visual (.pbiviz) ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="0.00,16.00" openTutorial="tutorial8" %}), which can be imported into Power BI. Check out how you can <a href="{{ '/docs/using-in-power-bi.html' | relativize_url }}">use the chart design in Power BI</a>. 
 Note that **not all** chart designs can be exported as a valid custom visual that can be imported into Power BI.
+
 
 <h2 id="nested-chart">Nested Chart</h2>
 Charticulaor allows you to create a <a href="https://en.wikipedia.org/wiki/Small_multiple">small multiple</a>, a series of similar graphs or charts using the same scale and axes, by using a nested chart (or a chart component).

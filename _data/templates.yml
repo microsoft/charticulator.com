@@ -1,0 +1,64 @@
+- title: Bubble Chart
+  image: /images/gallery/oecd_population_2018.png
+  path: /templates/bubble_chart.tmplt
+  data: /data/oecd_population_2018.csv
+
+- title: Scatterplot
+  image: /images/gallery/fertility_rate_vs_life_expectancy.png
+  path: /templates/scatterplot.tmplt
+  data: /data/gapminder.csv
+
+- title: Connected Scatterplot
+  image: /images/gallery/miles_vs_gasprices.png
+  path: /templates/connected_scatterplot.tmplt
+  data: /data/driving_trends.csv
+
+- title: Lollipop Chart
+  image: /images/gallery/oecd_population_2018_lollipop.png
+  path: /templates/lollipop_chart.tmplt
+  data: /data/oecd_population_2018.csv
+
+- title: Dumbbell Chart
+  image: /images/gallery/unemployment_gender_gap_g7.png
+  path: /templates/dumbbell_chart.tmplt
+  data: /data/unemployment_gender_gap_g7.csv
+
+- title: Bump Chart
+  image: /images/gallery/co2_emission_ranking.png
+  path: /templates/bump_chart.tmplt
+  data: /data/oecd_population_2018.csv
+
+- title: Dot Plot
+  image: /images/gallery/mushrooms.png
+  path: /templates/dot_plot.tmplt
+  data: /data/mushrooms.csv
+
+- title: Peacock Chart
+  image: /images/gallery/steps_by_month.png
+  path: /templates/peachock_chart.tmplt
+  data: /data/steps_by_month.csv
+
+- title: Nightingale Chart
+  image: /images/gallery/nightingale.png
+  path: /templates/nightingale_chart.tmplt
+  data: /data/nightingale.csv
+
+- title: Chord Diagram
+  image: /images/gallery/global_trade_of_natural_resources.png
+  path: /templates/chord_diagram.tmplt
+  data: /data/global_resource_trade.zip
+
+- title: Weather Radial Chart
+  image: /images/gallery/boston_weather.png
+  path: /templates/weather_radial_chart.tmplt
+  data: /data/boston_weather_2015.csv
+
+- title: Spiral Bar Chart
+  image: /images/gallery/fitbit_steps.png
+  path: /templates/spiral_bar_chart.tmplt
+  data: /data/fitbit_activities_2016.csv
+
+- title: Diverging Bar Chart
+  image: /images/gallery/world_population_2017.png
+  path: /templates/diverging_bar_chart.tmplt
+  data: /data/world_population_2017.csv

@@ -2,153 +2,172 @@
 // Licensed under the MIT license.
 
 .gallery-page {
+  display: flex;
+  flex-direction: row;
+
+  &-description {
+    margin-left: 20px;
+
+    .el-data-source {
+      border-top: 1px solid $grey-color-light;
+      padding-top: 10px;
+
+      &-item {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        line-height: 24px;
+
+        .el-label {
+          font-size: 12px;
+          width: 70px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          text-align: right;
+          margin-right: 10px;
+        }
+
+        .el-details {
+          p {
+            margin: 0;
+          }
+
+          ul {
+            margin: 0;
+
+            li {
+              margin: 0;
+            }
+
+            list-style-type: none;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-chart {
+    width: 500px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    img {
+      border-radius: 2px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      width: 100%;
+    }
+  }
+
+  margin-bottom: $spacing-unit;
+
+  @include media-query(900px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     &-description {
-        margin-left: 20px;
-
-        .el-data-source {
-            border-top: 1px solid $grey-color-light;
-            padding-top: 10px;
-
-            &-item {
-                display: flex;
-                flex-direction: row;
-                font-size: 14px;
-                line-height: 24px;
-
-                .el-label {
-                    font-size: 12px;
-                    width: 70px;
-                    flex-shrink: 0;
-                    flex-grow: 0;
-                    text-align: right;
-                    margin-right: 10px;
-                }
-
-                .el-details {
-                    p {
-                        margin: 0;
-                    }
-
-                    ul {
-                        margin: 0;
-
-                        li {
-                            margin: 0;
-                        }
-
-                        list-style-type: none;
-                        margin-left: 0;
-                    }
-                }
-            }
-        }
+      margin-left: 0px;
+      margin-top: $spacing-unit;
     }
 
     &-chart {
-        width: 500px;
-        flex-shrink: 0;
-        flex-grow: 0;
-
-        img {
-            border-radius: 2px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            width: 100%;
-        }
+      width: 100%;
+      max-width: 500px;
     }
-
-    margin-bottom: $spacing-unit;
-
-    @include media-query(900px) {
-        display: flex;
-        flex-direction: column;
-
-        &-description {
-            margin-left: 0px;
-            margin-top: $spacing-unit;
-        }
-
-        &-chart {
-            width: 100%;
-            max-width: 500px;
-        }
-    }
+  }
 }
 
 .gallery-video {
-    video {
-        width: 100%;
-    }
+  video {
+    width: 100%;
+  }
 }
 
 .p-small {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .gallery {
-    // text-align: center;
-    margin: -10px;
-    margin-bottom: $spacing-unit;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  // text-align: center;
+  margin: -10px;
+  margin-bottom: $spacing-unit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+
+  &-item {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
     overflow: hidden;
-
-    &-item {
-        margin: 10px;
-        border: 1px solid #ddd;
-        border-radius: 2px;
-        overflow: hidden;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.1s linear;
-        cursor: pointer;
-
-        .el-image {
-            display: block;
-            width: 100%;
-            padding-bottom: 70%;
-            background-size: cover;
-            background-position: 0% 0%;
-            background-repeat: no-repeat;
-            transition: ease 750ms background-position;
-
-            &:hover {
-                background-position: 100% 100%;
-            }
-        }
-
-        .el-description {
-            text-align: left;
-            font-size: 14px;
-            display: block;
-            padding: 10px;
-            padding-bottom: 0px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        &:hover {
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
-        }
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s linear;
+    &:link {
+      cursor: pointer;
     }
+
+    .el-image {
+      display: block;
+      width: 100%;
+      padding-bottom: 70%;
+      background-size: cover;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      transition: ease 750ms background-position;
+
+      &:hover {
+        background-position: 100% 100%;
+      }
+    }
+
+    .el-description {
+      text-align: left;
+      font-size: 14px;
+      display: block;
+      padding: 10px;
+      padding-bottom: 0px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .el-title {
+      text-align: left;
+      font-size: 14px;
+      display: block;
+      padding: 10px;
+      padding-bottom: 0px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .el-link {
+      text-align: left;
+      font-size: 14px;
+      display: block;
+      padding: 10px;
+      padding-bottom: 10px;
+    }
+
+    &:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2em transparentize($brand-color, 0.6);
+    }
+  }
 }
 
 @media (max-width: 900px) {
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 400px) {
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
