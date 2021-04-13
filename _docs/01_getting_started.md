@@ -60,7 +60,7 @@ Click the help icon in the top right corner to reveal links to several resources
 
 <h2 id="preparing-data">Preparing Data</h2>
 
-Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Charticulator is disigned to support both the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">wide and narrow</a> format of a data table. 
+Charticulator supports datasets in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">**CSV**</a> format and expects that **the first row contains the column names**. Charticulator is designed to support both the <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">wide and narrow</a> format of a data table. 
 
 <h3>Narrow</h3>
 The table below shows (in narrow form) the maket share of mobile operating systems from one year to the next.

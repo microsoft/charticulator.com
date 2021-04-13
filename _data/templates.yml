@@ -26,7 +26,7 @@
 - title: Bump Chart
   image: /images/gallery/co2_emission_ranking.png
   path: /templates/bump_chart.tmplt
-  data: /data/oecd_population_2018.csv
+  data: /data/co2_emission_ranking.csv
 
 - title: Dot Plot
   image: /images/gallery/mushrooms.png

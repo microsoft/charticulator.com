@@ -9,7 +9,7 @@ sections:
 ---
 
 In contrast to existing chart creation tools, Charticulator allows you to interactively specify a chart's layout. It automatically places glyphs based on your layout specification. Like other chart creation tools, Charticulator allows you to interactively style individual chart elements such as size, color, font, etc.
-In this tutorial, we describe the set of interactions used to create a chart in Charticulator. To see more examples of chart creation with Charticulator, refer to the creation process videos in the gallery as well as our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>.
+In this tutorial, we describe the set of interactions used to create a chart in Charticulator. To see more examples of chart creation with Charticulator, refer to the creation process videos in <a href="{{ '/gallery/index.html' | relativize_url }}">the gallery</a> as well as our <a href="{{ '/docs/video-tutorials.html' | relativize_url }}">video tutorials</a>.
 
 On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutorial.svg' | relativize_url }}" style="height: 1.5em; vertical-align: top; filter: opacity(60%);" /> button below will reveal the corresponding tutorial.
 
@@ -17,7 +17,7 @@ On this page, clicking a <img class="el-icon" src="{{ '/images/icons/video-tutor
 <h2 id="interaction">Interaction</h2>
 
 <h3>Adding a Mark (to a Glyph)</h3>
-Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, and an Icon. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
+Charticulator supports five types of marks: a Shape, a Symbol, a Line, a Text, and an Image. To add a mark to a glyph, you can drag the desired mark from the *Toolbar* and drop it into the *Glyph Editor*. Charticulator places the new mark at its default position: the center of the glyph. Charticulator also adds a corresponding entry to the *Layers Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="0.80,2.90" openTutorial="tutorial1" %})
 
 {% include image.html src="/images/docs/marks-toolbar.png" alt="Marks Toolbar" width="400px" center="1" %}
 
@@ -25,9 +25,7 @@ Charticulator supports three types of shapes: rectangle, oval, and triangle, as 
 
 {% include image.html src="/images/docs/shapes-symbols.png" alt="Shapes" width="700px" center="1" %}
 
-To place the mark at a specific location, you can click the mark to activate it and click or drag within the *Glyph Editor*, depending on the mark type. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="18.00,21.09" openTutorial="tutorial3" %})
-
-Guides can be added to a glyph from the *Toolbar* via the same interaction. ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="13.00,14.99" openTutorial="tutorial5" %})
+To place a mark at a specific location, you can click the mark to activate it and click or drag within the *Glyph Editor*, depending on the mark type. ({% include videocallout.html src="/videos/tutorials/tutorial3.mp4" timeRange="18.00,21.09" openTutorial="tutorial3" %})
 
 
 <h3>Binding Data</h3>
@@ -49,9 +47,19 @@ To reuse a chart design in Power BI, it is crucial to anchor visual elements to 
 
 
 <h3>Creating a Guide</h3>
-You can create your own guides to facilitate the alignment of elements. To create a guide, click the desired guide (horizontal or vertical) in the *Toolbar* to activate it; subsequently clicking on the *Glyph Editor* or *Chart Canvas* will add the new guide.
+Chariculator has four default guides (Top, Bottom, Left, and Right), which are placed relative to the chart canvas using the Chart's Margin attribute values. Middle and Center guides are in the middle of Top & Bottom and Left & Right, respectively. 
+
+You can create your own guides to facilitate the alignment of elements. As a guide needs to be added at a specific location, to create a guide, you first need to click the desired guide (horizontal or vertical) in the *Toolbar* to activate it; subsequently clicking on the *Glyph Editor* or *Chart Canvas* will add the new guide. Your own guide can be placed relative to one of the four default guides.
 
 {% include image.html src="/images/docs/new-guide.png" width="400px" alt="New Guide" center="true" %}
+
+You can change the baseline for each guide and adjust its offset from the baseline.
+
+{% include image.html src="/images/docs/edit-guide.png" width="300px" alt="Edit Guide" center="true" %}
+
+On the other hand, the guide coordinator needs to be placed along a line. Therefore, you need to click the guide coordinator from the *Toolbar* to activate it and then drag within the *Glyph Editor* or *Chart Canvas*.
+
+{% include image.html src="/images/docs/new-guide-coordinator.png" width="400px" alt="New Guide Coordinator" center="true" %}
 
 
 <h3>Creating Links</h3>
@@ -67,7 +75,7 @@ For attributes that are bound to data, Charticulator uses a scale to determine h
 
 {% include image.html src="/images/docs/scale-editor.png" alt="Scale Editor" width="400px" center="true" %}
 
-For the image field of the icon mark, you can assign an image for each unique data value. ({% include videocallout.html src="/videos/tutorials/tutorial10.mp4" timeRange="40.61,70.40" openTutorial="tutorial10" %})
+For the image field of the icon mark, you can assign an image for each unique data value. 
 
 {% include image.html src="/images/docs/image-scale.png" alt="Binding Images with Image Scale" width="500px" center="1" %}
 
@@ -156,5 +164,5 @@ The dollar symbol `$` is reserved to specify the expression. Therefore, if you w
 Charticulator currently support two constants --- `E` (=2.718281828…) and `PI` (=3.1415926…) --- as well as common math functions including `floor`, `ceil`, `exp`, `log`, `sin`, `cos`, `tan`, `sqrt`, and `pow`. In addition, it supports common aggregation functions such as `min`, `max`, `sum`, `avg`, `stdev`, `variance`, `median`, and `count`. It also allows you to retrive the first and last value with the `first` and `last` fuction, respectively.
 
 
-<h3>Formatiing Axis Tick Labels</h3>
+<h3>Formatting Axis Tick Labels</h3>
 For the Numerical Axis, you can format the axis tick labels by setting the tick format field using a similar format specifier. Because you are using the data bounded to the axis, you should not specify a data column name (with a dollar symbol). For example, to show a percentage for a numerical data, the tick format string should be `{.0%}`. If you want to prepend a dollar sign to the tick values with a single number after the decimal point, the tick format string should be `${.1f}`.

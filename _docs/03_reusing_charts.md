@@ -12,12 +12,26 @@ You can reuse a chart design for differnt datasets either (1) by importing a Cha
 
 <h2 id="importing-template">Import a Charticulator Template</h2>
 
-Clicking the <img class="el-icon" src="{{ '/images/icons/icons-import-template.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the toolbar will display a file open dialog so that you can select a template file. If the current dataset has all the data columns used (and thus are required) in the template, having the same column name and data type for every column, Charticulator immediately redraws the chart applying the selected template. Otherwise, Charticulator opens the *Map your data* window, asking you to create mappings between the data columns in the current dataset and those used in the template.
+Clicking the <img class="el-icon" src="{{ '/images/icons/icons-import-template.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the toolbar will display a file open dialog so that you can select a template file. If the current dataset has all the data columns used (and thus are required) in the template, having the same column name and data type for every column, Charticulator immediately redraws the chart applying the selected template. 
+
+Otherwise, Charticulator opens the *Map your data* window, asking you to create mappings between the data columns in the current dataset and those used in the template. Once you create all the required mappings, the "Save mapping" button is enabled. For example, a dot plot template created with a mushroom dataset requires three data columns: one for the x-axis (`Odor`), andother for the y-axis (`Surface`), and the third for the color coding (`IsEdible`). For a publication dataset that includes the research area of the paper and the year the paper was published, you can map the x-axis to `Year` and both y-axis and color to `ResearchArea`.
+
+{% include image.html src="/images/docs/map-your-data.png" alt="Map you data" width="500px" center="1" %}
+
+Once you click on the "Save mapping" button, you see the chart generated using the template. 
+
+{% include image.html src="/images/docs/before-edit.png" alt="Before edit" width="500px" center="1" %}
+
+You can edit the chart to achieve your intended chart design, best matching your dataset. For example, you can change a hard-coded text (e.g., title), the axis ordering, and the legend location & orientation.  
+
+{% include image.html src="/images/docs/after-edit.png" alt="After edit" width="546px" center="1" %}
 
 
 <h2 id="replacing-dataset">Swap in New Dataset</h2>
 
-Clicking the <img class="el-icon" src="{{ '/images/icons/icons-replace.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the Dataset Panel will display a file open dialog so that you can select a new dataset file. If the new dataset has exactly the same structure --- the same number of columns as well as same column name and data type for every column --- Charticulator immediately redraws the chart once the dataset file is selected. Otherwise, Charticulator opens the *Map your data* window to allow you to create mappings between the data columns used in the current design and those in the new dataset.
+Clicking the <img class="el-icon" src="{{ '/images/icons/icons-replace.svg' | relativize_url }}" style="height: 1.5em; vertical-align: middle; filter: opacity(70%);" /> icon in the Dataset Panel will display a file open dialog so that you can select a new dataset file. If the new dataset has exactly the same structure --- the same number of columns as well as same column name and data type for every column --- Charticulator immediately redraws the chart once the dataset file is selected. 
+
+Otherwise, Charticulator opens the *Map your data* window to allow you to create mappings between the data columns used in the current design and those in the new dataset.
 
 
 <h2 id="chart-output">Chart Output</h2>

@@ -290,6 +290,18 @@
 
 ##########################################################################################
 
+- id: oecd_mean_median_income
+  name: Mean and Median Income of Selected OECD Countries in 2018
+  description: |
+
+    Mean and Median Income of Selected OECD Countries in 2018
+
+  source: |
+
+    Data is retrieved from [Datawrapper](https://www.datawrapper.de/_/h3Jz9/).
+
+##########################################################################################
+
 - id: driving_trends
   name: Miles Driven vs. Gas Prices
   description: |
