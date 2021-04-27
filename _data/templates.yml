@@ -21,7 +21,7 @@
 - title: Dumbbell Chart
   image: /images/gallery/unemployment_gender_gap_g7.png
   path: /templates/dumbbell_chart.tmplt
-  data: /data/unemployment_gender_gap_g7.csv
+  data: /data/g7_unemployment_gender_gap.csv
 
 - title: Bump Chart
   image: /images/gallery/co2_emission_ranking.png

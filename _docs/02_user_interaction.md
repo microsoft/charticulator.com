@@ -115,11 +115,19 @@ As Charticulator by default handles the data in the order they appear in the tab
 {% include image.html src="/images/docs/axis-sort.png" alt="Axis Sort" width="400px" center="true" %}
 
 
+<h3>Axis Styling</h3>
+You can change the style of an axis, such as the tick color, tick size, font size, and font family from the *Axis Style* view. In addition, you can turn on/off wrapping of axis tick labels by manipulating the Wrap text attribute.
+
+{% include image.html src="/images/docs/word-wrap-off.png" alt="No Word Wrapping" width="500px" center="true" %}
+
+{% include image.html src="/images/docs/word-wrap-on.png" alt="Word Wrapping" width="500px" center="true" %}
+
+
 <h2 id="data-driven-guides">Data-Driven Guides</h2>
 
 A <a href="http://ddg.namwkim.org/" target="_blank">data-driven guide</a> provides data-driven anchor points from data columns sharing the same numerical unit (e.g., min and max temperature values). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="0.00,8.09" openTutorial="tutorial5" %}) It can be displayed as an axis, though to avoid duplicated axes, Charticulator shows only the first instance. Glyph elements can be snapped to these anchor points by adding layout constraints (e.g., placing the circle mark at the anchor point of the “Avg. Temperature” data column). ({% include videocallout.html src="/videos/tutorials/tutorial5.mp4" timeRange="35.07,45.09" openTutorial="tutorial5" %})
 
-A glyph can have multiple data-driven guides. For example, a diverging bar chart has the mark for one data column pointing right or up, and the mark for another data column pointing in the opposite direction (i.e., left or down, respectively). You can create a diverging bar chart by adding two data-driven guides, facing each other
+A glyph can have multiple data-driven guides. For example, a diverging bar chart has the mark for one data column pointing right or up, and the mark for another data column pointing in the opposite direction (i.e., left or down, respectively). You can create a diverging bar chart by adding two data-driven guides, facing each other.
 
 {% include image.html src="/images/docs/data-driven-guides.png" alt="Data-Driven Guides" width="450px" center="true" %}
 

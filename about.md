@@ -23,6 +23,13 @@ Charticulator is a project from [Microsoft Research](https://www.microsoft.com/e
         </a>
     </div>
     <div class="author-list-item">
+        <a href="https://www.microsoft.com/en-us/research/people/kenh">
+            <div class="el-image"><img src="{{ '/images/authors/author_ken.jpg' | relativize_url }}" alt="Ken Hinckley" /></div>
+            <div class="el-name">Ken Hinckley</div>
+            <div class="el-affiliation">Microsoft Research</div>
+        </a>
+    </div>
+    <div class="author-list-item">
         <a href="https://www.microsoft.com/en-us/research/people/mpahud">
             <div class="el-image"><img src="{{ '/images/authors/author_michel.png' | relativize_url }}" alt="Michel Pahud" /></div>
             <div class="el-name">Michel Pahud</div>
