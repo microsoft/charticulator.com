@@ -48,6 +48,16 @@
   path: /templates/chord_diagram.tmplt
   data: /data/global_resource_trade.zip
 
+- title: Arc Diagram
+  image: /images/gallery/les_miserables_linear.png
+  path: /templates/arc_diagram.tmplt
+  data: /data/les_miserables.pbix
+
+- title: Parallel Sets
+  image: /images/gallery/world_greenhouse_gas_emissions.png
+  path: /templates/parallel_sets.tmplt
+  data: /data/world_greenhouse_gas_emissions.zip
+
 - title: Weather Radial Chart
   image: /images/gallery/boston_weather.png
   path: /templates/weather_radial_chart.tmplt

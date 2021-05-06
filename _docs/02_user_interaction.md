@@ -83,7 +83,7 @@ For the image field of the icon mark, you can assign an image for each unique da
 <h4>Adding a legend</h4>{: style="color: darkblue; line-height: 0pt;" }
 Legends visualize the scales used in a chart. Charticulator currently uses a predefined legend for each scale type: color legend for categorical data; color legend for numerical data; and range legend for numerical data. You can add a lenged to the chart by clicking on the "Add Legend" button from a scale view. ({% include videocallout.html src="/videos/tutorials/tutorial4.mp4" timeRange="13.27,14.90" openTutorial="tutorial4" %})
 
-As for categorical data, you can create a scale and a corresponding legend in two ways. As described above, when you bind a data column to a visual property, Charticulator automatically creates a scale using data values from the column and allows you to add its legend to the chart. In addition, you can a scale and a corresponding legend using data column names: in this case, the legend is automatically added to the canvas. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="0.55,5.30" openTutorial="tutorial12" %}) You can edit the color mapping by toggling a scale view from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="6.55,16.05" openTutorial="tutorial12" %})
+As for categorical data, you can create a scale and a corresponding legend in two ways. As described above, when you bind a data column to a visual property, Charticulator automatically creates a scale using data values from the column and allows you to add its legend to the chart. In addition, you can create a scale and a corresponding legend using data column names: in this case, the legend is automatically added to the canvas. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="0.55,5.30" openTutorial="tutorial12" %}) You can edit the color mapping by toggling a scale view from the *Attributes Panel*. ({% include videocallout.html src="/videos/tutorials/tutorial12.mp4" timeRange="6.55,16.05" openTutorial="tutorial12" %})
 
 {% include image.html src="/images/docs/legend-column-names.png" alt="Creating a Legend using Column Names" width="700px" center="1" %}
 
@@ -98,6 +98,10 @@ When you add a range legend for numerical data, it is positioned along the axis 
 Charticulator enables you to reuse an exising scale. You can drag a scale from the *Scales Panel* and drop it into the target zones in the *Attributes Panel*. In addition, Charticulator tries to resue an exising scale automatically, when appropriate. For example, when you bind a `Country` column to the color of text (after biniding it to the color of the corresponding bar), Charticulator reuses the scale created for the bar's fill color.
 
 {% include image.html src="/images/docs/scale-reuse.png" alt="Scale Reuse" width="700px" center="1" %}
+
+If you want to create a new scale (i.e., prevent the reuse of an existing scale), you need to press the Shift key while you're performing data binding. 
+
+{% include image.html src="/images/docs/scale-reuse-vs-new.png" alt="Scale Reuse vs. New" width="400px" center="1" %}
 
 
 <h3>Data-Driven Visibility</h3>

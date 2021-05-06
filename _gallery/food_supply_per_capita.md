@@ -3,6 +3,7 @@ title: Per Capita Food Supply in 2013
 image: /images/gallery/food_supply_per_capita.png
 video: /videos/gallery/food_supply_per_capita.mp4
 description: Per capita food supply in 2013
+data: /data/food_supply_per_capita_2013.csv
 dataset: food_supply_per_capita
 order: 15
 ---
