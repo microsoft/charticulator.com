@@ -68,7 +68,17 @@
   path: /templates/spiral_bar_chart.tmplt
   data: /data/fitbit_activities_2016.csv
 
+- title: Marimekko Chart
+  image: /images/gallery/food_supply_per_capita.png
+  path: /templates/marimekko_chart.tmplt
+  data: /data/food_supply_per_capita_2013.csv
+
 - title: Diverging Bar Chart
   image: /images/gallery/world_population_2017.png
   path: /templates/diverging_bar_chart.tmplt
   data: /data/world_population_2017.csv
+
+- title: Nested Bar Chart
+  image: /images/gallery/oecd_mean_median_income.png
+  path: /templates/nested_bar_chart.tmplt
+  data: /data/oecd_mean_median_income.csv
