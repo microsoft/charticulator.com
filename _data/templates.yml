@@ -35,7 +35,7 @@
 
 - title: Peacock Chart
   image: /images/gallery/steps_by_month.png
-  path: /templates/peachock_chart.tmplt
+  path: /templates/peacock_chart.tmplt
   data: /data/steps_by_month.csv
 
 - title: Nightingale Chart
@@ -82,3 +82,8 @@
   image: /images/gallery/oecd_mean_median_income.png
   path: /templates/nested_bar_chart.tmplt
   data: /data/oecd_mean_median_income.csv
+
+- title: Waffle Chart
+  image: /images/gallery/mobile_os_market_share_jul2021.png
+  path: /templates/waffle_chart.tmplt
+  data: /data/mobile_os_market_share_jul2021.csv

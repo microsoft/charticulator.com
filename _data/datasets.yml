@@ -335,3 +335,15 @@
   source: |
 
     Data collected by the authors.
+
+##########################################################################################
+
+- id: mobile_os_market_share_jul2021
+  name: Mobile OS Market Share
+  description: |
+
+    Market share of major mobile operating systems in July 2021
+
+  source: |
+
+    Data is manually created based on a web search result.
