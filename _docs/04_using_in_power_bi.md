@@ -6,6 +6,7 @@ sections:
   - [Data Order, data-order]
   - [Date vs. Date Hierarchy, date]
   - [Chart with Links, chart-with-links]
+  - [Using highlight columns, highlight-columns]
 ---
 
 You can import the chart design, exported as a Power BI Custom Visual, into Power BI. Once its requird data fields are filled, you can see the chart within Power BI. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="32.87,48.00" openTutorial="tutorial8" %}) In addition, the chart reacts to the event from other charts or slicers. For example, you can create a slicer using the Month value of the `DATE` value so that you can interactively choose the desired month to be shown. ({% include videocallout.html src="/videos/tutorials/tutorial8.mp4" timeRange="52.70,61.00" openTutorial="tutorial8" %})
@@ -49,3 +50,68 @@ To draw a chart with the links between glyphs in Charticulator, you need two dat
 {% include image.html src="/images/docs/create-relationship.png" alt="Create relationship" width="600px" center="1" %}
 
 After creating the relationship, do not forget to select both **Don’t summarize** and **Show items with no data** for all columns in the Data and Links sections.
+
+<h2 id="highlight-columns">Using highlight columns</h2>
+
+Power BI Visuals [support values highlights](https://docs.microsoft.com/en-us/power-bi/create-reports/power-bi-reports-filters-and-highlighting). You [can change how visuals interact](https://docs.microsoft.com/en-us/power-bi/create-reports/service-reports-visual-interactions) in a Power BI report. Visual developers can enable this feature for own visuals. And [Charticulator visuals](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200002793) supports it.
+
+
+<h3>Highlight overview</h3>
+
+When you select elements in one visual Power BI highlights related data in another visuals. 
+
+In the example you can see how much ratio of "Profit" is taken by "Small Business" segment in different "Country" group.
+
+{% include image.html src="/images/docs/highlight_overview.png" alt="Highlight data points in a Power BI report" center="1" %}
+
+Here Clustered column chart on the right side has columns with partially highlighting.
+
+<h3>Using highlight columns in Charticulator visual</h3>
+
+When visuals declare highlight support, Power BI provides all data points and additional data points for measure columns with current highlighted values.
+
+Charticulator providers those columns in `Main` table as `<column name> (Highlights)`.
+
+{% include image.html src="/images/docs/highlight_columns.png" alt="Highlight columns in Charticulator visual" center="1" %}
+
+Without selection data values in measure column and highlight column are equal
+
+{% include image.html src="/images/docs/highlight_all_data.png" alt="Charticulator visual gets highlights values equal to measure values" center="1" %}
+
+If you select the "Small business" category in Pie chart and enter Edit mode of Charticulator visual you will get different values.
+
+{% include image.html src="/images/docs/highlight_partial_data.png" alt="Charticulator visual gets highlights values less than measure values" center="1" %}
+
+You can use highlights columns as regular column in Charticulator: bind them to width, height, or color attributes and properties of Charticulator objects.
+
+Create two rectangles (MeasureShape and HightlightShape) in glyph, but **don't bind height of the second (HightlightShape) reactngle to top guide of glyph**. Because the size of glyph depends on MeasureShape height where measure values bound. When the height of glyph bound to two different values it breaks whole chart. 
+
+{% include image.html src="/images/docs/highlight_glyph_tworects.png" alt="Charticulator visual gets highlights values less than measure values" center="1" %}
+
+Bind "Profit" measure column to MeasureShape rectangle height. And bind "Profit (highlights)" column to HightlightShape rectangle height
+
+You should get two rectangles with different heights and HightlightShape rectangle will react to selections in another visual by changing the height.
+
+Save the chart and exit from edit mode to test highlights.
+
+Click on Pie chart to select different categories, Charticulator visual will react to selections by rendering HightlightShape rectangle with correspond height. When no selections in Power BI report the height of both rectangles are equal. 
+
+{% include image.html src="/images/docs/highlight_testing.gif" alt="Testing highlights feature in a Power BI report" center="1" %}
+
+Finalize the chart to make it close to regular visual by overlapping HightlightShape rectangle on MeasureShape rectangle.
+
+Enter to edit mode again. Select MeasureShape rectangle and set opacity to `0.5`
+
+{% include image.html src="/images/docs/highlight_set_opacity.png" alt="Set opcaity to masure rectangle" center="1" %}
+
+Change size of rectangles to bind them to left and right guides of glyph. **Pay attention, the top edge of HightlightShape rectangle should not bound to top guide of glyph.**
+
+{% include image.html src="/images/docs/highlight_glyph_overlaprects.png" alt="Bind width of rectangles to glyph guides" center="1" %}
+
+The final view of chart where HightlightShape rectangle over MeasureShape rectangle.
+
+{% include image.html src="/images/docs/highlight_final.png" alt="The final view o chart" center="1" %}
+
+Save the chart and exit edit mode to test final result in a Power BI report again.
+
+{% include image.html src="/images/docs/highlight_finel_testing.gif" alt="Testing the final view of chart in a Power BI report" center="1" %}
