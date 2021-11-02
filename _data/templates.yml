@@ -87,3 +87,8 @@
   image: /images/gallery/mobile_os_market_share_jul2021.png
   path: /templates/waffle_chart.tmplt
   data: /data/mobile_os_market_share_jul2021.csv
+
+- title: Pictogram
+  image: /images/gallery/september_weather.png
+  path: /templates/pictogram.tmplt
+  data: /data/september_weather.csv

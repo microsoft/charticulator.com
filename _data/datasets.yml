@@ -347,3 +347,15 @@
   source: |
 
     Data is manually created based on a web search result.
+
+##########################################################################################
+
+- id: september_weather
+  name: September Weather
+  description: |
+
+    Daily weather conidtion for September
+
+  source: |
+
+    Data is manually created based on a web search result.

@@ -16,23 +16,23 @@ Charticulator is a project from [Microsoft Research](https://www.microsoft.com/e
         </a>
     </div>
     <div class="author-list-item">
-        <a href="https://github.com/zbritva">
-            <div class="el-image"><img src="{{ '/images/authors/author_ilfat.jpg' | relativize_url }}" alt="Ilfat Galiev" /></div>
-            <div class="el-name">Ilfat Galiev</div>
+        <a href="https://github.com/MrRamka">
+            <div class="el-image"><img src="{{ '/images/authors/author_ramil.jpg' | relativize_url }}" alt="Ramil Minyukov" /></div>
+            <div class="el-name">Ramil Minyukov</div>
             <div class="el-affiliation">Akvelon</div>
+        </a>
+    </div>
+    <div class="author-list-item">
+        <a href="https://www.microsoft.com/en-us/research/people/johnthompson">
+            <div class="el-image"><img src="{{ '/images/authors/author_john.jpg' | relativize_url }}" alt="John Thompson" /></div>
+            <div class="el-name">John Thompson</div>
+            <div class="el-affiliation">Microsoft Research</div>
         </a>
     </div>
     <div class="author-list-item">
         <a href="https://www.microsoft.com/en-us/research/people/kenh">
             <div class="el-image"><img src="{{ '/images/authors/author_ken.jpg' | relativize_url }}" alt="Ken Hinckley" /></div>
             <div class="el-name">Ken Hinckley</div>
-            <div class="el-affiliation">Microsoft Research</div>
-        </a>
-    </div>
-    <div class="author-list-item">
-        <a href="https://www.microsoft.com/en-us/research/people/mpahud">
-            <div class="el-image"><img src="{{ '/images/authors/author_michel.png' | relativize_url }}" alt="Michel Pahud" /></div>
-            <div class="el-name">Michel Pahud</div>
             <div class="el-affiliation">Microsoft Research</div>
         </a>
     </div>
@@ -46,17 +46,10 @@ Charticulator is a project from [Microsoft Research](https://www.microsoft.com/e
         </a>
     </div>
     <div class="author-list-item">
-        <a href="https://www.microsoft.com/en-us/research/people/danmar">
-            <div class="el-image"><img src="{{ '/images/authors/author_dan.jpg' | relativize_url }}" alt="Dan Marshall" /></div>
-            <div class="el-name">Dan Marshall</div>
-            <div class="el-affiliation">Microsoft Research</div>
-        </a>
-    </div>
-    <div class="author-list-item">
-        <a href="https://github.com/natoverse">
-            <div class="el-image"><img src="{{ '/images/authors/author_nathan.jpg' | relativize_url }}" alt="Nathan Evans" /></div>
-            <div class="el-name">Nathan Evans</div>
-            <div class="el-affiliation">Microsoft Research</div>
+        <a href="https://github.com/zbritva">
+            <div class="el-image"><img src="{{ '/images/authors/author_ilfat.jpg' | relativize_url }}" alt="Ilfat Galiev" /></div>
+            <div class="el-name">Ilfat Galiev</div>
+            <div class="el-affiliation">Akvelon</div>
         </a>
     </div>
     <div class="author-list-item">
@@ -94,6 +87,22 @@ Charticulator is a project from [Microsoft Research](https://www.microsoft.com/e
         <a href="https://github.com/darthtrevino">
             <div class="el-image"><img src="{{ '/images/authors/author_chris.jpg' | relativize_url }}" alt="Chris Trevino" /></div>
             <div class="el-name">Chris Trevino</div>
+            <div class="el-affiliation">Microsoft Research</div>
+        </a>
+    </div>
+</div>
+<div class="author-list">
+    <div class="author-list-item">
+        <a href="https://www.microsoft.com/en-us/research/people/danmar">
+            <div class="el-image"><img src="{{ '/images/authors/author_dan.jpg' | relativize_url }}" alt="Dan Marshall" /></div>
+            <div class="el-name">Dan Marshall</div>
+            <div class="el-affiliation">Microsoft Research</div>
+        </a>
+    </div>
+    <div class="author-list-item">
+        <a href="https://github.com/natoverse">
+            <div class="el-image"><img src="{{ '/images/authors/author_nathan.jpg' | relativize_url }}" alt="Nathan Evans" /></div>
+            <div class="el-name">Nathan Evans</div>
             <div class="el-affiliation">Microsoft Research</div>
         </a>
     </div>
