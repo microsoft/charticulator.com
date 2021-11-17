@@ -57,9 +57,9 @@ You can change the baseline for each guide and adjust its offset from the baseli
 
 {% include image.html src="/images/docs/edit-guide.png" width="300px" alt="Edit Guide" center="true" %}
 
-On the other hand, the guide coordinator needs to be placed along a line. Therefore, you need to click the guide coordinator from the *Toolbar* to activate it and then drag within the *Glyph Editor* or *Chart Canvas*.
+You can create a set of equally-spaced guides using the guide coordinator. Because it needs to be placed along a line, you need to click the guide coordinator from the *Toolbar* to activate it and then drag within the *Glyph Editor* or *Chart Canvas*. By default, Charticulator creates two inner guides for three equally-spaced blocks. You can adjust the number of inner guides from the *Attributes* panel. 
 
-{% include image.html src="/images/docs/new-guide-coordinator.png" width="400px" alt="New Guide Coordinator" center="true" %}
+{% include image.html src="/images/docs/new-guide-coordinator.png" alt="New Guide Coordinator" center="true" %}
 
 
 <h3>Creating Links</h3>
@@ -158,6 +158,11 @@ For categorical axes, Charticulator employs sub-layouts to determine a within-gr
 Charticulator suppors three coordinate systems: Cartesian, Polar, and Custom curve. Charticulator morphs mark shapes in the two non-Cartesian systems, and its morphing maintains a precise data binding because the morphing is performed in vector graphics. For example, a rectangle becomes a wedge shape in a polor coordinate system and a custom curve coordinate system. ({% include videocallout.html src="/videos/tutorials/tutorial1.mp4" timeRange="4.00,7.03" openTutorial="tutorial1" %})
 
 {% include image.html src="/images/docs/coordinate-systems.png" alt="Three Coordinate Systems" width="450px" center="true" %}
+
+<h3>Overlaying Plot Segments</h3>
+You can create a chart having multiple axes by overlaying plot segments. For example, you can use one plot segment for a bar chart and another plot segment for a line chart. Note that the order in the *Layers panel* matters as it corresponds to the z-order. For example, for a combo chart (combining a bar chart and a line chart), the link for the line chart should be below the plot segment for the bar chart in the list. 
+
+{% include image.html src="/images/docs/two-plot-segments-overlay.png" alt="Ovaerlaying Two Plot Segments" %}
 
 
 <h2 id="text-formatting">Text Formatting</h2>
