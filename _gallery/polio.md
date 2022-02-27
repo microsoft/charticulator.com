@@ -3,6 +3,7 @@ title: Polio Incidence Rates in the United States
 image: /images/gallery/polio.png
 video: /videos/gallery/polio.mp4
 description: Polio incidence rates in the United States (Matrix view)
+data: /data/polio_incidence_rate_us.csv
 dataset: polio_united_states
 order: 14
 ---

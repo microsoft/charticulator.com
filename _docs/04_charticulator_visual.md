@@ -8,6 +8,8 @@ sections:
   - [Exporting Chart, export-chart]
 ---
 
+<img src="{{ '/images/pbi-certified.svg' | cdn_url }}" alt="Power BI Certified" />
+
 With Microsoft Charticulator visual, you can create a wide range of custom chart designs **right within Power BI**. If you are new to Charticulator, first learn the basics from <a href="{{ '/docs/getting-started.html' | relativize_url }}">Getting Started</a>.
 
 <h2 id="import-visual">Import the Charticulator Visual</h2>
@@ -19,15 +21,15 @@ Using the “…” menu from the Visualizations pane, select “Get more visual
 
 <h3>Import from File</h3>
 
-By default, Power BI loads the latest published version of the visual from AppSource. To use a specific version of Charticulator visual available for download, you need to override the AppSource version with a local file version, by following the instruction from the [Testing submissions of Power BI visuals](https://docs.microsoft.com/en-us/power-bi/developer/visuals/submission-testing) page. 
+By default, Power BI loads the latest published version of the visual from AppSource. To use a specific version of Charticulator visual available for download, you need to override the AppSource version with a local file version, by following the instruction from the [Testing submissions of Power BI visuals](https://docs.microsoft.com/en-us/power-bi/developer/visuals/submission-testing) page.
 
 In Power BI Desktop, Developer mode is **valid for only one session** and the Charticulator visual imported from a local file **lasts only one session**. If you open a new Power BI Desktop instance, you need to you need to import the latest Charticulator visual file again after enabling Developer mode.
 
 A specific version of the Charticulator visual is available at
-```` 
-https://appsource.powerbi.com/charticulator.charticulator58556A88422D44A99D9BF0052B958F87.[VERSION].0.pbiviz. 
-````
 
+```
+https://appsource.powerbi.com/charticulator.charticulator58556A88422D44A99D9BF0052B958F87.[VERSION].0.pbiviz.
+```
 
 <h2 id="invoke-editor">Invoke the Charticultor Visual Editor</h2>
 
@@ -51,7 +53,7 @@ If you choose to build from scratch, you’ll land on the empty canvas to start 
 
 {% include image.html src="/images/docs/empty-canvas.png" alt="Empty canvas" %}
 
-If you wish to use an existing Charticulator template, choose “Import template.” Next, browse to where you have your template file stored, and select the file. Then, the Map your data window appears, showing the information (e.g., required data type, example data values) that helps you choose the right data column mapping. 
+If you wish to use an existing Charticulator template, choose “Import template.” Next, browse to where you have your template file stored, and select the file. Then, the Map your data window appears, showing the information (e.g., required data type, example data values) that helps you choose the right data column mapping.
 
 {% include image.html src="/images/docs/map-data.png" alt="Map your data dialog" %}
 

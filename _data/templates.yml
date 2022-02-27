@@ -92,3 +92,8 @@
   image: /images/gallery/september_weather.png
   path: /templates/pictogram.tmplt
   data: /data/september_weather.csv
+
+- title: Heatmap
+  image: /images/gallery/polio_incidence_rates_us.png
+  path: /templates/heatmap.tmplt
+  data: /data/polio_incidence_rates_us.csv

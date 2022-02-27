@@ -1,0 +1,1334 @@
+{
+  "specification": {
+    "_id": "qlccbptx6r",
+    "classID": "chart.rectangle",
+    "properties": {
+      "name": "Chart",
+      "backgroundColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "backgroundOpacity": 1,
+      "enableContextMenu": true,
+      "exposed": true
+    },
+    "mappings": {
+      "marginTop": {
+        "type": "value",
+        "value": 80
+      },
+      "width": {
+        "type": "value",
+        "value": 1400
+      },
+      "height": {
+        "type": "value",
+        "value": 900
+      },
+      "marginLeft": {
+        "type": "value",
+        "value": 140
+      },
+      "marginRight": {
+        "type": "value",
+        "value": 30
+      }
+    },
+    "glyphs": [
+      {
+        "_id": "bcbvijczetm",
+        "classID": "glyph.rectangle",
+        "properties": {
+          "name": "Glyph"
+        },
+        "table": "polio_incidence_rates_united_states",
+        "marks": [
+          {
+            "_id": "6gclvua44mk",
+            "classID": "mark.anchor",
+            "properties": {
+              "name": "Anchor"
+            },
+            "mappings": {
+              "x": {
+                "type": "parent",
+                "parentAttribute": "icx"
+              },
+              "y": {
+                "type": "parent",
+                "parentAttribute": "icy"
+              }
+            }
+          },
+          {
+            "_id": "3m38zltns4g",
+            "classID": "mark.rect",
+            "properties": {
+              "enableTooltips": true,
+              "enableContextMenu": true,
+              "enableSelection": true,
+              "exposed": true,
+              "visible": true,
+              "strokeStyle": "solid",
+              "shape": "rectangle",
+              "allowFlipping": true,
+              "rx": 0,
+              "ry": 0,
+              "name": "Shape1"
+            },
+            "mappings": {
+              "fill": {
+                "type": "scale",
+                "table": "polio_incidence_rates_united_states",
+                "expression": "avg(`Polio Cases`)",
+                "valueType": "number",
+                "scale": "foiqg4ryo7a",
+                "attribute": "fill",
+                "valueIndex": null
+              },
+              "strokeWidth": {
+                "type": "value",
+                "value": 1
+              },
+              "opacity": {
+                "type": "value",
+                "value": 1
+              },
+              "visible": {
+                "type": "value",
+                "value": true
+              },
+              "x1": {
+                "type": "parent",
+                "parentAttribute": "ix1"
+              },
+              "y1": {
+                "type": "parent",
+                "parentAttribute": "iy1"
+              },
+              "x2": {
+                "type": "parent",
+                "parentAttribute": "ix2"
+              },
+              "y2": {
+                "type": "parent",
+                "parentAttribute": "iy2"
+              }
+            }
+          }
+        ],
+        "mappings": {},
+        "constraints": []
+      }
+    ],
+    "elements": [
+      {
+        "_id": "5lss4acowsp",
+        "classID": "plot-segment.cartesian",
+        "glyph": "bcbvijczetm",
+        "table": "polio_incidence_rates_united_states",
+        "filter": null,
+        "mappings": {
+          "x1": {
+            "type": "parent",
+            "parentAttribute": "x1"
+          },
+          "y1": {
+            "type": "parent",
+            "parentAttribute": "y1"
+          },
+          "x2": {
+            "type": "parent",
+            "parentAttribute": "x2"
+          },
+          "y2": {
+            "type": "parent",
+            "parentAttribute": "y2"
+          }
+        },
+        "properties": {
+          "name": "PlotSegment1",
+          "visible": true,
+          "marginX1": 0,
+          "marginY1": 0,
+          "marginX2": 0,
+          "marginY2": 0,
+          "sublayout": {
+            "type": "grid",
+            "order": null,
+            "ratioX": 0.1,
+            "ratioY": 0.1,
+            "align": {
+              "x": "start",
+              "y": "start"
+            },
+            "grid": {
+              "direction": "x",
+              "xCount": null,
+              "yCount": null,
+              "gridStartPosition": "LT"
+            },
+            "packing": {
+              "gravityX": 0.1,
+              "gravityY": 0.1
+            },
+            "jitter": {
+              "vertical": true,
+              "horizontal": true
+            }
+          },
+          "xData": {
+            "type": "categorical",
+            "expression": "first(Year)",
+            "rawExpression": "first(Year)",
+            "valueType": "string",
+            "gapRatio": 0.1,
+            "visible": true,
+            "side": "default",
+            "style": {
+              "tickColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "tickTextBackgroudColor": null,
+              "tickTextBackgroudColorId": null,
+              "showTicks": true,
+              "showBaseline": true,
+              "lineColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "fontFamily": "Segoe UI",
+              "fontSize": 12,
+              "tickSize": 5,
+              "wordWrap": false,
+              "verticalText": false,
+              "gridlineStyle": "none",
+              "gridlineColor": {
+                "r": 234,
+                "g": 234,
+                "b": 234
+              },
+              "gridlineWidth": 1
+            },
+            "numericalMode": null,
+            "dataKind": "ordinal",
+            "order": null,
+            "orderMode": "alphabetically",
+            "autoDomainMax": true,
+            "autoDomainMin": true,
+            "tickFormat": null,
+            "tickDataExpression": null,
+            "tickFormatType": "none",
+            "domainMin": null,
+            "domainMax": null,
+            "dataDomainMin": null,
+            "dataDomainMax": null,
+            "enablePrePostGap": null,
+            "categories": [
+              "1928",
+              "1929",
+              "1930",
+              "1931",
+              "1932",
+              "1933",
+              "1934",
+              "1935",
+              "1936",
+              "1937",
+              "1938",
+              "1939",
+              "1940",
+              "1941",
+              "1942",
+              "1943",
+              "1944",
+              "1945",
+              "1946",
+              "1947",
+              "1948",
+              "1949",
+              "1950",
+              "1951",
+              "1952",
+              "1953",
+              "1954",
+              "1955",
+              "1956",
+              "1957",
+              "1958",
+              "1959",
+              "1960",
+              "1961",
+              "1962",
+              "1963",
+              "1964",
+              "1965",
+              "1966",
+              "1967",
+              "1968",
+              "1969"
+            ],
+            "allCategories": [
+              "1928",
+              "1929",
+              "1930",
+              "1931",
+              "1932",
+              "1933",
+              "1934",
+              "1935",
+              "1936",
+              "1937",
+              "1938",
+              "1939",
+              "1940",
+              "1941",
+              "1942",
+              "1943",
+              "1944",
+              "1945",
+              "1946",
+              "1947",
+              "1948",
+              "1949",
+              "1950",
+              "1951",
+              "1952",
+              "1953",
+              "1954",
+              "1955",
+              "1956",
+              "1957",
+              "1958",
+              "1959",
+              "1960",
+              "1961",
+              "1962",
+              "1963",
+              "1964",
+              "1965",
+              "1966",
+              "1967",
+              "1968",
+              "1969"
+            ],
+            "scrollPosition": 0,
+            "allowScrolling": false,
+            "windowSize": 10,
+            "barOffset": 0,
+            "offset": 0,
+            "onTop": false,
+            "enableSelection": false,
+            "orderByCategories": [
+              "1928",
+              "1929",
+              "1930",
+              "1931",
+              "1932",
+              "1933",
+              "1934",
+              "1935",
+              "1936",
+              "1937",
+              "1938",
+              "1939",
+              "1940",
+              "1941",
+              "1942",
+              "1943",
+              "1944",
+              "1945",
+              "1946",
+              "1947",
+              "1948",
+              "1949",
+              "1950",
+              "1951",
+              "1952",
+              "1953",
+              "1954",
+              "1955",
+              "1956",
+              "1957",
+              "1958",
+              "1959",
+              "1960",
+              "1961",
+              "1962",
+              "1963",
+              "1964",
+              "1965",
+              "1966",
+              "1967",
+              "1968",
+              "1969"
+            ],
+            "orderByExpression": "Year",
+            "numberOfTicks": 10,
+            "autoNumberOfTicks": true
+          },
+          "yData": {
+            "type": "categorical",
+            "expression": "first(State)",
+            "rawExpression": "first(State)",
+            "valueType": "string",
+            "gapRatio": 0.1,
+            "visible": true,
+            "side": "default",
+            "style": {
+              "tickColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "tickTextBackgroudColor": null,
+              "tickTextBackgroudColorId": null,
+              "showTicks": true,
+              "showBaseline": true,
+              "lineColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "fontFamily": "Segoe UI",
+              "fontSize": 12,
+              "tickSize": 5,
+              "wordWrap": false,
+              "verticalText": false,
+              "gridlineStyle": "none",
+              "gridlineColor": {
+                "r": 234,
+                "g": 234,
+                "b": 234
+              },
+              "gridlineWidth": 1
+            },
+            "numericalMode": null,
+            "dataKind": "categorical",
+            "order": null,
+            "orderMode": "alphabetically",
+            "autoDomainMax": true,
+            "autoDomainMin": true,
+            "tickFormat": null,
+            "tickDataExpression": null,
+            "tickFormatType": "none",
+            "domainMin": null,
+            "domainMax": null,
+            "dataDomainMin": null,
+            "dataDomainMax": null,
+            "enablePrePostGap": null,
+            "categories": [
+              "Alabama",
+              "Alaska",
+              "Arizona",
+              "Arkansas",
+              "California",
+              "Colorado",
+              "Connecticut",
+              "Delaware",
+              "District Of Columbia",
+              "Florida",
+              "Georgia",
+              "Hawaii",
+              "Idaho",
+              "Illinois",
+              "Indiana",
+              "Iowa",
+              "Kansas",
+              "Kentucky",
+              "Louisiana",
+              "Maine",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "Minnesota",
+              "Mississippi",
+              "Missouri",
+              "Montana",
+              "Nebraska",
+              "Nevada",
+              "New Hampshire",
+              "New Jersey",
+              "New Mexico",
+              "New York",
+              "North Carolina",
+              "North Dakota",
+              "Ohio",
+              "Oklahoma",
+              "Oregon",
+              "Pennsylvania",
+              "Rhode Island",
+              "South Carolina",
+              "South Dakota",
+              "Tennessee",
+              "Texas",
+              "Utah",
+              "Vermont",
+              "Virginia",
+              "Washington",
+              "West Virginia",
+              "Wisconsin",
+              "Wyoming"
+            ],
+            "allCategories": [
+              "Alabama",
+              "Alaska",
+              "Arizona",
+              "Arkansas",
+              "California",
+              "Colorado",
+              "Connecticut",
+              "Delaware",
+              "District Of Columbia",
+              "Florida",
+              "Georgia",
+              "Hawaii",
+              "Idaho",
+              "Illinois",
+              "Indiana",
+              "Iowa",
+              "Kansas",
+              "Kentucky",
+              "Louisiana",
+              "Maine",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "Minnesota",
+              "Mississippi",
+              "Missouri",
+              "Montana",
+              "Nebraska",
+              "Nevada",
+              "New Hampshire",
+              "New Jersey",
+              "New Mexico",
+              "New York",
+              "North Carolina",
+              "North Dakota",
+              "Ohio",
+              "Oklahoma",
+              "Oregon",
+              "Pennsylvania",
+              "Rhode Island",
+              "South Carolina",
+              "South Dakota",
+              "Tennessee",
+              "Texas",
+              "Utah",
+              "Vermont",
+              "Virginia",
+              "Washington",
+              "West Virginia",
+              "Wisconsin",
+              "Wyoming"
+            ],
+            "scrollPosition": 0,
+            "allowScrolling": false,
+            "windowSize": 10,
+            "barOffset": 0,
+            "offset": 0,
+            "onTop": false,
+            "enableSelection": false,
+            "orderByCategories": [
+              "Alabama",
+              "Alaska",
+              "Arizona",
+              "Arkansas",
+              "California",
+              "Colorado",
+              "Connecticut",
+              "Delaware",
+              "District Of Columbia",
+              "Florida",
+              "Georgia",
+              "Hawaii",
+              "Idaho",
+              "Illinois",
+              "Indiana",
+              "Iowa",
+              "Kansas",
+              "Kentucky",
+              "Louisiana",
+              "Maine",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "Minnesota",
+              "Mississippi",
+              "Missouri",
+              "Montana",
+              "Nebraska",
+              "Nevada",
+              "New Hampshire",
+              "New Jersey",
+              "New Mexico",
+              "New York",
+              "North Carolina",
+              "North Dakota",
+              "Ohio",
+              "Oklahoma",
+              "Oregon",
+              "Pennsylvania",
+              "Rhode Island",
+              "South Carolina",
+              "South Dakota",
+              "Tennessee",
+              "Texas",
+              "Utah",
+              "Vermont",
+              "Virginia",
+              "Washington",
+              "West Virginia",
+              "Wisconsin",
+              "Wyoming"
+            ],
+            "orderByExpression": "State",
+            "numberOfTicks": 10,
+            "autoNumberOfTicks": true
+          },
+          "exposed": true
+        }
+      },
+      {
+        "_id": "3fzoqrwxljd",
+        "classID": "mark.text",
+        "properties": {
+          "name": "Title",
+          "visible": true,
+          "alignment": {
+            "x": "middle",
+            "y": "top",
+            "xMargin": 0,
+            "yMargin": 30
+          },
+          "rotation": 0,
+          "exposed": true
+        },
+        "mappings": {
+          "x": {
+            "type": "parent",
+            "parentAttribute": "cx"
+          },
+          "y": {
+            "type": "parent",
+            "parentAttribute": "oy2"
+          },
+          "text": {
+            "type": "value",
+            "value": "Polio Incidence Rates in the United States"
+          },
+          "fontSize": {
+            "type": "value",
+            "value": 24
+          },
+          "color": {
+            "type": "value",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255
+            }
+          }
+        }
+      }
+    ],
+    "scales": [
+      {
+        "_id": "foiqg4ryo7a",
+        "classID": "scale.linear<number,color>",
+        "properties": {
+          "enableTooltips": true,
+          "enableContextMenu": true,
+          "enableSelection": true,
+          "exposed": true,
+          "name": "Scale1",
+          "domainMin": 0,
+          "domainMax": 160,
+          "range": {
+            "colors": [
+              {
+                "r": 8,
+                "g": 8,
+                "b": 8
+              },
+              {
+                "r": 50,
+                "g": 136,
+                "b": 189
+              },
+              {
+                "r": 102,
+                "g": 194,
+                "b": 165
+              },
+              {
+                "r": 171,
+                "g": 221,
+                "b": 164
+              },
+              {
+                "r": 230,
+                "g": 245,
+                "b": 152
+              },
+              {
+                "r": 255,
+                "g": 255,
+                "b": 191
+              },
+              {
+                "r": 254,
+                "g": 224,
+                "b": 139
+              },
+              {
+                "r": 253,
+                "g": 174,
+                "b": 97
+              },
+              {
+                "r": 244,
+                "g": 109,
+                "b": 67
+              },
+              {
+                "r": 213,
+                "g": 62,
+                "b": 79
+              },
+              {
+                "r": 158,
+                "g": 1,
+                "b": 66
+              }
+            ],
+            "colorspace": "lab"
+          },
+          "autoDomainMax": true,
+          "autoDomainMin": true
+        },
+        "mappings": {
+          "range": {
+            "type": "value",
+            "value": {
+              "colorspace": "lab",
+              "colors": [
+                {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255
+                },
+                {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              ]
+            }
+          }
+        },
+        "inputType": "number",
+        "outputType": "color"
+      }
+    ],
+    "scaleMappings": [
+      {
+        "type": "scale",
+        "table": "polio_incidence_rates_united_states",
+        "expression": "avg(`Polio Cases`)",
+        "valueType": "number",
+        "scale": "foiqg4ryo7a",
+        "attribute": "fill",
+        "valueIndex": null
+      }
+    ],
+    "constraints": [],
+    "resources": []
+  },
+  "defaultAttributes": {
+    "6gclvua44mk": {
+      "x": 0,
+      "y": 0
+    },
+    "3m38zltns4g": {
+      "x1": -1.3178571478591101,
+      "y1": -0.6794117647059051,
+      "x2": 1.3178571478591101,
+      "y2": 0.6794117647059051,
+      "cx": 0,
+      "cy": 0,
+      "width": 2.6357142957182202,
+      "height": 1.3588235294118103,
+      "strokeWidth": 0.1,
+      "opacity": 0.1
+    },
+    "3fzoqrwxljd": {
+      "x": 13.75,
+      "y": 112.5,
+      "fontSize": 6,
+      "opacity": 0.25
+    }
+  },
+  "tables": [
+    {
+      "name": "polio_incidence_rates_united_states",
+      "type": "Main",
+      "columns": [
+        {
+          "displayName": "Year",
+          "name": "Year",
+          "type": "string",
+          "metadata": {
+            "unit": "__year",
+            "kind": "ordinal",
+            "orderMode": "alphabetically",
+            "examples": "1928, 1929, 1930"
+          }
+        },
+        {
+          "displayName": "State",
+          "name": "State",
+          "type": "string",
+          "metadata": {
+            "kind": "categorical",
+            "orderMode": "alphabetically",
+            "examples": "Alabama, Alaska, Arizona"
+          }
+        },
+        {
+          "displayName": "Polio Cases",
+          "name": "Polio Cases",
+          "type": "number",
+          "metadata": {
+            "kind": "numerical",
+            "examples": "0, 1, 3"
+          }
+        }
+      ]
+    }
+  ],
+  "inference": [
+    {
+      "objectID": "5lss4acowsp",
+      "dataSource": {
+        "table": "polio_incidence_rates_united_states"
+      },
+      "axis": {
+        "expression": "first(Year)",
+        "type": "categorical",
+        "style": {
+          "tickColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "tickTextBackgroudColor": null,
+          "tickTextBackgroudColorId": null,
+          "showTicks": true,
+          "showBaseline": true,
+          "lineColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "fontFamily": "Segoe UI",
+          "fontSize": 12,
+          "tickSize": 5,
+          "wordWrap": false,
+          "verticalText": false,
+          "gridlineStyle": "none",
+          "gridlineColor": {
+            "r": 234,
+            "g": 234,
+            "b": 234
+          },
+          "gridlineWidth": 1
+        },
+        "order": null,
+        "orderMode": "alphabetically",
+        "rawExpression": "first(Year)",
+        "property": "xData",
+        "defineCategories": true
+      },
+      "autoDomainMin": true,
+      "autoDomainMax": true
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "dataSource": {
+        "table": "polio_incidence_rates_united_states"
+      },
+      "axis": {
+        "expression": "first(State)",
+        "type": "categorical",
+        "style": {
+          "tickColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "tickTextBackgroudColor": null,
+          "tickTextBackgroudColorId": null,
+          "showTicks": true,
+          "showBaseline": true,
+          "lineColor": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "fontFamily": "Segoe UI",
+          "fontSize": 12,
+          "tickSize": 5,
+          "wordWrap": false,
+          "verticalText": false,
+          "gridlineStyle": "none",
+          "gridlineColor": {
+            "r": 234,
+            "g": 234,
+            "b": 234
+          },
+          "gridlineWidth": 1
+        },
+        "order": null,
+        "orderMode": "alphabetically",
+        "rawExpression": "first(State)",
+        "property": "yData",
+        "defineCategories": true
+      },
+      "autoDomainMin": true,
+      "autoDomainMax": true
+    },
+    {
+      "objectID": "foiqg4ryo7a",
+      "autoDomainMax": true,
+      "autoDomainMin": true,
+      "scale": {
+        "classID": "scale.linear<number,color>",
+        "expressions": [
+          "avg(`Polio Cases`)"
+        ],
+        "properties": {
+          "mapping": "mapping"
+        }
+      },
+      "dataSource": {
+        "table": "polio_incidence_rates_united_states"
+      }
+    }
+  ],
+  "properties": [
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "style",
+          "subfield": "tickSize"
+        }
+      },
+      "type": "number",
+      "default": 5,
+      "displayName": "PlotSegment1/xData.style.tickSize"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "style",
+          "subfield": "fontSize"
+        }
+      },
+      "type": "number",
+      "default": 12,
+      "displayName": "PlotSegment1/xData.style.fontSize"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "style",
+          "subfield": "fontFamily"
+        }
+      },
+      "type": "font-family",
+      "default": "Segoe UI",
+      "displayName": "PlotSegment1/xData.style.fontFamily"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "style",
+          "subfield": "lineColor"
+        }
+      },
+      "type": "color",
+      "default": "#ffffff",
+      "displayName": "PlotSegment1/xData.style.lineColor"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "style",
+          "subfield": "tickColor"
+        }
+      },
+      "type": "color",
+      "default": "#ffffff",
+      "displayName": "PlotSegment1/xData.style.tickColor"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "tickFormat"
+        }
+      },
+      "type": "text",
+      "default": null,
+      "displayName": "PlotSegment1/xData.tickFormat"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "tickDataExpression"
+        }
+      },
+      "type": "text",
+      "default": null,
+      "displayName": "PlotSegment1/xData.tickDataExpression"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "offset"
+        }
+      },
+      "type": "number",
+      "default": 0,
+      "displayName": "PlotSegment1/xData.offset"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "numberOfTicks"
+        }
+      },
+      "type": "number",
+      "default": 10,
+      "displayName": "PlotSegment1/xData.numberOfTicks"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "autoNumberOfTicks"
+        }
+      },
+      "type": "boolean",
+      "default": true,
+      "displayName": "PlotSegment1/xData.autoNumberOfTicks"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "style",
+          "subfield": "tickSize"
+        }
+      },
+      "type": "number",
+      "default": 5,
+      "displayName": "PlotSegment1/yData.style.tickSize"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "style",
+          "subfield": "fontSize"
+        }
+      },
+      "type": "number",
+      "default": 12,
+      "displayName": "PlotSegment1/yData.style.fontSize"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "style",
+          "subfield": "fontFamily"
+        }
+      },
+      "type": "font-family",
+      "default": "Segoe UI",
+      "displayName": "PlotSegment1/yData.style.fontFamily"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "style",
+          "subfield": "lineColor"
+        }
+      },
+      "type": "color",
+      "default": "#ffffff",
+      "displayName": "PlotSegment1/yData.style.lineColor"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "style",
+          "subfield": "tickColor"
+        }
+      },
+      "type": "color",
+      "default": "#ffffff",
+      "displayName": "PlotSegment1/yData.style.tickColor"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "tickFormat"
+        }
+      },
+      "type": "text",
+      "default": null,
+      "displayName": "PlotSegment1/yData.tickFormat"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "tickDataExpression"
+        }
+      },
+      "type": "text",
+      "default": null,
+      "displayName": "PlotSegment1/yData.tickDataExpression"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "offset"
+        }
+      },
+      "type": "number",
+      "default": 0,
+      "displayName": "PlotSegment1/yData.offset"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "numberOfTicks"
+        }
+      },
+      "type": "number",
+      "default": 10,
+      "displayName": "PlotSegment1/yData.numberOfTicks"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "autoNumberOfTicks"
+        }
+      },
+      "type": "boolean",
+      "default": true,
+      "displayName": "PlotSegment1/yData.autoNumberOfTicks"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "xData",
+          "field": "categories"
+        }
+      },
+      "type": "enum",
+      "default": "ascending",
+      "displayName": "PlotSegment1/xData.categories"
+    },
+    {
+      "objectID": "5lss4acowsp",
+      "target": {
+        "property": {
+          "property": "yData",
+          "field": "categories"
+        }
+      },
+      "type": "enum",
+      "default": "ascending",
+      "displayName": "PlotSegment1/yData.categories"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "attribute": "visible"
+      },
+      "type": "boolean",
+      "default": true,
+      "displayName": "Shape1/visible"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "attribute": "strokeWidth"
+      },
+      "type": "number",
+      "default": 1,
+      "displayName": "Shape1/strokeWidth"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "property": "strokeStyle"
+      },
+      "type": "enum",
+      "default": "solid",
+      "displayName": "Shape1/strokeStyle"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "attribute": "opacity"
+      },
+      "type": "number",
+      "default": 1,
+      "displayName": "Shape1/opacity"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "property": "rx"
+      },
+      "type": "number",
+      "default": 0,
+      "displayName": "Shape1/rx"
+    },
+    {
+      "objectID": "3m38zltns4g",
+      "target": {
+        "property": "ry"
+      },
+      "type": "number",
+      "default": 0,
+      "displayName": "Shape1/ry"
+    },
+    {
+      "objectID": "3fzoqrwxljd",
+      "target": {
+        "attribute": "fontSize"
+      },
+      "type": "number",
+      "default": 24,
+      "displayName": "Title/fontSize"
+    },
+    {
+      "objectID": "3fzoqrwxljd",
+      "target": {
+        "attribute": "color"
+      },
+      "type": "color",
+      "default": "#ffffff",
+      "displayName": "Title/color"
+    },
+    {
+      "objectID": "3fzoqrwxljd",
+      "target": {
+        "attribute": "text"
+      },
+      "type": "text",
+      "default": "Polio Incidence Rates in the United States",
+      "displayName": "Title/text"
+    },
+    {
+      "objectID": "foiqg4ryo7a",
+      "target": {
+        "property": "domainMin"
+      },
+      "type": "number",
+      "displayName": "Scale1/domainMin"
+    },
+    {
+      "objectID": "foiqg4ryo7a",
+      "target": {
+        "property": "domainMax"
+      },
+      "type": "number",
+      "displayName": "Scale1/domainMax"
+    },
+    {
+      "objectID": "qlccbptx6r",
+      "target": {
+        "attribute": "marginLeft"
+      },
+      "type": "number",
+      "default": 140,
+      "displayName": "Chart/marginLeft"
+    },
+    {
+      "objectID": "qlccbptx6r",
+      "target": {
+        "attribute": "marginRight"
+      },
+      "type": "number",
+      "default": 30,
+      "displayName": "Chart/marginRight"
+    },
+    {
+      "objectID": "qlccbptx6r",
+      "target": {
+        "attribute": "marginTop"
+      },
+      "type": "number",
+      "default": 80,
+      "displayName": "Chart/marginTop"
+    },
+    {
+      "objectID": "qlccbptx6r",
+      "target": {
+        "attribute": "marginBottom"
+      },
+      "type": "number",
+      "default": 50,
+      "displayName": "Chart/marginBottom"
+    }
+  ],
+  "version": "2.1.6"
+}
