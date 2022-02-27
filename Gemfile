@@ -27,4 +27,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # Added at 2018-03-16 23:13:22 -0700 by donghao:
-gem "mini_magick", "~> 4.8"
+gem "mini_magick", "~> 4.9"
